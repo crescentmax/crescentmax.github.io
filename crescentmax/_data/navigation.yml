@@ -1,0 +1,32 @@
+# main links
+main:
+  - title: "Projects"
+    url: "/projects"
+    description: "Projects and games"
+  - title: "Blogs"
+    url: "/blogs"
+    description: "Notes about game development techniques"
+  - title: "2D Art"
+    url: "/2dart"
+    description: "Pixel art and 2D illustrations"
+  - title: "Resume"
+    url: "/resume"
+    description: "Resume"
+  - title: "Contact"
+    url: "/contact"
+    description: "Contact Information"
+  # - title: "About"
+  #   url: https://mmistakes.github.io/minimal-mistakes/about/
+  # - title: "Sample Posts"
+  #   url: /year-archive/
+  # - title: "Sample Collections"
+  #   url: /collection-archive/
+  # - title: "Sitemap"
+  #   url: /sitemap/
+
+# Common values for target include:
+
+# _self (default): Opens the link in the current tab or window.
+# _blank: Opens the link in a new tab or window.
+# _parent: Opens the link in the parent frame.
+# _top: Opens the link in the full body of the window, even if nested within iframes.
