@@ -1,0 +1,482 @@
+/* ========================================================================== */
+/* SINGLE PAGE/POST */
+/* ========================================================================== */
+
+/* Center the main content container */
+#main {
+  @include clearfix;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 100%; /* Default to full width */
+  animation: $intro-transition; /* Keep any existing animations */
+  animation-delay: 0.15s;
+
+  /* Constrain the max width for larger screens */
+  @include breakpoint($x-large) {
+    max-width: 1200px; /* Constrain width to 1200px */
+  }
+}
+
+/* Body styling for the entire page layout */
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+/* Center the main content in the page */
+.initial-content,
+.search-content {
+  flex: 1 0 auto;
+}
+
+/* Center the page content and remove any floats */
+.page {
+  width: 100%; /* Full width */
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  /* Optional: for larger screens */
+  @include breakpoint($x-large) {
+    max-width: 800px; /* Constrain width to 1200px */
+  }
+
+  .page__inner-wrap {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%; /* Full width within the container */
+    padding: 0 20px; /* Optional padding */
+
+    .page__content,
+    .page__meta,
+    .page__share {
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+    }
+  }
+}
+
+/* Style the page title */
+.page__title {
+  margin-top: 0;
+  line-height: 1.2;
+  text-align: left; 
+  font-size: 1.5rem; /* Adjust title font size */
+  color: $text-color;
+
+  a {
+    color: $text-color;
+    text-decoration: none;
+  }
+
+  & + .page__meta {
+    margin-top: -0.5em;
+  }
+}
+
+/* General content styling for the post content */
+.page__content {
+  font-size: 0.8em; /* Set base font size */
+  color: $text-color;
+  
+  
+  /* Adjust heading sizes relative to the base font size */
+  h1 {
+    font-size: 1.4rem;
+  }
+  
+  h2 {
+    font-size: 1.3rem; 
+  }
+  
+  h3 {
+    font-size: 1.2rem; /* Equivalent to 28px */
+  }
+  
+  h4 {
+    font-size: 1.1rem; /* Equivalent to 24px */
+  }
+  
+  h5 {
+    font-size: 1rem; /* Equivalent to 20px */
+  }
+  
+  h6 {
+    font-size: 0.9rem; /* Equivalent to 16px */
+  }
+
+  li {
+    font-size: 0.8rem;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    text-align: left; /* Ensure headings are left-aligned */
+    margin-top: 1.2rem;
+  }
+
+  p, li, dl {
+    text-align: left; /* Ensure paragraphs and lists are left-aligned */
+    margin-bottom: 0.4rem;
+  }
+
+  /* Center images inside the content */
+  img {
+    display: block; /* Block-level image */
+    margin: 0 auto; /* Center image */
+    max-width: 100%; /* Ensure the image is responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+/* Style for the lead text */
+.page__lead {
+  font-size: $type-size-4;
+  text-align: center; /* Center the lead text */
+}
+
+/* Hero image styling */
+.page__hero-image {
+  width: 100%;
+  height: auto;
+  margin: 0 auto; /* Center the image */
+}
+
+/* Hero section with overlay */
+.page__hero--overlay {
+  padding: 2rem;
+  text-align: center; /* Center text in the overlay */
+  background-size: cover;
+  background-position: center;
+
+  .page__title,
+  .page__meta,
+  .page__lead,
+  .btn {
+    color: #fff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .page__lead {
+    max-width: $medium;
+  }
+}
+
+
+/*
+   Social sharing
+   ========================================================================== */
+
+.page__share {
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top: 1px solid $border-color;
+
+  @include breakpoint(max-width $small) {
+    .btn span {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+  }
+}
+
+.page__share-title {
+  margin-bottom: 10px;
+  font-size: $type-size-6;
+  text-transform: uppercase;
+}
+
+/*
+   Page meta
+   ========================================================================== */
+
+.page__meta {
+  margin-top: 2em;
+  color: $muted-text-color;
+  font-family: $sans-serif;
+  font-size: $type-size-6;
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
+.page__meta-title {
+  margin-bottom: 10px;
+  font-size: $type-size-6;
+  text-transform: uppercase;
+}
+
+.page__meta-sep::before {
+  content: "\2022";
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+/*
+   Page taxonomy
+   ========================================================================== */
+
+.page__taxonomy {
+  .sep {
+    display: none;
+  }
+
+  strong {
+    margin-right: 10px;
+  }
+}
+
+.page__taxonomy-item {
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 8px;
+  padding: 5px 10px;
+  text-decoration: none;
+  border: 1px solid mix(#000, $border-color, 25%);
+  border-radius: $border-radius;
+
+  &:hover {
+    text-decoration: none;
+    color: $link-color-hover;
+  }
+}
+
+.taxonomy__section {
+  margin-bottom: 2em;
+  padding-bottom: 1em;
+
+  &:not(:last-child) {
+    border-bottom: solid 1px $border-color;
+  }
+
+  .archive__item-title {
+    margin-top: 0;
+  }
+
+  .archive__subtitle {
+    clear: both;
+    border: 0;
+  }
+
+  + .taxonomy__section {
+    margin-top: 2em;
+  }
+}
+
+.taxonomy__title {
+  margin-bottom: 0.5em;
+  color: $muted-text-color;
+}
+
+.taxonomy__count {
+  color: $muted-text-color;
+}
+
+.taxonomy__index {
+  display: grid;
+  grid-column-gap: 2em;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 1.414em 0;
+  padding: 0;
+  font-size: 0.75em;
+  list-style: none;
+
+  @include breakpoint($large) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0.25em 0;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid $border-color;
+  }
+}
+
+.back-to-top {
+  display: block;
+  clear: both;
+  color: $muted-text-color;
+  font-size: 0.6em;
+  text-transform: uppercase;
+  text-align: right;
+  text-decoration: none;
+}
+
+/*
+   Comments
+   ========================================================================== */
+
+.page__comments {
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  clear: both;
+}
+
+.page__comments-title {
+  margin-top: 2rem;
+  margin-bottom: 10px;
+  padding-top: 2rem;
+  font-size: $type-size-6;
+  border-top: 1px solid $border-color;
+  text-transform: uppercase;
+}
+
+.page__comments-form {
+  -webkit-transition: $global-transition;
+  transition: $global-transition;
+
+  &.disabled {
+    input,
+    button,
+    textarea,
+    label {
+      pointer-events: none;
+      cursor: not-allowed;
+      filter: alpha(opacity=65);
+      box-shadow: none;
+      opacity: 0.65;
+    }
+  }
+}
+
+.comment {
+  @include clearfix();
+  margin: 1em 0;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $border-color;
+  }
+}
+
+.comment__avatar-wrapper {
+  float: left;
+  width: 60px;
+  height: 60px;
+
+  @include breakpoint($large) {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.comment__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  @include breakpoint($large) {
+    width: 80px;
+    height: 80px;
+    padding: 5px;
+    border: 1px solid $border-color;
+  }
+}
+
+.comment__content-wrapper {
+  float: right;
+  width: calc(100% - 60px);
+
+  @include breakpoint($large) {
+    width: calc(100% - 100px);
+  }
+}
+
+.comment__author {
+  margin: 0;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.comment__date {
+  @extend .page__meta;
+  margin: 0;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+/*
+   Related
+   ========================================================================== */
+
+.page__related {
+  @include clearfix();
+  float: left;
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top: 1px solid $border-color;
+
+  @include breakpoint($large) {
+    float: right;
+    width: calc(100% - #{$right-sidebar-width-narrow});
+  }
+
+  @include breakpoint($x-large) {
+    width: calc(100% - #{$right-sidebar-width});
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.page__related-title {
+  margin-bottom: 10px;
+  font-size: $type-size-6;
+  text-transform: uppercase;
+}
+
+/*
+   Wide Pages
+   ========================================================================== */
+
+.wide {
+  .page {
+    @include breakpoint($large) {
+      padding-right: 0;
+    }
+
+    @include breakpoint($x-large) {
+      padding-right: 0;
+    }
+  }
+
+  .page__related {
+    @include breakpoint($large) {
+      padding-right: 0;
+    }
+
+    @include breakpoint($x-large) {
+      padding-right: 0;
+    }
+  }
+}

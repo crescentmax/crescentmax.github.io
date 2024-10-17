@@ -1,0 +1,70 @@
+/* Flex container for the grid of cards */
+.feature__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  margin-top: 40px; /* Adjust top margin of the card grid */
+  margin-bottom: 40px; 
+}
+
+/* Each card takes up about 30% of the row to allow 3 in a row */
+.feature__widget {
+  flex: 0 1 calc(33.333% - 20px);
+  text-decoration: none;
+  color: inherit;
+  background-color: #1e1e1e; /* Dark theme background for card */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3); /* Darker shadow to match the theme */
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 0; /* Remove the little white line (reset the bottom margin) */
+}
+
+.feature__widget:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Resizing the image so it's smaller */
+.archive__item img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+/* Styling for the content inside the card */
+.archive__item-body {
+  padding: 30px; /* Increased padding for more space around the content */
+}
+
+/* Title styling */
+.archive__item-title {
+  font-size: 0.9rem; /* Slightly larger title size */
+  font-weight: bold;
+  margin: 10px 0 10px; /* Increased margin */
+  color: #f0f0f0; /* Light text color for dark theme */
+}
+
+/* Excerpt styling */
+.archive__item-excerpt {
+  font-size: 0.6rem; /* Increased font size for readability */
+  color: #cccccc; /* Light gray text color for readability */
+  margin-bottom: 20px; /* Increased margin for better spacing */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1024px) {
+  .feature__widget {
+    flex: 0 1 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .feature__widget {
+    flex: 0 1 100%;
+  }
+}
+

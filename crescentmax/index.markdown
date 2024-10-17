@@ -6,7 +6,7 @@ permalink: /
 header:
   overlay_color: "#000"
   overlay_filter: "0.4"
-  overlay_image: /assets/home/header.jpg
+  overlay_image: /assets/images/home/header.jpg
   actions:
     - label: "Download"
       url: "https://github.com/mmistakes/minimal-mistakes/"
@@ -14,20 +14,20 @@ excerpt: "Software Engineer, Game Developer, and Artist."
 intro: 
   - excerpt: 'Nullam suscipit et nam, tellus velit pellentesque at malesuada, enim eaque. Quis nulla, netus tempor in diam gravida tincidunt, *proin faucibus* voluptate felis id sollicitudin. Centered with `type="center"`'
 feature_row:
-  - image_path: assets/images/unsplash-gallery-image-1-th.jpg
-    alt: "placeholder image 1"
-    title: "Placeholder 1"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
-  - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
-    alt: "placeholder image 2"
-    title: "Placeholder 2"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
-    url: "#test-link"
-    btn_label: "Read More"
-    btn_class: "btn--primary"
-  - image_path: /assets/images/unsplash-gallery-image-3-th.jpg
-    title: "Placeholder 3"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
+  - image_path: "https://images.unsplash.com/photo-1508873535684-277a3cbcc4e8?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    alt: "Projects Page Image"
+    title: "Projects"
+    excerpt: "This page showcases a selection of my professional and personal work."
+    url: "/projects"  # Add the URL to the page you want to link to
+  - image_path: "https://images.unsplash.com/photo-1483546416237-76fd26bbcdd1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    alt: "Blogs Image"
+    title: "Blogs"
+    excerpt: "You'll find posts about programming, game design, 3D art, and 2D art. This space is dedicated to sharing my journey and discoveries in these areas."
+    url: "/blogs"
+  - image_path: "https://images.unsplash.com/photo-1515405295579-ba7b45403062?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    title: "Art"
+    excerpt: "This page features a collection of my artistic creations, including VFX demonstrations, pixel art, and 2D illustrations."
+    url: "/art"
 feature_row2:
   - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
     alt: "placeholder image 2"
@@ -54,12 +54,5 @@ feature_row4:
     btn_class: "btn--primary"
 ---
 
-{% include feature_row id="intro" type="center" %}
-
 {% include feature_row %}
 
-{% include feature_row id="feature_row2" type="left" %}
-
-{% include feature_row id="feature_row3" type="right" %}
-
-{% include feature_row id="feature_row4" type="center" %}

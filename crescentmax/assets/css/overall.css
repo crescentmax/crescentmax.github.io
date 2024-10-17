@@ -1,0 +1,68 @@
+/* Global font size for the entire site */
+body {
+  font-size: 18px; /* Adjust this value for the base font size */
+  line-height: 1.8; /* Adjust line height for readability */
+}
+
+/* Adjust headings size */
+h1 {
+  font-size: 2.5rem; /* Adjust the heading font size */
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+/* Reduce the size of paragraph text */
+p {
+  font-size: 0.9rem; /* Slightly smaller than the default */
+  line-height: 1.6; /* Keep readability high */
+}
+
+/* Reduce button size */
+.btn {
+  font-size: 0.85rem; /* Make buttons text smaller */
+  padding: 8px 16px; /* Adjust button padding */
+}
+
+/* Set a maximum width for all images */
+img {
+  max-width: 100%; /* Ensure images scale with container */
+  height: auto; /* Keep the aspect ratio */
+  max-height: 500px; /* Control image height */
+}
+
+/* For hero images (like the large one on top) */
+.hero-image {
+  max-height: 400px; /* Reduce height of large hero images */
+  object-fit: cover; /* Keep the aspect ratio and fill the area */
+}
+
+/* Hide the year archive links or taxonomy index */
+.taxonomy__index {
+    display: none;
+}
+
+/* Adjust the right padding for the main page content */
+.page {
+  max-width: 1200px;
+  padding-right: 400px; /* Set right padding to 400px */
+  padding-left: 15px; /* Optional: Adjust left padding for balance */
+  text-align: left; /* Ensure the content is left-aligned */
+}
+
+/* Adjust the right padding for the related content section */
+.page__related {
+  max-width: 1200px;
+  padding-right: 400px; /* Set right padding to 400px */
+  padding-left: 15px; /* Optional: Adjust left padding for balance */
+}
+
