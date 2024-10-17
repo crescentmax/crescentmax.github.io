@@ -50,7 +50,6 @@ defaults:
       type: posts
     values:
       layout: single
-      read_time: true
       share: false
       related: true
 
@@ -71,6 +70,10 @@ footer:
     - label: "Twitter"
       url: "https://x.com/crescent_max"
       icon: "fab fa-twitter"  # FontAwesome icon class for Twitter
+      target: _blank
+    - label: "Email"
+      url: "crescentmax@tamu.edu"
+      icon: "fas fa-envelope" # FontAwesome icon class for Email
       target: _blank
 
 # Exclude from processing.

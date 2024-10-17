@@ -6,7 +6,7 @@ body {
 
 /* Adjust headings size */
 h1 {
-  font-size: 2.5rem; /* Adjust the heading font size */
+  font-size: 2rem; /* Adjust the heading font size */
 }
 
 h2 {
@@ -65,4 +65,7 @@ img {
   padding-right: 400px; /* Set right padding to 400px */
   padding-left: 15px; /* Optional: Adjust left padding for balance */
 }
+
+
+
 

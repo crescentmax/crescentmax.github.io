@@ -1,21 +1,38 @@
 /* ==========================================================================
    ARCHIVE
    ========================================================================== */
+.archive-page .archive {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  width: 100%;
+  max-width: 800px;
+  padding-left: 15px;
+  padding-right: 15px;
+  
+  @include breakpoint($large) {
+    padding-right: 0; /* Remove padding to prevent shifting */
+  }
+}
+
+.archive-page .archive__item {
+  max-width: 800px;
+  margin-bottom: 1.5em;
+
+}
+
+.archive-page .page__title {
+  text-align: left; /* Ensures the title is left-aligned */
+  margin-left: 0; /* Remove any unintended centering margins */
+  margin-right: auto; /* Optional: Add this to prevent auto centering */
+}
+
 
 .archive {
-  margin-top: 1em;
   margin-bottom: 2em;
-
-  @include breakpoint($large) {
-    float: right;
-    width: calc(100% - #{$right-sidebar-width-narrow});
-    padding-right: $right-sidebar-width-narrow;
-  }
-
-  @include breakpoint($x-large) {
-    width: calc(100% - #{$right-sidebar-width});
-    padding-right: $right-sidebar-width;
-  }
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .archive__item {
@@ -32,11 +49,12 @@
 }
 
 .archive__subtitle {
-  margin: 1.414em 0 0.5em;
+  padding-top: 0.5em;
   padding-bottom: 0.5em;
   font-size: $type-size-5;
   color: $muted-text-color;
   border-bottom: 1px solid $border-color;
+  margin-top: 9px;
 
   + .list__item .archive__item-title {
     margin-top: 0.5em;
@@ -126,19 +144,7 @@
    Grid view
    ========================================================================== */
 
-.archive {
-  .grid__wrapper {
-    /* extend grid elements to the right */
 
-    @include breakpoint($large) {
-      margin-right: -1 * $right-sidebar-width-narrow;
-    }
-
-    @include breakpoint($x-large) {
-      margin-right: -1 * $right-sidebar-width;
-    }
-  }
-}
 
 .grid__item {
   margin-bottom: 2em;
@@ -450,4 +456,8 @@
 	.feature__wrapper {
 		display: inline-block;
 	}
+}
+
+.taxonomy__index {
+  display: none;
 }

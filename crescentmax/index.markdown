@@ -7,9 +7,6 @@ header:
   overlay_color: "#000"
   overlay_filter: "0.4"
   overlay_image: /assets/images/home/header.jpg
-  actions:
-    - label: "Download"
-      url: "https://github.com/mmistakes/minimal-mistakes/"
 excerpt: "Software Engineer, Game Developer, and Artist."
 intro: 
   - excerpt: 'Nullam suscipit et nam, tellus velit pellentesque at malesuada, enim eaque. Quis nulla, netus tempor in diam gravida tincidunt, *proin faucibus* voluptate felis id sollicitudin. Centered with `type="center"`'

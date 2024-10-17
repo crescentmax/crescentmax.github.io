@@ -38,8 +38,7 @@ body {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-right: 15px;
 
   /* Optional: for larger screens */
   @include breakpoint($x-large) {
@@ -50,7 +49,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     width: 100%; /* Full width within the container */
-    padding: 0 20px; /* Optional padding */
+
 
     .page__content,
     .page__meta,
@@ -64,12 +63,15 @@ body {
 
 /* Style the page title */
 .page__title {
-  margin-top: 0;
+  margin-top: 1rem;
   line-height: 1.2;
   text-align: left; 
   font-size: 1.5rem; /* Adjust title font size */
   color: $text-color;
 
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
   a {
     color: $text-color;
     text-decoration: none;
@@ -82,37 +84,37 @@ body {
 
 /* General content styling for the post content */
 .page__content {
-  font-size: 0.8em; /* Set base font size */
+  font-size: 0.7rem; /* Set base font size */
   color: $text-color;
   
   
   /* Adjust heading sizes relative to the base font size */
   h1 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
   
   h2 {
-    font-size: 1.3rem; 
+    font-size: 1.1rem; 
   }
   
   h3 {
-    font-size: 1.2rem; /* Equivalent to 28px */
+    font-size: 1rem; /* Equivalent to 28px */
   }
   
   h4 {
-    font-size: 1.1rem; /* Equivalent to 24px */
+    font-size: 0.9rem; /* Equivalent to 24px */
   }
   
   h5 {
-    font-size: 1rem; /* Equivalent to 20px */
+    font-size: 0.85rem; /* Equivalent to 20px */
   }
   
   h6 {
-    font-size: 0.9rem; /* Equivalent to 16px */
+    font-size: 0.8rem; /* Equivalent to 16px */
   }
 
   li {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -122,7 +124,7 @@ body {
 
   p, li, dl {
     text-align: left; /* Ensure paragraphs and lists are left-aligned */
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.2rem;
   }
 
   /* Center images inside the content */
@@ -137,7 +139,10 @@ body {
 /* Style for the lead text */
 .page__lead {
   font-size: $type-size-4;
-  text-align: center; /* Center the lead text */
+  text-align: left; /* Center the lead text */
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Hero image styling */
@@ -162,9 +167,6 @@ body {
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
   }
 
-  .page__lead {
-    max-width: $medium;
-  }
 }
 
 
@@ -275,7 +277,7 @@ body {
   }
 
   + .taxonomy__section {
-    margin-top: 2em;
+    margin-top: 1rem;
   }
 }
 
