@@ -1,5 +1,7 @@
 ---
 title: "Projects"
-layout: single
+layout: projects
 permalink: /projects/
 ---
+
+

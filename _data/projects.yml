@@ -1,0 +1,24 @@
+- title: "Del Da Time"
+  image: "/assets/images/project-two.jpg"
+  description: "A brief description of Project Two."
+  url: "/projects/del-da-time"
+
+- title: "Lucid Dive"
+  image: "/assets/images/projects/lucid_dive/MainMenuBg.png"
+  description: "A 2D cyberpunk platformer <br> made with Unity"
+  url: "/projects/lucid-dive"
+
+- title: "Orbitone"
+  image: "/assets/images/project-one.jpg"
+  description: "A brief description of Project One."
+  url: "/projects/project-one"
+
+- title: "Smol Calli Dungeon"
+  image: "/assets/images/project-one.jpg"
+  description: "A brief description of Project One."
+  url: "/projects/project-one"
+
+- title: "Operation: Stardust"
+  image: "/assets/images/projects/operation_stardust/OBR.png"
+  description: "A 2D turn based strategy game <br> made with cocos"
+  url: "/projects/project-one"

@@ -73,7 +73,7 @@ footer:
       icon: "fab fa-twitter"  # FontAwesome icon class for Twitter
       target: _blank
     - label: "Email"
-      url: "crescentmax@tamu.edu"
+      url: "mailto:crescentmax@tamu.edu"
       icon: "fas fa-envelope" # FontAwesome icon class for Email
       target: _blank
 
@@ -97,4 +97,5 @@ footer:
 #   - vendor/gems/
 #   - vendor/ruby/
 sass:
+  sass_dir: _sass
   quiet_deps: true
