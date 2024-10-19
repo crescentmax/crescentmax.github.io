@@ -34,8 +34,7 @@ Threre are three different scenarios that an Unreal game can run in.
 
 ## 1. **Basics**
 
-Replication will make sure all of different game instances are in sync. 
-
+Replication will make sure all of different game instances are in sync. <br>
 Replication happens on the level of actors.
 
 The replication system relies on three important classes:
@@ -68,7 +67,7 @@ If an actor is being replicated to a client, there are three important things th
 
 ### Relevancy
 
-When an actor is eligible for replication, every so often the server’s net driver will check that actor against each client connection to determine if it’s relevant to that client. Actors can be set to  `*bAlwaysRelevant*`. **Ownership plays an important role in relevancy: an actor owned by a particular player will always be considered relevant for the corresponding client.**
+When an actor is eligible for replication, every so often the server’s net driver will check that actor against each client connection to determine if it’s relevant to that client. Actors can be set to  *`bAlwaysRelevant`*. **Ownership plays an important role in relevancy: an actor owned by a particular player will always be considered relevant for the corresponding client.**
 
 If the client doesn’t own the actor and the actor is not relevant to it,, the default behavior is:
 
@@ -109,7 +108,7 @@ Actors that are closed to the player are weighted with a higher priority, and ac
 
 **RPCs are typically reserved for high priority, time-critical network code. ***(e.g. Positions Update)*
 
-Any `*UFUNCTION`* can be designated *Client, Server* ot *NetMulticast* to make it an RPC.
+Any *`UFUNCTION`* can be designated *Client, Server* ot *NetMulticast* to make it an RPC.
 
 - Invoke a **Client RPC** on the server: Run function implemention on the owning client
 - Invoke a **Server RPC** on the client: Run function implemention on the server
