@@ -2,21 +2,52 @@
 layout: default
 title: Projects
 ---
+
 <link rel="stylesheet" href="{{ '/assets/css/projects.css' | relative_url }}">
 
-<div class="projects-container">
-  <h1 class="page-title">{{ page.title }}</h1>
-  <div class="project-grid">
-    {% for project in site.data.projects %}
-      <div class="project-card">
-        <a href="{{ project.url | relative_url }}">
-          <img class="project-image" src="{{ project.image | relative_url }}" alt="{{ project.title }}">
-          <div class="project-content">
-            <h2 class="project-title">{{ project.title }}</h2>
-            <p class="project-description">{{ project.description }}</p>
-          </div>
-        </a>
+<div id="main" role="main">
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <!-- Title -->
+    <h1 class="page__title">{{ page.title }}</h1>
+
+    <!-- Work Projects Section -->
+    <section class="project-section">
+      <h2 class="section-title">Work Projects</h2>
+      <div class="project-grid">
+        {% for project in site.data.projects %}
+          {% if project.type == "work" %}
+            <div class="project-card">
+              <a href="{{ project.url | relative_url }}">
+                <img class="project-image" src="{{ project.image | relative_url }}" alt="{{ project.title }}">
+                <div class="project-content">
+                  <h3 class="project-title">{{ project.title }}</h3>
+                  <p class="project-description">{{ project.description }}</p>
+                </div>
+              </a>
+            </div>
+          {% endif %}
+        {% endfor %}
       </div>
-    {% endfor %}
-  </div>
+    </section>
+
+    <!-- Personal Projects Section -->
+    <section class="project-section">
+      <h2 class="section-title">Personal Projects</h2>
+      <div class="project-grid">
+        {% for project in site.data.projects %}
+          {% if project.type == "personal" %}
+            <div class="project-card">
+              <a href="{{ project.url | relative_url }}">
+                <img class="project-image" src="{{ project.image | relative_url }}" alt="{{ project.title }}">
+                <div class="project-content">
+                  <h3 class="project-title">{{ project.title }}</h3>
+                  <p class="project-description">{{ project.description }}</p>
+                </div>
+              </a>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </section>
+  </article>
 </div>

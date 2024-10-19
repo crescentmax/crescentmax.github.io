@@ -2,23 +2,40 @@
   image: "/assets/images/projects/deal_da_time/logo.png"
   description: "A mini puzzle game <br> created for GMTK Jam 2023"
   url: "https://intoxicat-studio.itch.io/deal-da-time"
+  type: personal
 
 - title: "Lucid Dive"
   image: "/assets/images/projects/lucid_dive/MainMenuBg.png"
   description: "A 2D cyberpunk platformer <br> made with Unity"
   url: "https://chocola-mint.itch.io/lucid-dive"
+  type: personal
 
 - title: "Orbitone"
   image: "/assets/images/projects/orbitone/image.png"
   description: "A VR rhythm game <br> made with Unity"
   url: "https://youtu.be/KIr_CQgP_Xo"
+  type: personal
 
 - title: "Smol Calli Dungeon"
   image: "/assets/images/projects/smol_calli/image.png"
   description: "A simple 2D game <br> made with Unity"
   url: "https://youtu.be/jPKp1WAhcMo"
+  type: personal
 
 - title: "Operation: Stardust"
   image: "/assets/images/projects/operation_stardust/OBR.png"
-  description: "A VR rhythm game <br> made with Unity"
+  description: "A turn-based strategy game <br> made with Unity"
   url: "https://chocola-mint.itch.io/operation-stardust"
+  type: personal
+
+- title: "Unannounced AAA Project"
+  image: "/assets/images/projects/AAA/ue.jpg"
+  description: "A multiplayer action RPG <br> made with UE5"
+  url: "/projects/AAA"
+  type: work
+
+- title: "Project Kyzen"
+  image: "/assets/images/projects/kyzen/kyzen.jpeg"
+  description: "A fast-paced multiplayer third-person game"
+  url: "https://projectkyzen.io/"
+  type: work

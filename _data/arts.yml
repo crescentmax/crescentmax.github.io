@@ -1,0 +1,29 @@
+2d:
+  - title: "Forest Scene"
+    description: "A vibrant forest painting."
+    image: "/assets/images/art/2d/forest_scene.jpg"
+    grid_size: "span 2"
+  - title: "Character Design"
+    description: "A character designed for a game."
+    image: "/assets/images/art/2d/character_design.png"
+    grid_size: "span 1"
+
+vfx:
+  - title: "Fire Simulation"
+    description: "A real-time fire simulation."
+    image: "/assets/images/art/vfx/fire_simulation.gif"
+    grid_size: "span 2"
+  - title: "Explosion Effect"
+    description: "An explosion effect used in game cutscenes."
+    image: "/assets/images/art/vfx/explosion_effect.gif"
+    grid_size: "span 1"
+
+pixel:
+  - title: "Pixel Knight"
+    description: "A pixel art knight character."
+    image: "/assets/images/art/pixel/pixel_knight.png"
+    grid_size: "span 1"
+  - title: "Arcade Scene"
+    description: "A retro arcade environment."
+    image: "/assets/images/art/pixel/arcade_scene.png"
+    grid_size: "span 2"

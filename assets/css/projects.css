@@ -1,14 +1,12 @@
 .projects-container {
-  max-width: 800px;
+  max-width: 800px; /* Align this with the width of the blog page container */
   margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 20px;
+  padding: 20px 1rem; /* Align the padding with that of #main or .page */
 }
 
 .page-title {
   text-align: left;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   line-height: 1.2;
   font-size: 1.5rem;
 }
@@ -29,11 +27,7 @@
   text-align: center;
   width: calc(33% - 20px);
   max-width: 350px;
-  margin-bottom: 10px; /* Increase space between rows */
-}
-
-.project-content.project-title {
-  color: #8cd2d5; /* Preserving the font color */
+  margin-bottom: 20px; /* Increase space between rows */
 }
 
 .project-card:hover {
@@ -77,11 +71,16 @@
 }
 
 .project-card a {
-    color: #8cd2d5; /* Keeps link color consistent */
-    text-decoration: none; /* Remove underline for links */
-  }
-  
-  .project-card a:hover {
-    text-decoration: none; /* Ensure no underline on hover as well */
-  }
-  
+  color: #8cd2d5; /* Keeps link color consistent */
+  text-decoration: none; /* Remove underline for links */
+}
+
+.project-card a:hover {
+  text-decoration: none; /* Ensure no underline on hover as well */
+}
+
+.section-title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: 400;
+}

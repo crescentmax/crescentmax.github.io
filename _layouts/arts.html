@@ -1,0 +1,65 @@
+---
+layout: default
+title: Artworks
+---
+
+<link rel="stylesheet" href="{{ '/assets/css/projects.css' | relative_url }}">
+
+<div class="projects-container">
+  <h1 class="page-title">{{ page.title }}</h1>
+
+  <!-- 2D Art Section -->
+  <section class="project-section">
+    <h2 class="section-title">2D Art</h2>
+    <div class="project-grid">
+      {% for art in site.data.arts %}
+        {% if art.type == "2d" %}
+          <div class="project-card" style="grid-area: {{ art.grid_size | default: 'span 1' }}">
+            <img class="project-image" src="{{ art.image | relative_url }}" alt="{{ art.title }}">
+            <div class="project-content">
+              <h3 class="project-title">{{ art.title }}</h3>
+              <p class="project-description">{{ art.description }}</p>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- VFX Art Section -->
+  <section class="project-section">
+    <h2 class="section-title">VFX</h2>
+    <div class="project-grid">
+      {% for art in site.data.arts %}
+        {% if art.type == "vfx" %}
+          <div class="project-card" style="grid-area: {{ art.grid_size | default: 'span 1' }}">
+            <img class="project-image" src="{{ art.image | relative_url }}" alt="{{ art.title }}">
+            <div class="project-content">
+              <h3 class="project-title">{{ art.title }}</h3>
+              <p class="project-description">{{ art.description }}</p>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Pixel Art Section -->
+  <section class="project-section">
+    <h2 class="section-title">Pixel Art</h2>
+    <div class="project-grid">
+      {% for art in site.data.arts %}
+        {% if art.type == "pixel" %}
+          <div class="project-card" style="grid-area: {{ art.grid_size | default: 'span 1' }}">
+            <img class="project-image" src="{{ art.image | relative_url }}" alt="{{ art.title }}">
+            <div class="project-content">
+              <h3 class="project-title">{{ art.title }}</h3>
+              <p class="project-description">{{ art.description }}</p>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+  
+</div>

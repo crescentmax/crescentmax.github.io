@@ -15,14 +15,25 @@ layout: default
 {% endif %}
 
 <div id="main" role="main">
-  {% include sidebar.html %}
-
-  <div class="archive-page">
-    <div class="archive">
-      {% unless page.header.overlay_color or page.header.overlay_image %}
-        <h1 id="page-title" class="page__title"{% if page.locale %} lang="{{ page.locale }}"{% endif %}>{{ page.title }}</h1>
-      {% endunless %}
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork"{% if page.locale %} lang="{{ page.locale }}"{% endif %}>
+    
+    <!-- Consistent Title Section -->
+    {% if page.title %}
+      <h1 id="page-title" class="page__title" itemprop="headline">{{ page.title }}</h1>
+    {% endif %}
+    
+    <!-- Archive Content -->
+    <section class="page__content archive-content" itemprop="text">
       {{ content }}
-    </div>
-  </div>
+    </section>
+
+    <!-- Footer (Consistent with Other Pages) -->
+    <footer class="page__meta">
+      {% if site.data.ui-text[site.locale].meta_label %}
+        <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
+      {% endif %}
+      {% include page__taxonomy.html %}
+    </footer>
+    
+  </article>
 </div>
