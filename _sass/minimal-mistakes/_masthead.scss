@@ -4,7 +4,7 @@
 
 .masthead {
   position: relative;
-  border-bottom: 1px solid $border-color;
+  background-color: $footer-background-color;
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
   -webkit-animation-delay: 0.15s;
@@ -37,6 +37,17 @@
       text-decoration: none;
     }
   }
+
+  &__inner-wrap,
+  .site-title,
+  .site-subtitle,
+  .masthead__menu,
+  nav,
+  ul,
+  li,
+  a {
+    background-color: $footer-background-color; // Explicitly set background color to the same color
+  }
 }
 
 .site-logo img {
@@ -49,7 +60,8 @@
   display: flex;
   -ms-flex-item-align: center;
   align-self: center;
-  font-weight: bold;
+  font-weight: 400;
+  font-size: 1.1rem;
   // z-index: 20;
 }
 
@@ -67,7 +79,6 @@
 
   .site-nav {
     margin-left: 0;
-
     @include breakpoint($small) {
       float: right;
     }

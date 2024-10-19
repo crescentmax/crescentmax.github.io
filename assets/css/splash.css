@@ -13,7 +13,7 @@
   flex: 0 1 calc(33.333% - 20px);
   text-decoration: none;
   color: inherit;
-  background-color: #1e1e1e; /* Dark theme background for card */
+  background-color: rgb(26, 29, 36); /* Dark theme background for card */
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3); /* Darker shadow to match the theme */
   border-radius: 8px;
   overflow: hidden;
