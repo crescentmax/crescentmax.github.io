@@ -63,7 +63,6 @@ body {
 
 /* Style the page title */
 .page__title {
-  margin-top: 1rem;
   line-height: 1.2;
   text-align: left; 
   font-size: 1.5rem; /* Adjust title font size */
@@ -148,6 +147,7 @@ body {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 1rem;
 }
 
 /* Hero image styling */
@@ -159,7 +159,7 @@ body {
 
 /* Hero section with overlay */
 .page__hero--overlay {
-  padding: 2rem;
+  padding: 1.2rem;
   text-align: center; /* Center text in the overlay */
   background-size: cover;
   background-position: center;
@@ -172,6 +172,40 @@ body {
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
   }
 
+}
+
+.page__hero--overlay .social-links {
+  text-align: left; 
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page__hero--overlay .social-links a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit; /* Use current text color */
+  font-size: 1.5rem; /* Size for icons */
+  text-align: left; 
+}
+
+.page__hero--overlay .social-links a:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+  color: #8cd2d5; /* Optional color change on hover */
+}
+
+.page__hero--overlay .first-social-icon {
+  background-color: transparent;
+  border: none;
+  padding: 0 10px 0 0;
+  margin: 0;
+}
+
+.page__hero--overlay .social-icon {
+  background-color: transparent;
+  border: none;
+  padding: 0 10px;
+  margin: 0;
 }
 
 

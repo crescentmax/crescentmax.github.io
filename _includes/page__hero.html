@@ -34,6 +34,21 @@
         <p class="page__lead">{{ page.tagline | markdownify | remove: "<p>" | remove: "</p>" }}</p>
       {% elsif page.header.show_overlay_excerpt != false and page.excerpt %}
         <p class="page__lead">{{ page.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+        <!-- Social Contact Icons -->
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/chengyan-tsai-69b804225/" target="_blank" class="btn first-social-icon">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://crescentmax.itch.io/" target="_blank" class="btn social-icon">
+            <i class="fab fa-itch-io"></i>
+          </a>
+          <a href="https://x.com/crescent_max" target="_blank" class="btn social-icon">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="mailto:crescentmax@tamu.edu" target="_blank" class="btn social-icon">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
       {% endif %}
       {% include page__meta.html %}
       {% if page.header.actions %}

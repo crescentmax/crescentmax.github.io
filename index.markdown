@@ -15,16 +15,16 @@ feature_row:
     alt: "Projects Page Image"
     title: "Projects"
     excerpt: "This page showcases a selection of my professional and personal work."
-    url: "/projects"  # Add the URL to the page you want to link to
+    url: "/projects" 
   - image_path: "https://images.unsplash.com/photo-1483546416237-76fd26bbcdd1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     alt: "Blogs Image"
     title: "Blogs"
     excerpt: "You'll find posts about programming, game design, 3D art, and 2D art. This space is dedicated to sharing my journey and discoveries in these areas."
     url: "/blogs"
   - image_path: "https://images.unsplash.com/photo-1515405295579-ba7b45403062?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    title: "Art"
+    title: "Arts"
     excerpt: "This page features a collection of my artistic creations, including VFX demonstrations, pixel art, and 2D illustrations."
-    url: "/art"
+    url: "/arts"
 feature_row2:
   - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
     alt: "placeholder image 2"
