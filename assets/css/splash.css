@@ -37,7 +37,7 @@
 
 /* Styling for the content inside the card */
 .archive__item-body {
-  padding: 30px; /* Increased padding for more space around the content */
+  padding: 20px 30px; /* Increased padding for more space around the content */
 }
 
 /* Title styling */
@@ -55,6 +55,11 @@
   margin-bottom: 20px; /* Increased margin for better spacing */
 }
 
+/* Override */
+.layout--splash #main {
+  margin-top: 0;
+}
+
 /* Responsive adjustments for smaller screens */
 @media (max-width: 1024px) {
   .feature__widget {
@@ -66,4 +71,11 @@
   .feature__widget {
     flex: 0 1 100%;
   }
+}
+
+.page__lead {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
 }

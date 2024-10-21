@@ -1,29 +1,51 @@
-2d:
-  - title: "Forest Scene"
-    description: "A vibrant forest painting."
-    image: "/assets/images/art/2d/forest_scene.jpg"
-    grid_size: "span 2"
-  - title: "Character Design"
-    description: "A character designed for a game."
-    image: "/assets/images/art/2d/character_design.png"
-    grid_size: "span 1"
+- type: "2D"
+  url: "/assets/images/arts/2d/Here_Comes_Hope.png"
+  image: "/assets/images/arts/2d/Here_Comes_Hope.png"
 
-vfx:
-  - title: "Fire Simulation"
-    description: "A real-time fire simulation."
-    image: "/assets/images/art/vfx/fire_simulation.gif"
-    grid_size: "span 2"
-  - title: "Explosion Effect"
-    description: "An explosion effect used in game cutscenes."
-    image: "/assets/images/art/vfx/explosion_effect.gif"
-    grid_size: "span 1"
+- type: "2D"
+  url: "/assets/images/arts/2d/Charlotte.png"
+  image: "/assets/images/arts/2d/Charlotte.png"
 
-pixel:
-  - title: "Pixel Knight"
-    description: "A pixel art knight character."
-    image: "/assets/images/art/pixel/pixel_knight.png"
-    grid_size: "span 1"
-  - title: "Arcade Scene"
-    description: "A retro arcade environment."
-    image: "/assets/images/art/pixel/arcade_scene.png"
-    grid_size: "span 2"
+- type: "2D"
+  url: "/assets/images/arts/2d/Viola.png"
+  image: "/assets/images/arts/2d/Viola.png"
+
+- type: "2D"
+  url: "/assets/images/arts/2d/2022_NTHU_ACG_Club_Poster.png"
+  image: "/assets/images/arts/2d/2022_NTHU_ACG_Club_Poster.png"
+
+- type: "2D"
+  url: "/assets/images/arts/2d/OBR.png"
+  image: "/assets/images/arts/2d/OBR.png"
+
+- type: "2D"
+  url: "/assets/images/arts/2d/ACR.png"
+  image: "/assets/images/arts/2d/ACR.png"
+
+- type: "2D"
+  url: "/assets/images/arts/2d/Fox_Plushie.png"
+  image: "/assets/images/arts/2d/Fox_Plushie.png"
+
+- type: "2D"
+  url: "/assets/images/arts/2d/20201216.png"
+  image: "/assets/images/arts/2d/20201216.png"
+
+- type: "Pixel"
+  url: "/assets/images/arts/pixel/After_Rain.png"
+  image: "/assets/images/arts/pixel/After_Rain.png"
+
+- type: "Pixel"
+  url: "/assets/images/arts/pixel/Charlotte_Pixel.png"
+  image: "/assets/images/arts/pixel/Charlotte_Pixel.png"
+
+- type: "Pixel"
+  url: "/assets/images/arts/pixel/Commander_1.gif"
+  image: "/assets/images/arts/pixel/Commander_1.gif"
+
+- type: "Pixel"
+  url: "/assets/images/arts/pixel/Commander_2.gif"
+  image: "/assets/images/arts/pixel/Commander_2.gif"
+
+- type: "VFX"
+  url: "/artss/vfx-example1"
+  image: "/assets/images/arts/vfx/vfx-example1.gif"
