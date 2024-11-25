@@ -1,3 +1,15 @@
+- title: "Physically Based Simulations"
+  image: "/assets/images/projects/simulations/thumbnail.png"
+  description: "Physically based simulations <br> with OpenGL and UE5"
+  url: "/projects/simulations"
+  type: personal
+
+- title: "Geometry Nodes"
+  image: "/assets/images/projects/geometry_nodes/Thumbnail.jpg"
+  description: "Using maths to create abstract geometry, <br> rendered with Cycles and Karma"
+  url: "/projects/geometry"
+  type: personal
+
 - title: "Deal Da Time"
   image: "/assets/images/projects/deal_da_time/logo.png"
   description: "A mini puzzle game <br> created for GMTK Jam 2023"

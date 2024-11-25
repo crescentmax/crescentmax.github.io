@@ -12,6 +12,17 @@ My long-term career goal is to become a senior game programmer or technical arti
 
 ---
 
+# Contact Me
+
+You can find me on the following platforms:
+
+- <i class="fas fa-envelope"></i> [**Email**](mailto:crescentmax@tamu.edu)
+- <i class="fab fa-linkedin"></i> [**LinkedIn**](https://www.linkedin.com/in/chengyan-tsai-69b804225/)
+- <i class="fab fa-itch-io"></i> [**Itch.io**](https://crescentmax.itch.io/)
+- <i class="fab fa-twitter"></i> [**Twitter**](https://x.com/crescent_max)
+
+---
+
 In my spare time, I love to play various kinds of games. 
 Here's a list of my fav:
 - **RPG:** Control, Watch Dogs, Witcher 3, Divinity: Original Sin 2, Dishonored series, Mirror's Edge Catalyst, Persona series, South Park: The Stick of Truth

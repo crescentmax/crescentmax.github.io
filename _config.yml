@@ -99,3 +99,5 @@ footer:
 sass:
   sass_dir: _sass
   quiet_deps: true
+
+destination: /home/max/PersonalPage/crescentmax/_site
