@@ -7,7 +7,7 @@ permalink: /projects/geometry
 I tried to learn Houdini and Blender Geometry Nodes to make stunning rendering results.
 
 
-<div style="text-align: center; margin-bottom: 2rem;">
+<div style="text-align: center; margin-bottom: 1.5rem; margin-bottom: 2rem;">
     <img src="{{ '/assets/images/projects/geometry_nodes/AbstractShape01.png' | relative_url }}" alt="Abstract Shape 01" style="margin-bottom: 1rem;">
     <img src="{{ '/assets/images/projects/geometry_nodes/AbstractShape02.png' | relative_url }}" alt="Abstract Shape 02" style="margin-bottom: 1rem;">
     <img src="{{ '/assets/images/projects/geometry_nodes/AbstractShape03.png' | relative_url }}" alt="Abstract Shape 03">

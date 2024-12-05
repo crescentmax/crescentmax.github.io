@@ -4,7 +4,7 @@
   flex-wrap: wrap;
   gap: 20px;
   justify-content: space-between;
-  margin-top: 40px; /* Adjust top margin of the card grid */
+  margin-top: 30px; /* Adjust top margin of the card grid */
   margin-bottom: 20px; 
 }
 
@@ -30,29 +30,35 @@
 .archive__item img {
   width: 100%;
   height: auto;
-  max-height: 180px;
+  max-height: 200px;
   object-fit: cover;
   border-radius: 8px 8px 0 0;
 }
 
 /* Styling for the content inside the card */
 .archive__item-body {
-  padding: 20px 30px; /* Increased padding for more space around the content */
+  padding: 10px 30px; /* Increased padding for more space around the content */
 }
 
 /* Title styling */
 .archive__item-title {
-  font-size: 0.9rem; /* Slightly larger title size */
+  font-size: 22px; /* Slightly larger title size */
   font-weight: bold;
-  margin: 10px 0 10px; /* Increased margin */
+  margin: 0; 
   color: #f0f0f0; /* Light text color for dark theme */
 }
 
+h2.archive__item-title {
+  margin-top: 20px;
+  font-size: 22px !important;
+}
+
 /* Excerpt styling */
-.archive__item-excerpt {
-  font-size: 0.6rem; /* Increased font size for readability */
-  color: #cccccc; /* Light gray text color for readability */
-  margin-bottom: 20px; /* Increased margin for better spacing */
+.archive__item-excerpt p {
+  font-size: 15px !important;
+  line-height: 26px;
+  color: #cfcfcf; /* Light gray text color for readability */
+  margin: 10px 0 20px 0;
 }
 
 /* Override */

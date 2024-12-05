@@ -36,14 +36,21 @@ body {
 /* Center the page content and remove any floats */
 .page {
   width: 100%; /* Full width */
-  max-width: 800px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
   padding-right: 15px;
 
-  /* Optional: for larger screens */
-  @include breakpoint($x-large) {
-    max-width: 800px; /* Constrain width to 1200px */
+  /* For medium screens (e.g., tablets) */
+  @media (max-width: 1024px) {
+    max-width: 800px;
+  }
+
+  /* For small screens (e.g., phones) */
+  @media (max-width: 768px) {
+    max-width: 80%; /* Scale based on the viewport */
+    padding-right: 10px;
+    padding-left: 10px;
   }
 
   .page__inner-wrap {
@@ -66,9 +73,10 @@ body {
 .page__title {
   line-height: 1.2;
   text-align: left; 
-  font-size: 1.5rem; /* Adjust title font size */
+  font-size: 32px; /* Adjust title font size */
   color: $text-color;
-
+  margin-top: 25px;
+  margin-bottom: 25px;
   margin-left: auto;
   margin-right: auto;
   max-width: 1200px;
@@ -84,52 +92,52 @@ body {
 
 /* General content styling for the post content */
 .page__content {
-  font-size: 0.7rem; /* Set base font size */
+  font-size: 16px; /* Set base font size */
   color: $text-color;
   
   
   /* Adjust heading sizes relative to the base font size */
   h1 {
-    font-size: 1.2rem;
+    font-size: 32px;
   }
   
   h2 {
-    font-size: 1.1rem; 
+    font-size: 28px;
   }
   
   h3 {
-    font-size: 1rem; /* Equivalent to 28px */
+    font-size: 24px; /* Equivalent to 28px */
   }
   
   h4 {
-    font-size: 0.9rem; /* Equivalent to 24px */
+    font-size: 22px; /* Equivalent to 24px */
   }
   
   h5 {
-    font-size: 0.85rem; /* Equivalent to 20px */
+    font-size: 18px;
   }
   
   h6 {
-    font-size: 0.8rem; /* Equivalent to 16px */
+    font-size: 18px;
   }
 
   p {
-    font-size: 0.7rem;
-    line-height: 1.3rem;
+    font-size: 18px;
+    line-height: 28px;
   }
 
   li {
-    font-size: 0.7rem;
+    font-size: 18px;
   }
 
   h1, h2, h3, h4, h5, h6 {
     text-align: left; /* Ensure headings are left-aligned */
-    margin-top: 1.2rem;
+    margin-top: 24px;
   }
 
   p, li, dl {
     text-align: left; /* Ensure paragraphs and lists are left-aligned */
-    margin-bottom: 0.2rem;
+    margin-bottom: 4px;
   }
 
   /* Center images inside the content */

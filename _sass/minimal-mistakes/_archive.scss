@@ -38,7 +38,7 @@
   color: $muted-text-color;
   border-bottom: 1px solid $border-color;
 
-  + .list__item .archive__item-title {
+  + .list__item {
     margin-top: 0.5em;
   }
 }
@@ -64,7 +64,6 @@
 /* remove border*/
 .page__content {
   .archive__item-title {
-    margin-top: 1em;
     border-bottom: none;
   }
 }
@@ -206,7 +205,6 @@
   }
 
   .archive__item-title {
-    margin-top: 0.5em;
     font-size: $type-size-5;
   }
 
@@ -274,7 +272,7 @@
   }
 
   .archive__item-body {
-    padding: 20px 30px;
+    padding: 10px 25px;
   }
 
   a.btn::before {
@@ -386,12 +384,9 @@
   }
 }
 
-/* Place inside an archive layout */
-
 .archive {
   .feature__wrapper {
     .archive__item-title {
-      margin-top: 0.25em;
       font-size: 1em;
     }
   }

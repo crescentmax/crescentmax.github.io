@@ -24,7 +24,7 @@ You can find me on the following platforms:
 ---
 
 In my spare time, I love to play various kinds of games. 
-Here's a list of my fav:
+Here's a list of my favorite games:
 - **RPG:** Control, Watch Dogs, Witcher 3, Divinity: Original Sin 2, Dishonored series, Mirror's Edge Catalyst, Persona series, South Park: The Stick of Truth
 - **FPS:** Borderlands series, Overwatch
 - **Strategy:** Stellaris, Against the Storm, Cities: Skyline, XCOM series
