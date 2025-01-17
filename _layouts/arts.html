@@ -26,6 +26,34 @@ title: Gallery
       </div>
     </section>
 
+    <!-- Texture Section -->
+    <section class="gallery-section">
+      <h2 class="section-title">Procedural Texture</h2>
+    
+      <!-- Slider Container -->
+      <div id="slider-texture" class="slider-container">
+        
+        <!-- Previous Button -->
+        <a class="prev" onclick="moveSlides(-1, 'texture')">&#10094;</a>
+    
+        <!-- Images from the YAML data -->
+        <div class="slider-images">
+          {% for item in site.data.arts %}
+            {% if item.type == "Texture" %}
+              <div class="slide-texture">
+                <a href="{{ item.url | relative_url }}">
+                  <img class="gallery-image" src="{{ item.image | relative_url }}" alt="Texture">
+                </a>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+    
+        <!-- Next Button -->
+        <a class="next" onclick="moveSlides(1, 'texture')">&#10095;</a>
+      </div>
+    </section>
+
     <!-- 2D Art Section -->
     <section class="gallery-section">
       <h2 class="section-title">2D Art</h2>

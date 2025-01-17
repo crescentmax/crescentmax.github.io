@@ -46,6 +46,22 @@
   url: "/assets/images/arts/pixel/Commander_2.gif"
   image: "/assets/images/arts/pixel/Commander_2.gif"
 
-- type: "VFX"
-  url: "/artss/vfx-example1"
-  image: "/assets/images/arts/vfx/vfx-example1.gif"
+- type: "Texture"
+  url: "/assets/images/arts/textures/Water_Textures_Caustics_GrayScale_8bit.png"
+  image: "/assets/images/arts/textures/Water_Textures_Caustics_GrayScale_8bit.png"
+
+- type: "Texture"
+  url: "/assets/images/arts/textures/Cloud_Textures_Cloud01_Grayscale_8bit.png"
+  image: "/assets/images/arts/textures/Cloud_Textures_Cloud01_Grayscale_8bit.png"
+
+- type: "Texture"
+  url: "/assets/images/arts/textures/Smoke_Textures_Smoke_Grayscale_8bit.png"
+  image: "/assets/images/arts/textures/Smoke_Textures_Smoke_Grayscale_8bit.png"
+
+- type: "Texture"
+  url: "/assets/images/arts/textures/Ornate_Fabric_basecolor.png"
+  image: "/assets/images/arts/textures/Ornate_Fabric_basecolor.png"
+
+- type: "Texture"
+  url: "/assets/images/arts/textures/Ornate_Fabric.png"
+  image: "/assets/images/arts/textures/Ornate_Fabric.png"

@@ -68,7 +68,8 @@
 }
 
 .slide-2D,
-.slide-pixel {
+.slide-pixel,
+.slide-texture {
   text-align: center;
 }
 

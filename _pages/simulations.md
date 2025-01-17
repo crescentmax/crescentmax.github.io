@@ -110,3 +110,41 @@ for diverse scenarios.
     <img src="{{ '/assets/images/projects/simulations/RigidbodyCollision04.gif' | relative_url }}" alt="Rigidbody Collision 04">
     <p style="text-align: center; font-style: italic;">Edge-Edge Collision Showcase</p>
 </div>
+
+### VI. Smoothed Particle Hydrodynamics
+The goal of this project is to create real-time realistic fluid simulation with smooth particle hydrodynamics (SPH). The system uses spatial partition to accelerate the simulation. There are 40 cells along each axis, and the size is close to 2-3 times of the particle size to achieve the best performance. The smoothing length, which is the range of kernel function is also 2-3 times of the particle size.
+<br><br>
+**Key features:**
++ Implemented with Unreal Niagara System and hlsl
++ Symmetric pressure Contribution
++ Collision detection with any static meshes in the scene
++ Supports user interactions
++ Supports both simple Euler integration and 4th order Runge-Kutta (RK4)
++ Post Processing for better rendering result
+<div style="text-align: center; margin-top: 1.5rem; margin-bottom: 1.5rem;">
+    <img src="{{ '/assets/images/projects/simulations/SPH20000.webp' | relative_url }}" alt="SPH20000">
+    <p style="text-align: center; font-style: italic;">Simulation with 20000 Particles <br> Each frame will only cost 0.5ms</p>
+</div>
+<div style="text-align: center; margin-bottom: 1.5rem;">
+    <img src="{{ '/assets/images/projects/simulations/SPHEuler.webp' | relative_url }}" alt="SPHEuler">
+    <p style="text-align: center; font-style: italic;">Euler Integration (Unstable)</p>
+</div>
+<div style="text-align: center; margin-bottom: 1.5rem;">
+    <img src="{{ '/assets/images/projects/simulations/SPHRK4.webp' | relative_url }}" alt="SPHRK4">
+    <p style="text-align: center; font-style: italic;">RK4 Integration (Stable)</p>
+</div>
+<div style="text-align: center; margin-bottom: 1.5rem;">
+    <img src="{{ '/assets/images/projects/simulations/SPHInteract.webp' | relative_url }}" alt="SPHInteract">
+    <p style="text-align: center; font-style: italic;">Interact with Particles</p>
+</div>
+
+In order to improve the rendering result, the water material combines 3 passes
+to get the final result.
+<div style="text-align: center; margin-top: 1.5rem; margin-bottom: 1.5rem;">
+    <img src="{{ '/assets/images/projects/simulations/SPHPostProcessing.png' | relative_url }}" alt="SPHPostProcessing">
+    <p style="text-align: center; font-style: italic;">Post Processing Process</p>
+</div>
+<div style="text-align: center; margin-bottom: 1.5rem;">
+    <img src="{{ '/assets/images/projects/simulations/SPHWater.webp' | relative_url }}" alt="SPHWater">
+    <p style="text-align: center; font-style: italic;">Result after Post Processing</p>
+</div>
