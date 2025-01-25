@@ -8,9 +8,10 @@ The following showcases were completed as part of the **CSCE 649: Physically Bas
 His excellent teaching helped me gain valuable insights into implementing and optimizing simulation algorithms. 
 All simulations were implemented using either **OpenGL** or **Unreal Engine 5 (Niagara and GLSL)**.
 
+---
 ## I. Bouncing Ball
 This project features a simple bouncing ball simulation. The simulation and rendering steps are decoupled, ensuring the frame rate remains unaffected when adjusting the simulation step.<br><br>
-**Key features:**
+**Key Features:**
 + Continuous collision detection
 + Rest state detection
 + Decoupled simulation step and rendering step
@@ -21,12 +22,12 @@ This project features a simple bouncing ball simulation. The simulation and rend
     <p style="text-align: center; font-style: italic;">Bouncing Ball in a Box</p>
 </div>
 
-
+---
 ## II. Particle System
 This project demonstrates a flame simulation powered by a robust particle system. The simulation ran smoothly on my laptop 
 *(RTX 3060, i5-11300H, 8GB RAM)* with up to 5,000 particles, handling thousands of particles and a mesh with approximately a thousand faces.
 <br><br>
-**Key features:**
+**Key Features:**
 + Collision detection for particles
 + Particles with initial attributes including position, velocity, lifespan, and color based on temprature
 + Initial attributes drawn from a probability distribution
@@ -39,11 +40,11 @@ This project demonstrates a flame simulation powered by a robust particle system
     <p style="text-align: center; font-style: italic;">Flame Particle Collision with Complex Mesh</p>
 </div>
 
-
+---
 ### III. Flocking System / Boid
 This project showcases a flocking simulation implemented in Unreal Engine using the Niagara system. By leveraging the **NeighborGrid3D**, each particle queries the states of its neighbors, enabling behavior influenced only by nearby particles while ignoring distant ones. The system emulates natural flocking dynamics with rules such as separation, alignment, cohesion, and obstacle avoidance.
 <br><br>
-**Key features:**
+**Key Features:**
 + Spatial subdivision with NeighborGrid3D
 + Particles that make their own independent decisions 
 + Rules that produce a flocking behavior (Separation, Alignment, Cohesion)
@@ -68,11 +69,11 @@ This project showcases a flocking simulation implemented in Unreal Engine using 
     <p style="text-align: center; font-style: italic;">General Fish Behavior Showcase</p>
 </div>
 
-
+---
 ### IV. Softbody
 This project demonstrates a softbody simulation using pendulum constraint. The vertices are colored based the external forces acting on them. Elasticity is acheived by spawning particles on the surface of a mesh and constraining them with a pendulum system. This approach establishes springs between each particle and the pendulum center, forming a mass-spring-damper system. The physics calculations are resolved and used to deform the mesh via world position offsets, resulting in a springy, flexible structure.
 <br><br>
-**Key features:**
+**Key Features:**
 + Object defined using particles with mass
 + Mass-spring-damper system
 + Supports both simple Euler integration and 4th order Runge-Kutta (RK4)
@@ -81,6 +82,7 @@ This project demonstrates a softbody simulation using pendulum constraint. The v
     <p style="text-align: center; font-style: italic;">Softbody Simulation with Pendulum Constraint</p>
 </div>
 
+---
 ### V. Rigidbody Simulation
 This project features a rigidbody simulation with realistic collision handling. 
 Both face-vertex and edge-edge collision cases are supported, along with precise 
@@ -88,7 +90,7 @@ responses that incorporate velocity and inertia for accurate physical interactio
 The system supports multiple objects and complex interactions, making it versatile 
 for diverse scenarios. 
 <br><br>
-**Key features:**
+**Key Features:**
 + Continuous collision detection
 + Rest state detection
 + Supports face-vertex, edge-edge collision detection and collision response
@@ -111,10 +113,11 @@ for diverse scenarios.
     <p style="text-align: center; font-style: italic;">Edge-Edge Collision Showcase</p>
 </div>
 
+---
 ### VI. Smoothed Particle Hydrodynamics
 The goal of this project is to create real-time realistic fluid simulation with smooth particle hydrodynamics (SPH). The system uses spatial partition to accelerate the simulation. There are 40 cells along each axis, and the size is close to 2-3 times of the particle size to achieve the best performance. The smoothing length, which is the range of kernel function is also 2-3 times of the particle size.
 <br><br>
-**Key features:**
+**Key Features:**
 + Implemented with Unreal Niagara System and hlsl
 + Symmetric pressure Contribution
 + Collision detection with any static meshes in the scene

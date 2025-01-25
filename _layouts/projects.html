@@ -9,8 +9,8 @@ title: Projects
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <!-- Title -->
     <h1 class="page__title">{{ page.title }}</h1>
-
-    <!-- Work Projects Section -->
+    
+    <!-- Work Projects Section 
     <section class="project-section">
       <h2 class="section-title">Work Projects</h2>
       <div class="project-grid">
@@ -29,10 +29,11 @@ title: Projects
         {% endfor %}
       </div>
     </section>
+    -->
 
     <!-- Personal Projects Section -->
     <section class="project-section">
-      <h2 class="section-title">Personal Projects</h2>
+      <!-- <h2 class="section-title">Personal Projects</h2>-->
       <div class="project-grid">
         {% for project in site.data.projects %}
           {% if project.type == "personal" %}
