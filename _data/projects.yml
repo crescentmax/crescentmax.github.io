@@ -25,7 +25,7 @@
 - title: "Orbitone"
   image: "/assets/images/projects/orbitone/image.png"
   description: "A VR rhythm game <br> made with Unity"
-  url: "https://youtu.be/KIr_CQgP_Xo"
+  url: "/projects/orbitone"
   type: personal
 
 - title: "Geometry Nodes"
