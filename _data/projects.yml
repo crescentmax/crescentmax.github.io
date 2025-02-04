@@ -2,19 +2,19 @@
   image: "/assets/images/projects/AAA/ue.jpg"
   description: "A multiplayer action RPG <br> made with UE5"
   url: "/projects/AAA"
-  type: personal
+  type: highlight
 
 - title: "Physically Based Simulations"
   image: "/assets/images/projects/simulations/thumbnail.png"
   description: "Physically based simulations <br> with OpenGL and UE5"
   url: "/projects/simulations"
-  type: personal
+  type: highlight
 
 - title: "Lucid Dive"
   image: "/assets/images/projects/lucid_dive/MainMenuBg.png"
   description: "A 2D cyberpunk platformer <br> made with Unity"
   url: "https://chocola-mint.itch.io/lucid-dive"
-  type: personal  
+  type: highlight  
 
 - title: "Project Kyzen"
   image: "/assets/images/projects/kyzen/kyzen.jpeg"
