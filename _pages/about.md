@@ -4,11 +4,27 @@ layout: post
 permalink: /about/
 ---
 
-Hi, my name is Chengyan Tsai. I am a dedicated game developer with a strong passion for VFX, computer graphics, gameplay programming, and drawing. I am currently pursuing a Master of Computer Science at Texas A&M University, where I have further developed my skills in C/C++, Python, and Unreal Engine. 
+<div style="align-items: start; overflow: hidden;">
+  <img src="/assets/images/about/pic.jpg" alt="Chengyan Tsai" style="width: 400px; float: right; margin:1em; margin-top: 1.5em;">
+  <div>
+    <p>
+      Chengyan Tsai is a dedicated game developer with a strong passion for VFX, computer graphics, gameplay programming, and drawing. 
+      He is currently pursuing a <em>Master of Computer Science</em> at Texas A&M University and serves as a research assistant at the 
+      <a href="https://softinteraction.com/">Soft Interaction Lab</a>.
+    </p>
 
-I began my game dev journey as an undergraduate at National Tsing Hua University. I co-founded the NTHU Game Developer Club, organizing workshops and industry lectures for over 300 members. I also served as a lecturer for the NTHU ACG Club, delivering workshops on gesture drawing and color theory.
+    <p>
+        Previously, he worked as a full-time game programmer at <em>Winking Studios</em>, where he collaborated with international agile teams 
+        on projects such as Project Kyzen and an early-stage AAA title. In these roles, he played a critical part in implementing three core 
+        gameplay systems and designing tools to streamline team workflows. During his time at <em>National Tsing Hua University</em>, he 
+        co-founded the <em>NTHU Game Developer Club</em>, organizing workshops and industry lectures for a community of over 300 members.
+    </p>
+  </div>
+</div>
 
-My long-term career goal is to become a senior game programmer or technical artist, crafting engaging and immersive virtual worlds.
+
+
+With a long-term goal of becoming a senior game programmer or technical artist, Chengyan aims to craft engaging and immersive virtual worlds that push the boundaries of interactive experiences.
 
 ---
 
@@ -21,14 +37,3 @@ You can find me on the following platforms:
 - <i class="fab fa-itch-io"></i> [**Itch.io**](https://crescentmax.itch.io/)
 - <i class="fab fa-twitter"></i> [**Twitter**](https://x.com/crescent_max)
 
----
-
-In my spare time, I love to play various kinds of games. 
-Here's a list of my favorite games:
-- **RPG:** Control, Watch Dogs, Witcher 3, Divinity: Original Sin 2, Dishonored series, Mirror's Edge Catalyst, Persona series, South Park: The Stick of Truth
-- **FPS:** Borderlands series, Overwatch
-- **Strategy:** Stellaris, Against the Storm, Cities: Skyline, XCOM series
-- **Cards:** Slay the Spire, Inscryption, Chrono Ark, Yugioh
-- **Roguelike:** The Binding of Isaac: Rebirth, Risk of Rain 2, Faster Than Light
-- **Driving:** Euro Truck Simulator 2, Froza Horizon 4
-- **Others:** Danganronpa 1&2, Abiotic Factor, Arknights
