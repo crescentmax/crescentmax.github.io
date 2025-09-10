@@ -8,7 +8,15 @@ permalink: /projects/orbitone
 <br><br>
 In this project, I was primarily responsible for design and testing, while also contributing to programming tasks.
 <br><br>
-[Watch Demo](https://youtu.be/KIr_CQgP_Xo)
+
+<div style="text-align:center;">
+  <iframe width="560" height="315"
+          src="https://www.youtube.com/embed/KIr_CQgP_Xo"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+  </iframe>
+</div>
 
 ---
 ## I. Main Idea

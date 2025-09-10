@@ -61,6 +61,9 @@ defaults:
 year_archive:
   enabled: false
 
+heading_anchors: false
+
+
 footer:
   links:
     - label: "LinkedIn"
@@ -88,17 +91,15 @@ footer:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor
+  
 sass:
   sass_dir: _sass
   quiet_deps: true
