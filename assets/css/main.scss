@@ -1,16 +1,78 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
 search: false
 ---
 
 @charset "utf-8";
 
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
-@import "minimal-mistakes"; // main partials
+@import "minimal-mistakes/skins/dark";
+@import "minimal-mistakes";
+
 
 .page__content a.header-link,
 .page__content a.anchorjs-link,
 .page__content a.direct-link {
   display: none !important;
   visibility: hidden !important;
+}
+
+/* --- Full-width TAMU Banner Polished --- */
+.tamu-banner-wrapper {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0,0,0,0.55)),
+    url('/assets/images/home/LabVR.webp');
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+  padding: 0.5rem 1rem;
+  min-height: 100px; 
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  border-radius: 0.4rem;
+}
+
+.tamu-banner-content {
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  max-width: 960px;     
+  margin: 0 auto;       
+  padding: 0.5rem 1rem;  
+}
+
+.tamu-banner-content h2 {
+  font-size: 1.2rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  text-align: center;
+}
+
+.tamu-banner-content p {
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
+
+/* TAMU Maroon Button */
+.tamu-banner-content .btn {
+  font-size: 0.85rem;
+  padding: 0.5rem 1rem;
+  background-color: #500000 !important;
+  color: #fff !important;
+  border: none;
+  border-radius: 0.3rem;
+  transition: background-color 0.2s ease;
+}
+
+.tamu-banner-content .btn:hover {
+  background-color: #330000 !important;
 }

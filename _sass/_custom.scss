@@ -1,0 +1,54 @@
+/* Custom extras for Solarized Dark */
+$heading-color: $yellow;
+$highlight-color: $cyan;
+
+h1, h2, h3 {
+  color: $heading-color;
+}
+
+a:hover, a:focus {
+  color: lighten($primary-color, 10%);
+  text-decoration: underline;
+}
+
+blockquote {
+  background: mix($base02, $background-color, 60%);
+  border-left: 4px solid $highlight-color;
+  color: $base1;
+}
+
+table {
+  background: $table-background-color;
+  border-color: $table-border-color;
+  th, td { border-color: $table-border-color; }
+  tr:nth-child(odd) { background: mix($table-background-color, $base02, 85%); }
+}
+
+pre, code, kbd, samp {
+  color: $code-text-color;
+  background: $code-background-color;
+}
+
+.site-title, .site-title:visited {
+  color: $base3;
+}
+
+.page__content h2 .header-link, 
+.page__content h3 .header-link {
+  color: $highlight-color;
+}
+
+/* Buttons */
+.btn, .btn--primary {
+  background: $button-background-color;
+  color: $button-color;
+  border-color: transparent;
+}
+.btn:hover { filter: brightness(1.1); }
+
+/* Search and forms */
+input, textarea, select {
+  background: mix($base02, $background-color, 85%);
+  color: $base1;
+  border-color: $border-color;
+}

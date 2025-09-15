@@ -1,7 +1,5 @@
 
----
-Basic blueprint communication methods.
-
+Blueprint communication lets Unreal Engine objects interact through direct references, interfaces, or event dispatchers.
 ---
 
 ## **I. Intro**

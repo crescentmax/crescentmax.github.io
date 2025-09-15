@@ -35,5 +35,5 @@ You can find me on the following platforms:
 - <i class="fas fa-envelope"></i> [**Email**](mailto:crescentmax@tamu.edu)
 - <i class="fab fa-linkedin"></i> [**LinkedIn**](https://www.linkedin.com/in/chengyan-tsai-69b804225/)
 - <i class="fab fa-itch-io"></i> [**Itch.io**](https://crescentmax.itch.io/)
-- <i class="fab fa-twitter"></i> [**Twitter**](https://x.com/crescent_max)
+- <i class="fab fa-twitter"></i> [**Twitter**](https://x.com/crescent_maxx)
 

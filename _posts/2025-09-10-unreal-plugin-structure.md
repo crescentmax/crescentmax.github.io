@@ -1,6 +1,5 @@
 
----
-Unreal C++ plugin
+Basic structure and configurations of an unreal engine C++ plugin.
 
 ---
 

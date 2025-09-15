@@ -1,22 +1,4 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
+# LISTEN_GEM_USE_POLLING=1 bundle exec jekyll serve --livereload --force_polling
 
 title: Chengyan Tsai / Max
 email: crescentmax@tamu.edu
@@ -30,9 +12,10 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 # Build settings
+theme: minimal-mistakes-jekyll
 exclude:
   - minimal-mistakes
-remote_theme: "mmistakes/minimal-mistakes@4.26.2"
+# remote_theme: "mmistakes/minimal-mistakes@4.26.2"
 minimal_mistakes_skin: dark
 plugins:
   - jekyll-feed
@@ -89,7 +72,7 @@ footer:
 #
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
-# 
+#
 exclude:
   - .sass-cache/
   - .jekyll-cache/
@@ -98,7 +81,10 @@ exclude:
   - Gemfile.lock
   - node_modules/
   - vendor
+  
 sass:
+  silence_deprecations:
+    - import
   sass_dir: _sass
   quiet_deps: true
 

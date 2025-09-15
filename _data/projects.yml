@@ -16,6 +16,12 @@
   url: "https://chocola-mint.itch.io/lucid-dive"
   type: highlight  
 
+- title: "Retail Digital Twin"
+  image: "/assets/images/projects/digital_twin_retail/Overview.png"
+  description: "A digital twin of a convenience store <br> made with Unreal"
+  url: "/projects/retail"
+  type: highlight 
+
 - title: "Project Kyzen"
   image: "/assets/images/projects/kyzen/kyzen.jpeg"
   description: "A fast-paced multiplayer third-person game"

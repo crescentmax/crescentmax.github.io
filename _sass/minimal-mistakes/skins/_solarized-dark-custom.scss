@@ -1,0 +1,48 @@
+/* ==========================================================================
+   Solarized Dark (custom) skin for Minimal Mistakes
+   Drop this file at: _sass/minimal-mistakes/skins/_solarized-dark-custom.scss
+   Then set `minimal_mistakes_skin: "solarized-dark-custom"` in _config.yml
+   ========================================================================== */
+
+$base03: #002b36;
+$base02: #073642;
+$base01: #586e75;
+$base00: #657b83;
+$base0:  #839496;
+$base1:  #93a1a1;
+$base2:  #eee8d5;
+$base3:  #fdf6e3;
+
+$yellow:  #b58900;
+$orange:  #cb4b16;
+$red:     #dc322f;
+$magenta: #d33682;
+$violet:  #6c71c4;
+$blue:    #268bd2;
+$cyan:    #2aa198;
+$green:   #859900;
+
+/* Core palette mappings */
+$background-color:           $base03 !default;
+$text-color:                 $base1  !default;   // main body text
+$muted-text-color:           $base0  !default;   // secondary text
+$primary-color:              $blue   !default;   // links, accents
+$link-color:                 $primary-color !default;
+$border-color:               mix(#fff, $background-color, 12%) !default;
+
+$masthead-background-color:  $base02 !default;
+$masthead-link-color:        $base1  !default;
+$navicon-link-color-hover:   $primary-color !default;
+
+$footer-background-color:    $base02 !default;
+
+$button-color:               $base3  !default;
+$button-background-color:    $primary-color !default;
+
+$code-background-color:      $base02 !default;
+$code-text-color:            $base1  !default;
+
+/* Optional extras for better contrast in dark mode */
+$notice-background:          mix($base02, $background-color, 50%) !default;
+$table-background-color:     $base03 !default;
+$table-border-color:         $border-color !default;

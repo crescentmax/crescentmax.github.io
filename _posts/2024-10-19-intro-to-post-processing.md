@@ -1,4 +1,4 @@
-Introduction of post processing volume properties.
+Post processing in Unreal Engine that enhances the visual quality.
 
 ---
 

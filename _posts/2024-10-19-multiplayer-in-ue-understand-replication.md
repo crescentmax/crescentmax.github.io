@@ -1,7 +1,7 @@
 ---
 title: Multiplayer in UE - Understand Replication
 ---
-Multiplayer foundation of UE.
+Replication keeps actors and gameplay state synchronized across clients and servers in multiplayer sessions.
 
 ---
 
