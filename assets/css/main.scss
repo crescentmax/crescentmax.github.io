@@ -6,7 +6,7 @@ search: false
 
 @import "minimal-mistakes/skins/dark";
 @import "minimal-mistakes";
-
+@import "custom";
 
 .page__content a.header-link,
 .page__content a.anchorjs-link,
@@ -50,6 +50,7 @@ search: false
 }
 
 .tamu-banner-content h2 {
+  color: #fff !important;
   font-size: 1.2rem;
   margin-top: 0.2rem;
   margin-bottom: 0.2rem;

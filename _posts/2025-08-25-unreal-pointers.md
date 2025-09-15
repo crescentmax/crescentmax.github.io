@@ -1,34 +1,33 @@
 
 Unreal provides different pointer types to manage references, garbage collection, and asset loading safely.
+
 ---
 
-# Pointers
-
-## 1. Raw Pointers `UObject*`
+## 1. Raw Pointers (UObject*)
 
 - Just a plain C++ pointer.
 - Unreal's **GC (Garbage Collector)** does *not* know about it unless it’s marked with `UPROPERTY()`.
 
-## 2. `TObjectPtr<T>`
+## 2. TObjectPtr<T>
 
 - Gives GC metadata about your reference, but behaves like a raw pointer in code.
 - Safest general choice for “normal references” in UE5.
 - Blueprint-visible variables use this under the hood.
 
-## 3. `TWeakObjectPtr<T>`
+## 3. TWeakObjectPtr<T>
 
 - Non-owning reference to a UObject. **Does not keep the object alive.**
 - GC can safely collect the object → the pointer auto-resets to `nullptr`.
 - Before using, you must check `.IsValid()`.
 
-## 4. `TSoftObjectPtr<T>`
+## 4. TSoftObjectPtr<T>
 
 - Stores a reference by **asset path**, not a direct pointer.
 - Object doesn’t need to be loaded — you can load it on demand (sync or async)
 - Common in asset references (UI images, config data, etc)
 - `TLazyObjectPtr` will be deprecated in a future engine version and new features should use `TSoftObjectPtr` instead.
 
-## 5. `TSoftClassPtr<T>`
+## 5. TSoftClassPtr<T>
 
 - Like `TSoftObjectPtr`, but for classes.
 - Useful when you want to reference a Blueprint class without loading it until needed.

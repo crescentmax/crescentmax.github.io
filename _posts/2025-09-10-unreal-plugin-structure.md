@@ -3,8 +3,6 @@ Basic structure and configurations of an unreal engine C++ plugin.
 
 ---
 
-# Unreal Plugin Structure
-
 ## 1. Core Concepts
 
 ### Plugin
