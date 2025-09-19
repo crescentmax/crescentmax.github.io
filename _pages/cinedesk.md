@@ -18,6 +18,10 @@ By combining intuitive controls with flexible visualization capabilities, CineDe
 ---
 ## Touch Input
 
+<div style="text-align: center; margin-top: 1.5rem; margin-bottom: 1.5rem;">
+    <img src="{{ '/assets/images/projects/cinedesk/cinedesk-camera.gif' | relative_url }}" alt="Prototype" style="width: 100%;">
+    <p style="text-align: center; font-style: italic;">Camera navigation with the touch input interface</p>
+</div>
 
 ---
 ## Tangible Object Input
@@ -38,4 +42,9 @@ Much like a joystick, the Spacemouse enables smooth translation, rotation, and n
 <div style="text-align: center; margin-top: 1.5rem; margin-bottom: 1.5rem;">
     <img src="{{ '/assets/images/projects/cinedesk/camera-view.webp' | relative_url }}" alt="Prototype" style="width: 90%;">
     <p style="text-align: center; font-style: italic;">Camera Preview <br> The system supports multiple inputs simultaneously</p>
+</div>
+
+<div style="text-align: center; margin-top: 1.5rem; margin-bottom: 1.5rem;">
+    <img src="{{ '/assets/images/projects/cinedesk/cinedesk-camera.gif' | relative_url }}" alt="Prototype" style="width: 100%;">
+    <p style="text-align: center; font-style: italic;">Adjust camera settings with the touch input interface</p>
 </div>
