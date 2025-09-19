@@ -10,6 +10,26 @@ title: Projects
     <!-- Title -->
     <h1 class="page__title">{{ page.title }}</h1>
     
+    <!-- Work Projects Section -->
+    <section class="project-section">
+      <h2 class="section-title">Work Projects</h2>
+      <div class="project-grid">
+        {% for project in site.data.projects %}
+          {% if project.type == "work" %}
+            <div class="project-card">
+              <a href="{{ project.url | relative_url }}">
+                <img class="project-image" src="{{ project.image | relative_url }}" alt="{{ project.title }}">
+                <div class="project-content">
+                  <h3 class="project-title">{{ project.title }}</h3>
+                  <p class="project-description">{{ project.description }}</p>
+                </div>
+              </a>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </section>
+
     <!-- Highlight Section -->
     <section class="project-section">
       <h2 class="section-title">Highlight</h2>
@@ -29,11 +49,10 @@ title: Projects
         {% endfor %}
       </div>
     </section>
-    
 
     <!-- Personal Projects Section -->
     <section class="project-section">
-      <h2 class="section-title">All Projects</h2>
+      <h2 class="section-title">Side Projects</h2>
       <div class="project-grid">
         {% for project in site.data.projects %}
           {% if project.type == "personal" %}

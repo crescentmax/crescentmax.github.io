@@ -18,15 +18,12 @@ search: false
 /* --- Full-width TAMU Banner Polished --- */
 .tamu-banner-wrapper {
   position: relative;
-  width: 100vw;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  width: 100%;
+  margin: 0 auto;
   background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0,0,0,0.55)),
     url('/assets/images/home/LabVR.webp');
   background-size: cover;
-  background-position: center 30%;
+  background-position: center 25%;
   background-repeat: no-repeat;
   padding: 0.5rem 1rem;
   min-height: 100px; 

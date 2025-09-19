@@ -1,8 +1,26 @@
+- title: "CineDesk"
+  image: "/assets/images/projects/cinedesk/cinedesk.webp"
+  description: "A virtual production tool for pre-viz <br> made with Unreal"
+  url: "/projects/cinedesk"
+  type: work
+
 - title: "Unannounced AAA Project"
   image: "/assets/images/projects/AAA/ue.jpg"
   description: "A multiplayer action RPG <br> made with UE5"
   url: "/projects/AAA"
-  type: highlight
+  type: work
+
+- title: "Project Kyzen"
+  image: "/assets/images/projects/kyzen/kyzen.jpeg"
+  description: "A fast-paced multiplayer third-person game"
+  url: "https://projectkyzen.io/"
+  type: work
+
+- title: "Retail Digital Twin"
+  image: "/assets/images/projects/digital_twin_retail/Overview.png"
+  description: "A digital twin of a convenience store <br> made with Unreal"
+  url: "/projects/retail"
+  type: highlight 
 
 - title: "Physically Based Simulations"
   image: "/assets/images/projects/simulations/thumbnail.png"
@@ -14,19 +32,7 @@
   image: "/assets/images/projects/lucid_dive/MainMenuBg.png"
   description: "A 2D cyberpunk platformer <br> made with Unity"
   url: "https://chocola-mint.itch.io/lucid-dive"
-  type: highlight  
-
-- title: "Retail Digital Twin"
-  image: "/assets/images/projects/digital_twin_retail/Overview.png"
-  description: "A digital twin of a convenience store <br> made with Unreal"
-  url: "/projects/retail"
-  type: highlight 
-
-- title: "Project Kyzen"
-  image: "/assets/images/projects/kyzen/kyzen.jpeg"
-  description: "A fast-paced multiplayer third-person game"
-  url: "https://projectkyzen.io/"
-  type: personal
+  type: highlight
 
 - title: "Orbitone"
   image: "/assets/images/projects/orbitone/image.png"
@@ -57,4 +63,3 @@
   description: "A turn-based strategy game <br> made with Unity"
   url: "https://chocola-mint.itch.io/operation-stardust"
   type: personal
-

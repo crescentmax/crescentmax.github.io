@@ -1,12 +1,29 @@
-/* Custom header color for Markdown page headers */
-$page-header-color: #d5cd5c;
-
-.page__content h1,
-.page__content h2 {
-  color: $page-header-color !important;
+/* Force post content headers yellow */
+body.layout--post .page__content h1,
+body.layout--post .page__content h2 {
+  color: #96d7ec !important;
 }
 
-/* Also update the little anchor link icons next to headings */
-.page__content .header-link {
-  color: $page-header-color !important;
+/* Header link anchors */
+body.layout--post .page__content .header-link {
+  color: #96d7ec !important;
+}
+
+/* Post hero title */
+body.layout--post .page__title {
+  color: #96d7ec !important;
+}
+
+body.layout--single:not(.page-about):not(.page-blogs) .page__title,
+body.layout--single:not(.page-about):not(.page-blogs) .page__content h1,
+body.layout--single:not(.page-about):not(.page-blogs) .page__content h2{
+  color: #96d7ec !important;
+}
+
+.archive__item-title a {
+  color: #96d7ec !important;   /* your light blue */
+}
+
+.archive__item-title a:hover {
+  color: lighten(#96d7ec, 15%) !important;  /* lighter on hover */
 }

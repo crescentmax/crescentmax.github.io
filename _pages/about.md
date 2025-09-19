@@ -1,11 +1,11 @@
 ---
 title: "About Me"
-layout: post
+layout: single 
 permalink: /about/
 ---
 
 <div style="align-items: start; overflow: hidden;">
-  <img src="/assets/images/about/pic.jpg" alt="Chengyan Tsai" style="width: 400px; float: right; margin:1em; margin-top: 1.5em;">
+  <img src="/assets/images/about/vizpic.jpg" alt="Chengyan Tsai" style="width: 400px; float: right; margin:1em; margin-top: 1.5em;">
   <div>
     <p>
       Chengyan Tsai is a dedicated game developer with a strong passion for VFX, computer graphics, gameplay programming, and drawing. 

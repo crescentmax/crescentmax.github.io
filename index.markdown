@@ -5,8 +5,10 @@ date: 2024-10-15T20:27:00-05:00
 permalink: /
 header:
   overlay_color: "#000"
-  overlay_filter: "0.4"
-  overlay_image: /assets/images/home/header.jpg
+  overlay_filter: "0.6"
+  overlay_image: /assets/images/home/MSC.jpg
+  min_height: 35vh
+  background_position: "center 48%"
 excerpt: "Software Engineer, Game Developer, and Artist."
 intro: 
   - excerpt: 'Nullam suscipit et nam, tellus velit pellentesque at malesuada, enim eaque. Quis nulla, netus tempor in diam gravida tincidunt, *proin faucibus* voluptate felis id sollicitudin. Centered with `type="center"`'
@@ -55,7 +57,7 @@ feature_row4:
 <!-- 🚩 Texas A&M full-width banner -->
 <div class="tamu-banner-wrapper">
   <div class="tamu-banner-content">
-    <h2>🚀 Featured by Texas A&M</h2>
+    <h2>🚀 Featured by Texas A&M!</h2>
     <p>Discover how our immersive tools are changing the way we teach and learn.</p>
     <a href="https://stories.tamu.edu/stories/texas-am-professor-uses-immersive-technology-to-push-the-limits-of-teaching/"
        class="btn btn--primary" target="_blank" rel="noopener">
