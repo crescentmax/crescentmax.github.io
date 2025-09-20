@@ -5,8 +5,9 @@ date: 2024-10-15T20:27:00-05:00
 permalink: /
 header:
   overlay_color: "#000"
-  overlay_filter: "0.6"
+  overlay_filter: "0.50"
   overlay_image: /assets/images/home/MSC.jpg
+  overlay_text_shadow: true
   min_height: 35vh
   background_position: "center 48%"
 excerpt: "Software Engineer, Game Developer, and Artist."

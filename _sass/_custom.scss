@@ -27,3 +27,58 @@ body.layout--single:not(.page-about):not(.page-blogs) .page__content h2{
 .archive__item-title a:hover {
   color: lighten(#96d7ec, 15%) !important;  /* lighter on hover */
 }
+
+
+/* Bigger table text */
+table {
+  font-size: 0.9rem;       /* bump table text above body */
+  line-height: 1.6;
+}
+
+/* Table header */
+table th {
+  font-weight: 600;
+  font-size: 0.8rem;      /* slightly bigger than td */
+  padding: 0.3em 0.7em;
+}
+
+/* Table body cells */
+table td {
+  font-weight: 400;
+  font-size: 0.7rem;       /* bigger than body */
+  padding: 0.3em 0.7em;
+  vertical-align: top;
+}
+
+/* Inline code inside tables */
+table td code,
+table th code {
+  font-size: 0.6rem;       /* smaller than surrounding text */
+  padding: 0.3em 0.7em;
+}
+
+/*---------- Fonts ----------*/
+
+/* Body text → Light */
+body,
+.page__content,
+p,
+li {
+  font-weight: 300;  /* Regular */
+}
+
+/* Headings and bold → SemiBold */
+h1, h2, h3, h4, h5, h6,
+.page__title,
+strong, b {
+  font-weight: 600;  /* SemiBold */
+}
+
+.site-title {
+  font-weight: 600;   /* SemiBold */
+  letter-spacing: -0.5px; /* optional: tighter, modern look */
+}
+
+.archive__item-title {
+  font-weight: 600 !important;
+}

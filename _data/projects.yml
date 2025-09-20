@@ -31,7 +31,7 @@
 - title: "Lucid Dive"
   image: "/assets/images/projects/lucid_dive/MainMenuBg.png"
   description: "A 2D cyberpunk platformer <br> made with Unity"
-  url: "https://chocola-mint.itch.io/lucid-dive"
+  url: "/projects/luciddive"
   type: highlight
 
 - title: "Orbitone"
