@@ -10,61 +10,79 @@ title: Projects
     <!-- Title -->
     <h1 class="page__title">{{ page.title }}</h1>
     
-    <!-- Work Projects Section -->
+    <!-- Professional and collaborative work -->
     <section class="project-section">
-      <h2 class="section-title">Work Projects</h2>
+      <h2 class="section-title">Professional &amp; collaborative work</h2>
       <div class="project-grid">
         {% for project in site.data.projects %}
           {% if project.type == "work" %}
-            <div class="project-card">
-              <a href="{{ project.url | relative_url }}">
+            <article class="project-card">
+              <a href="{{ project.url | relative_url }}"{% if project.url contains '://' %} target="_blank" rel="noopener"{% endif %}>
                 <img class="project-image" src="{{ project.image | relative_url }}" alt="{{ project.title }}">
                 <div class="project-content">
                   <h3 class="project-title">{{ project.title }}</h3>
                   <p class="project-description">{{ project.description }}</p>
+                  <div class="project-footer">
+                    <span class="project-tags">
+                      {% for tag in project.tags %}<span class="project-tag">{{ tag }}</span>{% endfor %}
+                    </span>
+                    <span class="project-link">View project ↗</span>
+                  </div>
                 </div>
               </a>
-            </div>
+            </article>
           {% endif %}
         {% endfor %}
       </div>
     </section>
 
-    <!-- Highlight Section -->
+    <!-- Research and technical studies -->
     <section class="project-section">
-      <h2 class="section-title">Highlight</h2>
+      <h2 class="section-title">Research &amp; technical studies</h2>
       <div class="project-grid">
         {% for project in site.data.projects %}
           {% if project.type == "highlight" %}
-            <div class="project-card">
-              <a href="{{ project.url | relative_url }}">
+            <article class="project-card">
+              <a href="{{ project.url | relative_url }}"{% if project.url contains '://' %} target="_blank" rel="noopener"{% endif %}>
                 <img class="project-image" src="{{ project.image | relative_url }}" alt="{{ project.title }}">
                 <div class="project-content">
                   <h3 class="project-title">{{ project.title }}</h3>
                   <p class="project-description">{{ project.description }}</p>
+                  <div class="project-footer">
+                    <span class="project-tags">
+                      {% for tag in project.tags %}<span class="project-tag">{{ tag }}</span>{% endfor %}
+                    </span>
+                    <span class="project-link">View project ↗</span>
+                  </div>
                 </div>
               </a>
-            </div>
+            </article>
           {% endif %}
         {% endfor %}
       </div>
     </section>
 
-    <!-- Personal Projects Section -->
+    <!-- Personal projects and games -->
     <section class="project-section">
-      <h2 class="section-title">Side Projects</h2>
+      <h2 class="section-title">Personal projects &amp; games</h2>
       <div class="project-grid">
         {% for project in site.data.projects %}
           {% if project.type == "personal" %}
-            <div class="project-card">
-              <a href="{{ project.url | relative_url }}">
+            <article class="project-card">
+              <a href="{{ project.url | relative_url }}"{% if project.url contains '://' %} target="_blank" rel="noopener"{% endif %}>
                 <img class="project-image" src="{{ project.image | relative_url }}" alt="{{ project.title }}">
                 <div class="project-content">
                   <h3 class="project-title">{{ project.title }}</h3>
                   <p class="project-description">{{ project.description }}</p>
+                  <div class="project-footer">
+                    <span class="project-tags">
+                      {% for tag in project.tags %}<span class="project-tag">{{ tag }}</span>{% endfor %}
+                    </span>
+                    <span class="project-link">View project ↗</span>
+                  </div>
                 </div>
               </a>
-            </div>
+            </article>
           {% endif %}
         {% endfor %}
       </div>

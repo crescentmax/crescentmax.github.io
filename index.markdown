@@ -3,68 +3,76 @@ title: "Chengyan Tsai / Max"
 layout: splash
 date: 2024-10-15T20:27:00-05:00
 permalink: /
+hero_kicker: "Software engineer · Game developer · Technical artist"
 header:
-  overlay_color: "#000"
-  overlay_filter: "0.50"
+  overlay_color: "#080b12"
+  overlay_filter: "linear-gradient(90deg, rgba(8, 11, 18, 0.96) 0%, rgba(8, 11, 18, 0.72) 48%, rgba(8, 11, 18, 0.24) 100%)"
   overlay_image: /assets/images/home/MSC.jpg
-  overlay_text_shadow: true
-  min_height: 35vh
+  overlay_text_shadow: false
+  min_height: 68vh
   background_position: "center 48%"
-excerpt: "Software Engineer, Game Developer, and Artist."
-intro: 
-  - excerpt: 'Nullam suscipit et nam, tellus velit pellentesque at malesuada, enim eaque. Quis nulla, netus tempor in diam gravida tincidunt, *proin faucibus* voluptate felis id sollicitudin. Centered with `type="center"`'
+  actions:
+excerpt: "I build real-time tools, interactive systems, and visual experiences at the intersection of code and art."
 
-feature_row:
-  - image_path: "https://images.unsplash.com/photo-1508873535684-277a3cbcc4e8?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    alt: "Projects Page Image"
-    title: "Projects"
-    excerpt: "This page showcases a selection of my professional and personal work."
-    url: "/projects" 
-  - image_path: "https://images.unsplash.com/photo-1483546416237-76fd26bbcdd1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    alt: "Blogs Image"
-    title: "Blogs"
-    excerpt: "You'll find posts about programming, game design, 3D art, and 2D art. This space is dedicated to sharing my journey and discoveries in these areas."
-    url: "/blogs"
-  - image_path: "https://images.unsplash.com/photo-1515405295579-ba7b45403062?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    title: "Arts"
-    excerpt: "This page features a collection of my artistic creations, including VFX demonstrations, pixel art, and 2D illustrations."
-    url: "/arts"
-feature_row2:
-  - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
-    alt: "placeholder image 2"
-    title: "Placeholder Image Left Aligned"
-    excerpt: 'This is some sample content that goes here with **Markdown** formatting. Left aligned with `type="left"`'
-    url: "#test-link"
-    btn_label: "Read More"
-    btn_class: "btn--primary"
-feature_row3:
-  - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
-    alt: "placeholder image 2"
-    title: "Placeholder Image Right Aligned"
-    excerpt: 'This is some sample content that goes here with **Markdown** formatting. Right aligned with `type="right"`'
-    url: "#test-link"
-    btn_label: "Read More"
-    btn_class: "btn--primary"
-feature_row4:
-  - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
-    alt: "placeholder image 2"
-    title: "Placeholder Image Center Aligned"
-    excerpt: 'This is some sample content that goes here with **Markdown** formatting. Centered with `type="center"`'
-    url: "#test-link"
-    btn_label: "Read More"
-    btn_class: "btn--primary"
+selected_work:
+  - image_path: "/assets/images/projects/cinedesk/cinedesk.webp"
+    alt: "CineDesk virtual production interface"
+    title: "CineDesk"
+    excerpt: "An Unreal Engine pre-visualization tool that makes virtual camera work faster and more tactile."
+    meta: "Unreal Engine · C++ · UX"
+    url: "/projects/cinedesk"
+  - image_path: "/assets/images/projects/mock_trial/courtroom-simulation.png"
+    alt: "AI-driven courtroom simulation for forensic nursing testimony training"
+    title: "Mock Trial"
+    excerpt: "An Unreal Engine courtroom where AI agents help forensic nurses practice expert-witness testimony."
+    meta: "Unreal Engine · C++ · WebSockets"
+    url: "/projects/mock-trial"
+  - image_path: "/assets/images/projects/simulations/thumbnail.png"
+    alt: "Physically based simulation experiments"
+    title: "Physically Based Simulations"
+    excerpt: "A collection of particle, rigid-body, soft-body, and fluid systems built from first principles."
+    meta: "OpenGL · GLSL · UE5"
+    url: "/projects/simulations"
+  - image_path: "/assets/images/projects/geometry_nodes/Thumbnail.jpg"
+    alt: "Procedural geometry artwork"
+    title: "Geometry Nodes"
+    excerpt: "Mathematical forms and procedural studies that turn compact systems into expressive visuals."
+    meta: "Blender · Houdini · Python"
+    url: "/projects/geometry"
 ---
 
-<!-- 🚩 Texas A&M full-width banner -->
-<div class="tamu-banner-wrapper">
-  <div class="tamu-banner-content">
-    <h2>🚀 Featured by Texas A&M!</h2>
-    <p>Discover how our immersive tools are changing the way we teach and learn.</p>
-    <a href="https://stories.tamu.edu/stories/texas-am-professor-uses-immersive-technology-to-push-the-limits-of-teaching/"
-       class="btn btn--primary" target="_blank" rel="noopener">
-       Read the Story
-    </a>
-  </div>
-</div>
+<a class="news-strip" href="{{ '/projects/cinedesk' | relative_url }}" aria-label="View CineDesk SIGGRAPH 2026 project"><span class="news-strip__label"><span></span>Latest</span><span class="news-strip__copy"><strong>CineDesk accepted to<br>SIGGRAPH 2026</strong><span>Our tangible virtual-production interface will be presented in the Posters program.</span></span><span class="news-strip__action">View more <span aria-hidden="true">→</span></span></a>
 
-{% include feature_row %}
+<a class="portfolio-cue" href="#selected-work" aria-label="Scroll to portfolio overview"><span class="portfolio-cue__arrows" aria-hidden="true"><span>v</span><span>v</span></span><span class="portfolio-cue__label">Portfolio Overview</span><span class="portfolio-cue__arrows" aria-hidden="true"><span>v</span><span>v</span></span></a>
+
+<section id="selected-work" class="landing-section landing-section--work">
+  <div class="section-heading">
+    <h2>Selected work</h2>
+  </div>
+  {% include feature_row id="selected_work" variant="work" %}
+  <a class="text-link" href="{{ '/projects' | relative_url }}">View more projects <span aria-hidden="true">→</span></a>
+</section>
+
+<section id="experience" class="landing-section experience-section">
+  <div class="section-heading">
+    <h2>Experience</h2>
+  </div>
+
+  <div class="experience-list">
+    {% for experience in site.data.experience %}
+      <article class="experience-item" tabindex="0">
+        <div class="experience-item__logo experience-item__logo--{{ experience.logo_theme | default: 'surface' }}">
+          <img src="{{ experience.logo | relative_url }}" alt="{{ experience.organization }} logo">
+        </div>
+        <div class="experience-item__identity">
+          <h3>{{ experience.role }}</h3>
+          <p>{{ experience.organization }}</p>
+          <time>{{ experience.period }}</time>
+        </div>
+        <div class="experience-item__description">
+          <p>{{ experience.summary }}</p>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>

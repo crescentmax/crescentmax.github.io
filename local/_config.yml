@@ -35,6 +35,8 @@ defaults:
       type: posts
     values:
       layout: single
+      classes:
+        - blog-post
       share: false
       related: true
 
@@ -75,6 +77,7 @@ footer:
 exclude:
   - .sass-cache/
   - .jekyll-cache/
+  - .jekyll-local/
   - gemfiles/
   - Gemfile
   - Gemfile.lock
@@ -87,4 +90,4 @@ sass:
   sass_dir: _sass
   quiet_deps: true
 
-destination: /home/max/PersonalPage/crescentmax/_site
+destination: .jekyll-local

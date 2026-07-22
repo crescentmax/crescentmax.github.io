@@ -1,0 +1,24 @@
+/* ========================================================================== 
+   Midnight Studio skin
+   A deep neutral canvas with softened cyan and violet signal colors.
+   ========================================================================== */
+
+$background-color: #080b12 !default;
+$text-color: #edf0f8 !default;
+$primary-color: #6770c3 !default;
+$border-color: #303858 !default;
+$code-background-color: #101827 !default;
+$code-background-color-dark: #0c1320 !default;
+$form-background-color: #101522 !default;
+$footer-background-color: #070a10 !default;
+$link-color: #939be0 !default;
+$link-color-hover: #b4baf0 !default;
+$link-color-visited: #b18bd4 !default;
+$masthead-link-color: #edf0f8 !default;
+$masthead-link-color-hover: #ffffff !default;
+$navicon-link-color-hover: #6770c3 !default;
+$muted-text-color: #9aa3ba !default;
+
+.ais-search-box .ais-search-box--input {
+  background-color: $form-background-color;
+}

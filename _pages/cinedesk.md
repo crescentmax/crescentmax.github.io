@@ -2,64 +2,107 @@
 title: CineDesk
 layout: post
 permalink: /projects/cinedesk
+classes:
+  - project-case-study
 ---
 
-**CineDesk** is an ongoing project that serves as a virtual production tool for rapid pre-visualization in collaborative environments. Designers and animators can use this interface to effortlessly **plan the staging**, **improve the layout**, and **generate storyboard**. 
+<span class="case-study__status">Accepted poster · SIGGRAPH 2026</span>
 
-The system supports **two input methods** simultaneously: direct touch interaction from the touchscreen and 6-Degrees-of-Freedom (6DoF) navigation using a ***Spacemouse***.
+<p class="case-study__lede"><strong>CineDesk</strong> is a collaborative virtual-production interface that combines multi-touch staging with precise 6DoF SpaceMouse control. The research, <em>Touching the Virtual: Multi-Touch Tangible Interfaces for Virtual Production</em>, was accepted to the SIGGRAPH 2026 Posters program.</p>
 
-By combining intuitive controls with flexible visualization capabilities, CineDesk aims to streamline the pre-viz process, reduce iteration time, and enhance creative collaboration across teams.
-
-<div style="text-align: center; margin-top: 1.5rem; margin-bottom: 1.5rem;">
-    <img src="{{ '/assets/images/projects/cinedesk/cinedesk.webp' | relative_url }}" alt="Prototype" style="width: 80%; height: auto;">
-    <p style="text-align: center; font-style: italic;">Use Case</p>
+<div class="case-study__actions">
+  <a class="btn" href="https://dl.acm.org/doi/10.1145/3799825.3818775" target="_blank" rel="noopener">View ACM publication ↗</a>
+  <a class="btn" href="{{ '/assets/files/CineDesk_SIGGRAPH_2026_Poster.pdf' | relative_url }}" target="_blank" rel="noopener">View poster ↗</a>
 </div>
 
----
-## Touch Input
+<dl class="case-study__meta">
+  <div><dt>My role</dt><dd>Unreal developer · Interaction systems</dd></div>
+  <div><dt>Research group</dt><dd>Soft Interaction Lab · Texas A&amp;M</dd></div>
+  <div><dt>Technology</dt><dd>Unreal Engine · UMG · SpaceMouse · Spout</dd></div>
+  <div><dt>Recognition</dt><dd>SIGGRAPH 2026 Posters</dd></div>
+</dl>
 
-The system provides an intuitive interface that allows even non-technical users to modify scene layouts and set up cameras quickly. Using a top-down view, users can manipulate actors in the scene with simple gestures.
+<figure class="case-study__hero">
+  <img src="{{ '/assets/images/projects/cinedesk/cinedesk.webp' | relative_url }}" alt="Two collaborators using the CineDesk touch-table interface">
+  <figcaption>CineDesk supports collaborative scene layout on a shared touch display.</figcaption>
+</figure>
 
-<div style="text-align: center; margin-top: 1.5rem; margin-bottom: 1.5rem;">
-    <img src="{{ '/assets/images/projects/cinedesk/cinedesk-spacemouse-control.gif' | relative_url }}" alt="Prototype" style="width: 100%; height: auto;">
-    <p style="text-align: center; font-style: italic;">Camera navigation with the touch input interface</p>
-</div>
+<section class="case-study__section">
+  <h2>The research question</h2>
+  <p>Previsualization often separates fast layout decisions from precise camera control. CineDesk investigates whether a shared interface can make both tasks accessible in one workflow: direct touch for broad staging and a tangible controller for fine camera adjustments.</p>
 
-CineDesk is structured into three primary layers:
-+ **3D Scene Layer** – Cameras, lights, metahumans, and other actors in the 3D level.
-+ **Movable Widgets Layer** – Actors with CineDesk components generate widgets at runtime, enabling configuration and transformation via the touchscreen.
-+ **Widget Detail Layer** – Contains functional UI elements such as the control panel and detail viewer.
+  <div class="case-study__grid">
+    <article class="case-study__card">
+      <span>01 · Accessible</span>
+      <h3>Direct scene manipulation</h3>
+      <p>A top-down touch interface lets non-technical collaborators position actors, inspect properties, and plan a scene without navigating a traditional editor.</p>
+    </article>
+    <article class="case-study__card">
+      <span>02 · Precise</span>
+      <h3>Tangible 6DoF control</h3>
+      <p>The SpaceMouse provides smooth translation, rotation, and camera navigation when touch alone is not precise enough.</p>
+    </article>
+    <article class="case-study__card">
+      <span>03 · Collaborative</span>
+      <h3>Immediate visual feedback</h3>
+      <p>Top-down layout and a live 3D camera preview remain visible together, helping teams discuss and iterate on staging in real time.</p>
+    </article>
+  </div>
+</section>
 
-<div style="text-align: center; margin-top: 1.5rem; margin-bottom: 1.5rem;">
-    <img src="{{ '/assets/images/projects/cinedesk/system-overview.png' | relative_url }}" alt="Prototype" style="width: 80%; height: auto;">
-    <p style="text-align: center; font-style: italic;">System Overview</p>
-</div>
+<section class="case-study__section">
+  <h2>My contribution</h2>
+  <p>I developed the Unreal-side interaction framework and delivered twelve core features for staging and camera setup. The work focused on making runtime scene editing predictable for users who do not normally work inside Unreal Engine.</p>
 
----
-## Tangible Object Input
-In addition to touchscreen interaction, CineDesk integrates a tangible input device — the ***Spacemouse***. With its 6-Degrees-of-Freedom (6DoF) sensor, users can intuitively and precisely manipulate actors and cameras within the scene. 
+  <div class="case-study__grid">
+    <article class="case-study__card">
+      <span>Runtime UI</span>
+      <h3>Actor-to-widget workflow</h3>
+      <p>CineDesk components generate movable widgets at runtime and expose actor transforms and relevant controls through the touch interface.</p>
+    </article>
+    <article class="case-study__card">
+      <span>Input integration</span>
+      <h3>Touch + SpaceMouse</h3>
+      <p>I connected broad touch gestures with precise 6DoF control so users can move between layout and camera work without changing tools.</p>
+    </article>
+    <article class="case-study__card">
+      <span>Virtual camera</span>
+      <h3>Live camera tooling</h3>
+      <p>Camera components and the widget subsystem expose lens and transform controls while Off World Live streams CineCamera views through Spout.</p>
+    </article>
+  </div>
+</section>
 
-Much like a joystick, the Spacemouse enables smooth translation, rotation, and navigation, allowing designers to adjust staging and spatial relationships with a high degree of control and immediacy.
+<section class="case-study__section">
+  <div class="case-study__split">
+    <div>
+      <h2>Three-layer interface</h2>
+      <p>The system separates the 3D world from touch representations and detailed controls. This keeps scene actors authoritative while allowing the tabletop UI to remain lightweight and context-sensitive.</p>
+      <div class="case-study__callout">
+        <p><strong>3D Scene Layer:</strong> cameras, lights, characters, and set objects.<br><strong>Movable Widgets Layer:</strong> runtime representations used for selection and transforms.<br><strong>Widget Detail Layer:</strong> camera, actor, and property controls for the current selection.</p>
+      </div>
+    </div>
+    <figure class="case-study__figure">
+      <img src="{{ '/assets/images/projects/cinedesk/system-overview.png' | relative_url }}" alt="Diagram of the three-layer CineDesk interface architecture">
+      <figcaption>The touch UI mirrors selected scene actors without replacing Unreal’s underlying scene state.</figcaption>
+    </figure>
+  </div>
+</section>
 
+<section class="case-study__section">
+  <h2>Hybrid interaction workflow</h2>
+  <figure class="case-study__figure">
+    <img src="{{ '/assets/images/projects/cinedesk/cinedesk-spacemouse-control.gif' | relative_url }}" alt="CineDesk touch and SpaceMouse camera interaction">
+    <figcaption>Users combine fast top-down staging with continuous 6DoF camera navigation.</figcaption>
+  </figure>
+  <p>The poster’s early findings indicate that the dual-input workflow helped participants complete layout tasks faster, improved perceived camera control and ease of use, and supported more fluid team iteration. These results position tangible input as a complement to touch—not a replacement for it.</p>
+</section>
 
-<div style="text-align: center; margin-top: 1.5rem; margin-bottom: 1.5rem;">
-    <img src="{{ '/assets/images/projects/cinedesk/spacemouse.webp' | relative_url }}" alt="Prototype" style="width: 80%; height: auto;">
-    <p style="text-align: center; font-style: italic;">User Input with the Tangible Object (Spacemouse)</p>
-</div>
-
----
-## Easy Camera Setup
-
-The system provide real-time camera preview with *off world live* plugin. It enables CineCameras to seamlessly stream their views via Spout output, enhancing the overall virtual production workflow.
-
-<div style="text-align: center; margin-top: 1.5rem; margin-bottom: 1.5rem;">
-    <img src="{{ '/assets/images/projects/cinedesk/camera-view.webp' | relative_url }}" alt="Prototype" style="width: 80%; height: auto;">
-    <p style="text-align: center; font-style: italic;">Camera Preview <br> The system supports multiple inputs simultaneously</p>
-</div>
-
-With `DeskCameraComponent` and `DeskWidgetSubsystem`, users can easily configure camera settings via touch input.
-
-<div style="text-align: center; margin-top: 1.5rem; margin-bottom: 1.5rem;">
-    <img src="{{ '/assets/images/projects/cinedesk/cinedesk-camera.gif' | relative_url }}" alt="Prototype" style="width: 100%; height: auto;">
-    <p style="text-align: center; font-style: italic;">Adjust camera settings with the touch input interface</p>
-</div>
+<section class="case-study__section">
+  <h2>Research publication</h2>
+  <div class="case-study__citation">
+    <strong>Touching the Virtual: Multi-Touch Tangible Interfaces for Virtual Production</strong>
+    <p>Jinsil Hwaryoung Seo, Caleb Kicklighter, Seung Kim, Mayet Andreassen, Hadeel Ramadan, and Chengyan Tsai. SIGGRAPH 2026 Posters. DOI: 10.1145/3799825.3818775.</p>
+  </div>
+  <p>The project expands the original cineDESK system developed by the Zurich University of the Arts and acknowledges the wider cineDESK network, including HKAPA and FilmEU.</p>
+</section>

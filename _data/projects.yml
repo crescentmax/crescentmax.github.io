@@ -3,63 +3,81 @@
   description: "A virtual production tool for pre-viz <br> made with Unreal"
   url: "/projects/cinedesk"
   type: work
+  tags: [Unreal Engine, C++, Virtual Production]
+
+- title: "Mock Trial"
+  image: "/assets/images/projects/mock_trial/courtroom-simulation.png"
+  description: "AI-driven testimony training <br> built with Unreal and C++"
+  url: "/projects/mock-trial"
+  type: work
+  tags: [Unreal Engine, C++, TTS]
 
 - title: "Unannounced AAA Project"
   image: "/assets/images/projects/AAA/ue.jpg"
   description: "A multiplayer action RPG <br> made with UE5"
   url: "/projects/AAA"
   type: work
+  tags: [UE5, C++, Gameplay]
 
 - title: "Project Kyzen"
   image: "/assets/images/projects/kyzen/kyzen.jpeg"
   description: "A fast-paced multiplayer third-person game"
   url: "https://projectkyzen.io/"
   type: work
+  tags: [UE5, C++, Multiplayer]
 
 - title: "Retail Digital Twin"
   image: "/assets/images/projects/digital_twin_retail/Overview.png"
   description: "A digital twin of a convenience store <br> made with Unreal"
   url: "/projects/retail"
   type: highlight 
+  tags: [Unreal Engine, Digital Twin]
 
 - title: "Physically Based Simulations"
   image: "/assets/images/projects/simulations/thumbnail.png"
   description: "Physically based simulations <br> with OpenGL and UE5"
   url: "/projects/simulations"
   type: highlight
+  tags: [OpenGL, GLSL, UE5]
 
 - title: "Lucid Dive"
   image: "/assets/images/projects/lucid_dive/MainMenuBg.png"
   description: "A 2D cyberpunk platformer <br> made with Unity"
   url: "/projects/luciddive"
-  type: highlight
+  type: personal
+  tags: [Unity, C#, Gameplay]
 
 - title: "Orbitone"
   image: "/assets/images/projects/orbitone/image.png"
   description: "A VR rhythm game <br> made with Unity"
   url: "/projects/orbitone"
   type: personal
+  tags: [Unity, VR, C#]
 
 - title: "Geometry Nodes"
   image: "/assets/images/projects/geometry_nodes/Thumbnail.jpg"
   description: "Using maths to create abstract geometry, <br> rendered with Cycles and Karma"
   url: "/projects/geometry"
   type: personal
+  tags: [Blender, Houdini, Python]
 
 - title: "Deal Da Time"
   image: "/assets/images/projects/deal_da_time/logo.png"
   description: "A mini puzzle game <br> created for GMTK Jam 2023"
   url: "https://intoxicat-studio.itch.io/deal-da-time"
   type: personal
+  tags: [Unity, Game Jam]
 
 - title: "Smol Calli Dungeon"
   image: "/assets/images/projects/smol_calli/image.png"
   description: "A simple 2D game <br> made with Unity"
   url: "https://youtu.be/jPKp1WAhcMo"
   type: personal
+  tags: [Unity, 2D]
 
 - title: "Operation: Stardust"
   image: "/assets/images/projects/operation_stardust/OBR.png"
   description: "A turn-based strategy game <br> made with Unity"
   url: "https://chocola-mint.itch.io/operation-stardust"
   type: personal
+  tags: [Unity, Strategy]

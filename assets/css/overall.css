@@ -1,68 +1,312 @@
-/* Global font size for the entire site */
+/* Shared Midnight Studio shell for every page except the landing-specific hero. */
 body {
-  font-size: 18px; /* Adjust this value for the base font size */
-  line-height: 1.8; /* Adjust line height for readability */
+  background: var(--atelier-bg);
+  color: var(--atelier-text);
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
 }
 
-/* Adjust headings size */
-h1 {
-  font-size: 2rem; /* Adjust the heading font size */
+body,
+p,
+li,
+.page__content {
+  font-weight: 400;
 }
 
-h2 {
-  font-size: 2rem;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.page__title,
+.site-title {
+  color: var(--atelier-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.035em;
 }
 
-h3 {
-  font-size: 1.75rem;
+a {
+  color: var(--atelier-gold);
 }
 
-h4 {
-  font-size: 1.5rem;
+a:hover {
+  color: var(--atelier-accent);
 }
 
-/* Reduce the size of paragraph text */
-p {
-  font-size: 0.9rem; /* Slightly smaller than the default */
-  line-height: 1.6; /* Keep readability high */
+.masthead {
+  background: rgba(8, 11, 18, 0.96);
+  border-bottom: 1px solid var(--atelier-line);
 }
 
-/* Reduce button size */
-.btn {
-  font-size: 0.85rem; /* Make buttons text smaller */
-  padding: 8px 16px; /* Adjust button padding */
+.masthead__inner-wrap {
+  max-width: 1280px;
+  padding: 0.95rem 1rem;
 }
 
-/* Set a maximum width for all images */
-img {
-  max-width: 100%; /* Ensure images scale with container */
-  height: auto; /* Keep the aspect ratio */
-  max-height: 500px; /* Control image height */
+.masthead__inner-wrap,
+.masthead__menu,
+.masthead nav,
+.masthead ul,
+.masthead li,
+.masthead a {
+  background-color: transparent;
 }
 
-/* For hero images (like the large one on top) */
-.hero-image {
-  max-height: 400px; /* Reduce height of large hero images */
-  object-fit: cover; /* Keep the aspect ratio and fill the area */
+.site-title {
+  color: var(--atelier-text) !important;
+  font-size: 1rem;
+  text-decoration: none !important;
 }
 
-/* Hide the year archive links or taxonomy index */
-.taxonomy__index {
-    display: none;
+.site-subtitle {
+  color: var(--atelier-muted);
 }
 
-/* Adjust the right padding for the main page content */
+.masthead .masthead__menu-item a {
+  color: var(--atelier-muted);
+  font-family: "Manrope", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.masthead .masthead__menu-item a:hover,
+.masthead .masthead__menu-item a:focus {
+  color: var(--atelier-accent);
+}
+
+.greedy-nav .hidden-links {
+  background: var(--atelier-surface);
+  border: 1px solid var(--atelier-line);
+}
+
+.greedy-nav .hidden-links a {
+  color: var(--atelier-text);
+}
+
+#main {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
 .page {
+  float: none !important;
+  width: 100% !important;
   max-width: 1200px;
-  padding-right: 400px; /* Set right padding to 400px */
-  padding-left: 15px; /* Optional: Adjust left padding for balance */
-  text-align: left; /* Ensure the content is left-aligned */
+  margin: 0 auto;
+  padding: 3rem 1rem 5rem !important;
+  text-align: left;
 }
 
-/* Adjust the right padding for the related content section */
+.page__content {
+  width: 70%;
+  max-width: 840px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.page__title {
+  width: 70%;
+  max-width: 840px;
+  margin: 0 auto 2rem;
+  font-size: clamp(1.25rem, 2.4vw, 1.95rem) !important;
+  font-weight: 400;
+  line-height: 1.08;
+}
+
+.page__content h1,
+.page__content h2,
+.page__content h3,
+.page__content h4 {
+  color: var(--atelier-text);
+}
+
+.page__content h1 {
+  font-size: clamp(0.95rem, 1.7vw, 1.4rem);
+  font-weight: 400;
+}
+
+.page__content h2 {
+  margin-top: 3rem;
+  font-size: clamp(0.95rem, 1.7vw, 1.4rem);
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.page__content h3 {
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+body.layout--post .page__title {
+  font-size: clamp(1.25rem, 2.4vw, 1.95rem) !important;
+  font-weight: 400;
+}
+
+body.layout--post .page__content h2 {
+  font-size: clamp(0.95rem, 1.7vw, 1.4rem);
+  font-weight: 400;
+}
+
+body.layout--post .page__content h3,
+body.layout--post .page__content h4 {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Keep long-form project copy at a comfortable reading measure while allowing
+   screenshots, video, and diagrams to use the full project canvas. */
+body.layout--post:not(.project-case-study) .page__content > p,
+body.layout--post:not(.project-case-study) .page__content > ul,
+body.layout--post:not(.project-case-study) .page__content > ol,
+body.layout--post:not(.project-case-study) .page__content > blockquote,
+body.layout--post:not(.project-case-study) .page__content > h1,
+body.layout--post:not(.project-case-study) .page__content > h2,
+body.layout--post:not(.project-case-study) .page__content > h3,
+body.layout--post:not(.project-case-study) .page__content > h4,
+body.layout--post:not(.project-case-study) .page__content > hr {
+  width: 100%;
+  max-width: none;
+}
+
+.page__content p,
+.page__content li {
+  color: var(--atelier-muted);
+}
+
+.page__content strong {
+  color: var(--atelier-text);
+}
+
+.page__content blockquote {
+  border-left-color: var(--atelier-accent);
+  color: var(--atelier-muted);
+}
+
+.page__content code,
+.page__content pre {
+  background: var(--atelier-surface);
+  border-color: var(--atelier-line);
+  color: var(--atelier-accent);
+}
+
+body.blog-post .page__content :not(pre) > code {
+  padding: 0.12em 0.35em;
+  border: 1px solid #71303d;
+  border-radius: 0.3rem;
+  background: #351820;
+  color: #f0a0ad;
+  font-size: 0.88em;
+  font-weight: 500;
+}
+
+.about-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.28fr) minmax(180px, 0.72fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: start;
+  margin-bottom: 3rem;
+}
+
+.about-intro__portrait {
+  width: 100%;
+  max-height: none;
+  margin: 0;
+  border: 1px solid var(--atelier-line);
+  border-radius: 0.85rem;
+  object-fit: cover;
+}
+
+.about-intro__copy p {
+  margin-top: 0;
+}
+
+.about-intro__eyebrow {
+  color: var(--atelier-gold) !important;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.page__content hr {
+  border-top-color: var(--atelier-line);
+}
+
+.btn {
+  background: var(--atelier-gold);
+  border: 1px solid var(--atelier-gold);
+  border-radius: 999px;
+  color: var(--atelier-bg) !important;
+  font-family: "Manrope", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.65rem 1rem;
+}
+
+.btn:hover,
+.btn:focus {
+  background: var(--atelier-accent);
+  border-color: var(--atelier-accent);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .page__related {
   max-width: 1200px;
-  padding-right: 400px; /* Set right padding to 400px */
-  padding-left: 15px; /* Optional: Adjust left padding for balance */
+  margin: 0 auto;
+  padding: 0 1rem 4rem;
 }
 
+.page__footer {
+  background: var(--atelier-bg);
+  border-top: 1px solid var(--atelier-line);
+  color: var(--atelier-muted);
+}
+
+.taxonomy__index {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .masthead__inner-wrap {
+    padding: 0.8rem 0.75rem;
+  }
+
+  .page {
+    padding: 2.25rem 0.85rem 4rem !important;
+  }
+
+  .page__title,
+  .page__content {
+    width: 100%;
+  }
+
+  .about-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .about-intro__portrait {
+    max-width: 320px;
+  }
+
+  body.layout--post:not(.project-case-study) .page__content > p,
+  body.layout--post:not(.project-case-study) .page__content > ul,
+  body.layout--post:not(.project-case-study) .page__content > ol,
+  body.layout--post:not(.project-case-study) .page__content > blockquote,
+  body.layout--post:not(.project-case-study) .page__content > h1,
+  body.layout--post:not(.project-case-study) .page__content > h2,
+  body.layout--post:not(.project-case-study) .page__content > h3,
+  body.layout--post:not(.project-case-study) .page__content > h4,
+  body.layout--post:not(.project-case-study) .page__content > hr {
+    width: 100%;
+  }
+}

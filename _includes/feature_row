@@ -4,7 +4,7 @@
   {% assign feature_row = page.feature_row %}
 {% endif %}
 
-<div class="feature__wrapper">
+<div class="feature__wrapper{% if include.variant %} feature__wrapper--{{ include.variant }}{% endif %}">
   <div class="feature__grid">
     {% for f in feature_row %}
       <a href="{{ f.url | relative_url }}" class="feature__widget">
@@ -25,6 +25,15 @@
                 {{ f.excerpt | markdownify }}
               </div>
             {% endif %}
+            <div class="archive__item-footer">
+              {% if f.meta %}
+                <span class="archive__item-tags">
+                  {% assign item_tags = f.meta | split: " · " %}
+                  {% for tag in item_tags %}<span class="archive__item-tag">{{ tag }}</span>{% endfor %}
+                </span>
+              {% endif %}
+              <span class="archive__item-link">View project <span aria-hidden="true">↗</span></span>
+            </div>
           </div>
         </div>
       </a>

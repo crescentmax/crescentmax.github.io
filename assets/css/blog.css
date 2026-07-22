@@ -1,8 +1,80 @@
-.taxonomy__section .entries-list .archive__item-excerpt {
-    font-size: 14px;
-    color: #cfcfcf;
-    margin-top: 10px;
-    margin-bottom: 10px;
+/* Blog archive cards share the same quiet, editorial surface as the landing page. */
+body.layout--posts .page__title,
+body.layout--posts .page__content {
+  width: 80%;
+  max-width: 1024px;
 }
 
-  
+body.layout--posts .archive__subtitle {
+  color: var(--atelier-muted);
+  font-family: "Manrope", sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+body.layout--posts .entries-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+body.layout--posts .entries-list > * {
+  margin: 0;
+}
+
+body.layout--posts .archive__item {
+  height: 100%;
+  padding: 1.35rem 1.45rem;
+  border: 1px solid var(--atelier-line);
+  border-radius: 0.85rem;
+  background: var(--atelier-surface);
+  transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
+}
+
+body.layout--posts .archive__item:hover {
+  border-color: rgba(103, 112, 195, 0.68);
+  background: var(--atelier-surface-raised);
+  transform: translateY(-3px);
+}
+
+body.layout--posts .archive__item-title {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", sans-serif;
+  font-size: clamp(0.95rem, 1.7vw, 1.2rem);
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+body.layout--posts .archive__item-title a {
+  color: var(--atelier-text);
+}
+
+body.layout--posts .archive__item-title a:hover {
+  color: var(--atelier-accent);
+}
+
+body.layout--posts .archive__item-excerpt {
+  margin: 0.65rem 0 0;
+  color: var(--atelier-muted);
+  font-size: 0.75rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+body.layout--posts .page__meta {
+  color: var(--atelier-gold);
+  font-family: "Fira Code", monospace;
+  font-size: 0.68rem;
+}
+
+@media (max-width: 700px) {
+  body.layout--posts .page__title,
+  body.layout--posts .page__content {
+    width: 100%;
+  }
+
+  body.layout--posts .entries-list {
+    grid-template-columns: 1fr;
+  }
+}

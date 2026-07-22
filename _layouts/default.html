@@ -3,14 +3,19 @@
 
 <!doctype html>
 {% include copyright.html %}
-<link rel="icon" href="{{ '/assets/images/PFP_Circle.png' | relative_url }}" type="image/png" />
-<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{{ '/assets/css/overall.css' | relative_url }}">
 <html lang="{{ site.locale | replace: "_", "-" | default: "en" }}" class="no-js">
   <head>
     {% include head.html %}
     {% include head/custom.html %}
+    <link rel="icon" href="{{ '/assets/images/PFP_Circle.png' | relative_url }}" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/assets/css/overall.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/splash.css' | relative_url }}">
+    {% if page.classes contains "project-case-study" %}
+      <link rel="stylesheet" href="{{ '/assets/css/case-study.css' | relative_url }}">
+    {% endif %}
   </head>
 
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}" dir="{% if site.rtl %}rtl{% else %}ltr{% endif %}">
