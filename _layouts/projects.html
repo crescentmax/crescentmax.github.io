@@ -18,7 +18,11 @@ title: Projects
           {% if project.type == "work" %}
             <article class="project-card">
               <a href="{{ project.url | relative_url }}"{% if project.url contains '://' %} target="_blank" rel="noopener"{% endif %}>
-                <img class="project-image" src="{{ project.image | relative_url }}" alt="{{ project.title }}">
+                {% if project.image %}
+                  <img class="project-image" src="{{ project.image | relative_url }}" alt="{{ project.title }}">
+                {% else %}
+                  <div class="project-image project-image--placeholder" role="img" aria-label="{{ project.title }}"><span>AI CONVERSATION<br>SIMULATION</span></div>
+                {% endif %}
                 <div class="project-content">
                   <h3 class="project-title">{{ project.title }}</h3>
                   <p class="project-description">{{ project.description }}</p>
@@ -44,7 +48,11 @@ title: Projects
           {% if project.type == "highlight" %}
             <article class="project-card">
               <a href="{{ project.url | relative_url }}"{% if project.url contains '://' %} target="_blank" rel="noopener"{% endif %}>
-                <img class="project-image" src="{{ project.image | relative_url }}" alt="{{ project.title }}">
+                {% if project.image %}
+                  <img class="project-image" src="{{ project.image | relative_url }}" alt="{{ project.title }}">
+                {% else %}
+                  <div class="project-image project-image--placeholder" role="img" aria-label="{{ project.title }}"><span>AI CONVERSATION<br>SIMULATION</span></div>
+                {% endif %}
                 <div class="project-content">
                   <h3 class="project-title">{{ project.title }}</h3>
                   <p class="project-description">{{ project.description }}</p>
@@ -70,7 +78,11 @@ title: Projects
           {% if project.type == "personal" %}
             <article class="project-card">
               <a href="{{ project.url | relative_url }}"{% if project.url contains '://' %} target="_blank" rel="noopener"{% endif %}>
-                <img class="project-image" src="{{ project.image | relative_url }}" alt="{{ project.title }}">
+                {% if project.image %}
+                  <img class="project-image" src="{{ project.image | relative_url }}" alt="{{ project.title }}">
+                {% else %}
+                  <div class="project-image project-image--placeholder" role="img" aria-label="{{ project.title }}"><span>AI CONVERSATION<br>SIMULATION</span></div>
+                {% endif %}
                 <div class="project-content">
                   <h3 class="project-title">{{ project.title }}</h3>
                   <p class="project-description">{{ project.description }}</p>

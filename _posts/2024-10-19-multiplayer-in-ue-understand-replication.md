@@ -22,11 +22,11 @@ Replication keeps actors and gameplay state synchronized across clients and serv
     - Update world at the behest of the server
     - As Client
 
-![Untitled](/assets/images/posts/multiplayer/image_1.png)
+![Untitled](/assets/images/posts/multiplayer/image_1.webp)
 
 Threre are three different scenarios that an Unreal game can run in.
 
-![Untitled](/assets/images/posts/multiplayer/image_2.png)
+![Untitled](/assets/images/posts/multiplayer/image_2.webp)
 
 ---
 
@@ -49,7 +49,7 @@ The replication system relies on three important classes:
     - Different channels in *NetConnections* *(VoiceChannel, ActorChannel, etc.)*
     - When an actor **is eligible for replication and relevant to a particular player**, then the server will open an *ActorChannel* in that player’s *NetConnection.* **Which means, that actor will be replicated.**
 
-![Untitled](/assets/images/posts/multiplayer/image_3.png)
+![Untitled](/assets/images/posts/multiplayer/image_3.webp)
 
 ## 2. Actor Replication
 
@@ -86,7 +86,7 @@ Connection ownership is important for a few things:
 - Actor replication and connection relevancy
 - Actor property replication conditions when the owner is involved
 
-![Untitled](/assets/images/posts/multiplayer/image_4.png)
+![Untitled](/assets/images/posts/multiplayer/image_4.webp)
 
 ## 4. Update Frequency & Priority
 

@@ -7,7 +7,7 @@ Basic structure and configurations of an unreal engine C++ plugin.
 
 ### Plugin
 
-- A ****plugin is a self-contained package of functionality.
+- A plugin is a self-contained package of functionality.
 - **It can contain one or more modules.**  (e.g., `CoreLogic`, `UI`, `EditorExtensions`)
 - **It may have dependencies on other plugins.** (e.g., `VirtualCamera`)
 - Defined by a `.uplugin` file.

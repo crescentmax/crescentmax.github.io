@@ -126,20 +126,20 @@ a:hover {
 }
 
 .page__content h1 {
-  font-size: clamp(0.95rem, 1.7vw, 1.4rem);
+  font-size: clamp(1.15rem, 2.1vw, 1.75rem);
   font-weight: 400;
 }
 
 .page__content h2 {
   margin-top: 3rem;
-  font-size: clamp(0.95rem, 1.7vw, 1.4rem);
+  font-size: clamp(1.15rem, 2vw, 1.6rem);
   font-weight: 400;
   line-height: 1.15;
 }
 
 .page__content h3 {
   margin-top: 2rem;
-  font-size: 0.85rem;
+  font-size: clamp(0.95rem, 1.45vw, 1.15rem);
   font-weight: 500;
 }
 
@@ -149,13 +149,13 @@ body.layout--post .page__title {
 }
 
 body.layout--post .page__content h2 {
-  font-size: clamp(0.95rem, 1.7vw, 1.4rem);
+  font-size: clamp(1.15rem, 2vw, 1.6rem);
   font-weight: 400;
 }
 
 body.layout--post .page__content h3,
 body.layout--post .page__content h4 {
-  font-size: 0.85rem;
+  font-size: clamp(0.95rem, 1.45vw, 1.15rem);
   font-weight: 500;
 }
 
@@ -247,12 +247,20 @@ body.blog-post .page__content :not(pre) > code {
   font-size: 0.78rem;
   font-weight: 700;
   padding: 0.65rem 1rem;
+  transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
 }
 
 .btn:hover,
-.btn:focus {
+.btn:focus-visible {
   background: var(--atelier-accent);
   border-color: var(--atelier-accent);
+  box-shadow: 0 8px 22px rgba(103, 112, 195, 0.28);
+  transform: translateY(-2px);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--atelier-text);
+  outline-offset: 3px;
 }
 
 img {

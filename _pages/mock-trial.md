@@ -18,7 +18,7 @@ classes:
 </dl>
 
 <figure class="case-study__hero">
-  <img src="{{ '/assets/images/projects/mock_trial/courtroom-simulation.png' | relative_url }}" alt="Unreal Engine courtroom simulation with judge, prosecutors, defense, and jury">
+  <img src="{{ '/assets/images/projects/mock_trial/courtroom-simulation.webp' | relative_url }}" alt="Unreal Engine courtroom simulation with judge, prosecutors, defense, and jury">
   <figcaption>The Unreal frontend places the learner in an interactive courtroom with AI-driven legal roles.</figcaption>
 </figure>
 
@@ -61,7 +61,7 @@ classes:
       </div>
     </div>
     <figure class="case-study__figure">
-      <img src="{{ '/assets/images/projects/mock_trial/system-architecture.png' | relative_url }}" alt="System architecture connecting the client, WebSocket gateway, orchestration service, and case data">
+      <img src="{{ '/assets/images/projects/mock_trial/system-architecture.webp' | relative_url }}" alt="System architecture connecting the client, WebSocket gateway, orchestration service, and case data">
       <figcaption>The client remains focused on interaction and presentation while the backend owns dialogue context, evidence, and agent orchestration.</figcaption>
     </figure>
   </div>
@@ -70,7 +70,7 @@ classes:
 <section class="case-study__section">
   <h2>Adaptive courtroom behavior</h2>
   <figure class="case-study__figure">
-    <img src="{{ '/assets/images/projects/mock_trial/agent-orchestration.png' | relative_url }}" alt="Multi-agent courtroom orchestration workflow">
+    <img src="{{ '/assets/images/projects/mock_trial/agent-orchestration.webp' | relative_url }}" alt="Multi-agent courtroom orchestration workflow">
     <figcaption>Role-specific agents share memory and case facts while the phase manager controls direct, cross, redirect, and re-cross examination.</figcaption>
   </figure>
   <p>Consistent testimony can produce coherent follow-up questions, while incomplete or contradictory answers prompt clarification and adaptive cross-examination. The Unreal layer makes those backend decisions legible through speaker focus, pacing, audio, and character performance.</p>

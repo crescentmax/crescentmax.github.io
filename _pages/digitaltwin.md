@@ -26,17 +26,17 @@ permalink: /projects/retail
 + Direction
 
 <div style="text-align: center; margin-top: 1.5rem; margin-bottom: 1.5rem;">
-    <img src="{{ '/assets/images/projects/digital_twin_retail/MarkerModel.png' | relative_url }}" alt="Marker Model">
+    <img src="{{ '/assets/images/projects/digital_twin_retail/MarkerModel.webp' | relative_url }}" alt="Marker Model">
     <p style="text-align: center; font-style: italic;">Marker in the Level</p>
 </div>
 
 <div style="text-align: center; margin-top: 1.5rem; margin-bottom: 1.5rem;">
-    <img src="{{ '/assets/images/projects/digital_twin_retail/MarkerDataTable.png' | relative_url }}" alt="Marker Data Table">
+    <img src="{{ '/assets/images/projects/digital_twin_retail/MarkerDataTable.webp' | relative_url }}" alt="Marker Data Table">
     <p style="text-align: center; font-style: italic;">Store Level Marker Information in Data Table</p>
 </div>
 
 <div style="text-align: center; margin-top: 1.5rem; margin-bottom: 1.5rem;">
-    <img src="{{ '/assets/images/projects/digital_twin_retail/MarkerCreator.png' | relative_url }}" alt="Marker Creator">
+    <img src="{{ '/assets/images/projects/digital_twin_retail/MarkerCreator.webp' | relative_url }}" alt="Marker Creator">
     <p style="text-align: center; font-style: italic;">Designer can create markers with editor utility</p>
 </div>
 
@@ -63,7 +63,7 @@ We use predefined actions to control customers. Designer can easily create new a
 ## Customer AI
 
 <div style="text-align: center; margin-top: 1.5rem; margin-bottom: 1.5rem;">
-    <img src="{{ '/assets/images/projects/digital_twin_retail/CustomerAI.png' | relative_url }}" alt="Customer AI Structure">
+    <img src="{{ '/assets/images/projects/digital_twin_retail/CustomerAI.webp' | relative_url }}" alt="Customer AI Structure">
     <p style="text-align: center; font-style: italic;">Customer AI Structure</p>
 </div>
 
@@ -74,6 +74,6 @@ We use predefined actions to control customers. Designer can easily create new a
 The system utilizes Unreal MQTT plugin to broadcast the real-time retail store data to a user specified topic. 
 
 <div style="text-align: center; margin-top: 1.5rem; margin-bottom: 1.5rem;">
-    <img src="{{ '/assets/images/projects/digital_twin_retail/MQTT.png' | relative_url }}" alt="MQTT Scripts">
+    <img src="{{ '/assets/images/projects/digital_twin_retail/MQTT.webp' | relative_url }}" alt="MQTT Scripts">
     <p style="text-align: center; font-style: italic;">MQTT Scripts</p>
 </div>

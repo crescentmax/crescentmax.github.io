@@ -24,9 +24,9 @@ Post processing in Unreal Engine that enhances the visual quality.
 - Film parameters can affect tone mapper
 - **Toe:** A long toe means more shades of gray will appear as black.
 
-![Untitled](/assets/images/posts/post_processing/image_1.png)
+![Untitled](/assets/images/posts/post_processing/image_1.webp)
 
-![Untitled](/assets/images/posts/post_processing/image_2.png)
+![Untitled](/assets/images/posts/post_processing/image_2.webp)
 
 - **Shoulder:** A long shoulder means more solid whites, similar to toe.
 - **Slope:** The steepness of the curve between toe and shoulder
@@ -54,7 +54,7 @@ Post processing in Unreal Engine that enhances the visual quality.
 - A distortion effect of a lens to focus all colors to the same point.
 - Adjust the ***Intensity*** and ***Start Offset*** to create little edge abbreation effect.
 
-![Untitled](/assets/images/posts/post_processing/image_3.png)
+![Untitled](/assets/images/posts/post_processing/image_3.webp)
 
 ## Film Grain
 

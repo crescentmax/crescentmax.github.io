@@ -3,14 +3,21 @@
   description: "A virtual production tool for pre-viz <br> made with Unreal"
   url: "/projects/cinedesk"
   type: work
-  tags: [Unreal Engine, C++, Virtual Production]
+  tags: [UE, UI/UX, Interaction]
 
 - title: "Mock Trial"
-  image: "/assets/images/projects/mock_trial/courtroom-simulation.png"
+  image: "/assets/images/projects/mock_trial/courtroom-simulation.webp"
   description: "AI-driven testimony training <br> built with Unreal and C++"
   url: "/projects/mock-trial"
   type: work
   tags: [Unreal Engine, C++, TTS]
+
+- title: "Hotel HR Training Simulation"
+  image: "/assets/images/projects/hotel_hr/Hotel_Training.webp"
+  description: "AI-powered workplace conversation simulation <br> for professional communication training"
+  url: "/projects/hotel-conversation"
+  type: work
+  tags: [UE, TTS, LLM, Simulation]
 
 - title: "Unannounced AAA Project"
   image: "/assets/images/projects/AAA/ue.jpg"
@@ -27,28 +34,28 @@
   tags: [UE5, C++, Multiplayer]
 
 - title: "Retail Digital Twin"
-  image: "/assets/images/projects/digital_twin_retail/Overview.png"
+  image: "/assets/images/projects/digital_twin_retail/Overview.webp"
   description: "A digital twin of a convenience store <br> made with Unreal"
   url: "/projects/retail"
   type: highlight 
   tags: [Unreal Engine, Digital Twin]
 
 - title: "Physically Based Simulations"
-  image: "/assets/images/projects/simulations/thumbnail.png"
+  image: "/assets/images/projects/simulations/thumbnail.webp"
   description: "Physically based simulations <br> with OpenGL and UE5"
   url: "/projects/simulations"
   type: highlight
   tags: [OpenGL, GLSL, UE5]
 
 - title: "Lucid Dive"
-  image: "/assets/images/projects/lucid_dive/MainMenuBg.png"
+  image: "/assets/images/projects/lucid_dive/MainMenuBg.webp"
   description: "A 2D cyberpunk platformer <br> made with Unity"
   url: "/projects/luciddive"
   type: personal
   tags: [Unity, C#, Gameplay]
 
 - title: "Orbitone"
-  image: "/assets/images/projects/orbitone/image.png"
+  image: "/assets/images/projects/orbitone/image.webp"
   description: "A VR rhythm game <br> made with Unity"
   url: "/projects/orbitone"
   type: personal
@@ -62,21 +69,21 @@
   tags: [Blender, Houdini, Python]
 
 - title: "Deal Da Time"
-  image: "/assets/images/projects/deal_da_time/logo.png"
+  image: "/assets/images/projects/deal_da_time/logo.webp"
   description: "A mini puzzle game <br> created for GMTK Jam 2023"
   url: "https://intoxicat-studio.itch.io/deal-da-time"
   type: personal
   tags: [Unity, Game Jam]
 
 - title: "Smol Calli Dungeon"
-  image: "/assets/images/projects/smol_calli/image.png"
+  image: "/assets/images/projects/smol_calli/image.webp"
   description: "A simple 2D game <br> made with Unity"
   url: "https://youtu.be/jPKp1WAhcMo"
   type: personal
   tags: [Unity, 2D]
 
 - title: "Operation: Stardust"
-  image: "/assets/images/projects/operation_stardust/OBR.png"
+  image: "/assets/images/projects/operation_stardust/OBR.webp"
   description: "A turn-based strategy game <br> made with Unity"
   url: "https://chocola-mint.itch.io/operation-stardust"
   type: personal

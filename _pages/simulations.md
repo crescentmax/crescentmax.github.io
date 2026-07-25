@@ -144,7 +144,7 @@ The goal of this project is to create real-time realistic fluid simulation with 
 In order to improve the rendering result, the water material combines 3 passes
 to get the final result.
 <div style="text-align: center; margin-top: 1.5rem; margin-bottom: 1.5rem;">
-    <img src="{{ '/assets/images/projects/simulations/SPHPostProcessing.png' | relative_url }}" alt="SPHPostProcessing">
+    <img src="{{ '/assets/images/projects/simulations/SPHPostProcessing.webp' | relative_url }}" alt="SPHPostProcessing">
     <p style="text-align: center; font-style: italic;">Post Processing Process</p>
 </div>
 <div style="text-align: center; margin-bottom: 1.5rem;">

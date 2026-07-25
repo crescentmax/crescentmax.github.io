@@ -83,6 +83,8 @@ exclude:
   - Gemfile.lock
   - node_modules/
   - vendor
+  - internal-docs/
+  - scripts/
   
 sass:
   silence_deprecations:
