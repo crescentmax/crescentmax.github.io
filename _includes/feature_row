@@ -11,7 +11,7 @@
         <div class="archive__item">
           {% if f.image_path %}
             <div class="archive__item-teaser">
-              <img src="{{ f.image_path | relative_url }}" alt="{% if f.alt %}{{ f.alt }}{% endif %}">
+              <img src="{{ f.image_path | relative_url }}" alt="{% if f.alt %}{{ f.alt }}{% endif %}" width="1600" height="1000" loading="lazy" decoding="async">
             </div>
           {% endif %}
 

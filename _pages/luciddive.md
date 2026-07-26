@@ -5,7 +5,7 @@ permalink: /projects/luciddive
 ---
 
 <div style="text-align:center;">
-  <iframe
+  <iframe loading="lazy"
     src="https://www.youtube-nocookie.com/embed/mYBjleQQm_g"
     title="Lucid Dive Demo"
     frameborder="0"

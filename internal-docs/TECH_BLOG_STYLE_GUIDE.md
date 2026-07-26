@@ -4,9 +4,9 @@ Internal documentation for creating and revising Chengyan Tsai / Max’s technic
 
 This folder is excluded from the Jekyll build. Do not link to it from the website or move these files into `_posts` or `_pages`.
 
-To start the local site, run `scripts/start-local-site.ps1` from PowerShell. The script builds the site, starts Jekyll with live reload and Windows file polling, and keeps the server attached to the current terminal so it remains available while that terminal is open.
+To start the local site, run `scripts/start-local-site.ps1` from PowerShell. The script builds the site, starts Jekyll, and keeps the server attached to the current terminal so it remains available while that terminal is open. Restart the script after edits so the generated site reflects the latest files.
 
-## 1. Editorial goal
+## 1. Editorial Goal
 
 Each post should feel like a compact technical note written by a game programmer and technical artist:
 
@@ -18,7 +18,7 @@ Each post should feel like a compact technical note written by a game programmer
 
 The reader should be able to understand the topic, recognize the important terms, and apply the technique after reading the post.
 
-## 2. File name and front matter
+## 2. File Name and Front Matter
 
 Create posts inside `_posts/` using this format:
 
@@ -38,7 +38,7 @@ tags: [Unreal, C++, Programming]
 
 Use a small, accurate tag list. Prefer three to five tags from the existing vocabulary, such as `Unreal`, `C++`, `UI`, `Rendering`, `Programming`, `Gameplay`, or `Technical Art`.
 
-## 3. Recommended post structure
+## 3. Recommended Post Structure
 
 Start with a short lead paragraph immediately after the front matter. It should explain what the post covers and why the topic matters.
 
@@ -53,11 +53,11 @@ Then organize the article using this hierarchy:
 ```markdown
 ---
 
-## 1. Core concept
+## 1. Core Concept
 
 Explain the idea in plain language.
 
-### When to use it
+### When to Use It
 
 Describe the practical decision.
 
@@ -65,7 +65,7 @@ Describe the practical decision.
 
 Show the relevant code or editor setup.
 
-## 3. Common mistakes
+## 3. Common Mistakes
 
 Explain failure cases and how to avoid them.
 
@@ -80,18 +80,69 @@ End with the most important takeaway.
 
 Use `##` for main sections and `###` for subsections. Number sections only when the order is meaningful or when the post is a step-by-step guide. Do not use multiple `#` headings in the body; the front-matter title is the page’s only top-level title.
 
-## 4. Markdown conventions
+## 4. Markdown Conventions
+
+### Titles and Headings
+
+Use editorial Title Case for every page title and Markdown heading.
+
+- Capitalize the first and last words and all major words.
+- Keep short articles, conjunctions, and prepositions lowercase unless they
+  begin or end the title: `a`, `an`, `and`, `as`, `at`, `but`, `by`, `for`,
+  `from`, `in`, `nor`, `of`, `on`, `or`, `the`, `to`, and `with`.
+- Preserve established capitalization for project names, APIs, and technical
+  terms such as `CineDesk`, `MetaHuman`, `UI/UX`, `SPH`, `HLSL`, and
+  `NeighborGrid3D`.
+- Write the capitalization correctly in Markdown or front matter. Do not use
+  CSS `text-transform` to imitate Title Case.
+
+Examples:
+
+- `## System Architecture`
+- `### TTS and Lip Sync`
+- `## Multiplayer in UE: Understanding Replication`
 
 Use pure Markdown for normal writing whenever possible.
 
-### Paragraphs and empty space
+### Required Typography and Spacing
+
+Long-form posts use the shared article scale in `assets/css/overall.css`. Do not
+add inline font sizes or manual spacer elements to individual posts.
+
+- Body copy and list items render at **15–16px** with a **1.68 line height**.
+- `##` headings render at **22–27px** with a compact 10px gap before the first
+  paragraph.
+- `###` and `####` headings render at **18–21px**.
+- Fenced code blocks render at **13–14px** with a **1.55 line height**.
+- Tables render at **13–15px** with compact cell padding.
+- Inline code renders at **84%** of the surrounding text size.
+- Main-section top spacing is **28–36px**.
+- Subsection top spacing is **20–26px**.
+- Normal paragraphs use about **0.85rem** of space below them.
+- Lists use about **0.95rem** below the list.
+- Keep the existing 70% article width; do not enlarge text to compensate for a
+  wide layout.
+
+These values are intentionally bounded in pixels because the site theme changes
+the root font size across breakpoints. Use the shared CSS rather than adding a
+new `rem` size inside a Markdown file.
+
+### Paragraphs and Empty Space
 
 - Put one blank line between paragraphs.
 - Put one blank line before and after lists, code blocks, quotes, images, and headings.
 - Use `---` only to separate major phases of an article; do not add it after every subsection.
 - Do not use repeated `<br>` tags or empty HTML elements to create vertical space.
+- Do not add extra blank lines to create larger chapter gaps; Markdown collapses them and the stylesheet controls the rhythm.
 - Keep paragraphs short: usually two to five sentences.
 - Break up a long explanation with a heading, list, example, table, or image when it becomes difficult to scan.
+
+### Horizontal Rules
+
+Technical blog posts do not need a divider before every section. Use a Markdown
+horizontal rule (`---`) only between genuinely different phases of a long
+article. Project pages use a separate rule: every major project section receives
+a subtle divider automatically through the shared project stylesheet.
 
 Good spacing:
 
@@ -100,7 +151,7 @@ The system receives an input event and routes it to the active widget.
 
 The widget then updates its state and reports the result to the controller.
 
-## Input routing
+## Input Routing
 
 The viewport determines which widget receives focus.
 ```
@@ -119,7 +170,7 @@ Use `-` for unordered lists and `1.` for ordered steps. Keep list items grammati
 
 Use nested lists only when the relationship is important. Avoid more than two levels of nesting.
 
-### Bold text for keywords and concepts
+### Bold Text for Keywords and Concepts
 
 Use bold for a key concept when it is introduced or when it is the conclusion of a paragraph:
 
@@ -129,7 +180,7 @@ Use bold for a key concept when it is introduced or when it is the conclusion of
 
 Use bold sparingly. Do not bold every technical noun, complete paragraphs, or entire list items. A reader should be able to scan the bold text and understand the structure of the explanation.
 
-### Inline code
+### Inline Code
 
 Use backticks for exact technical identifiers, API names, file names, paths, commands, values, and short expressions:
 
@@ -151,7 +202,7 @@ Use inline code for:
 
 Do not use inline code for a general concept such as **garbage collection**, **authority**, or **input routing** unless the exact identifier is being discussed.
 
-### Italic text
+### Italic Text
 
 Use italics for light emphasis, a term being defined, or a publication/title reference. Do not use italics as a substitute for inline code.
 
@@ -169,7 +220,7 @@ Read the [Unreal Engine networking documentation](https://dev.epicgames.com/docu
 
 Place references in a final `## References` section when the sources are important to the article. Use official Unreal documentation or primary technical sources whenever possible.
 
-## 5. Code examples
+## 5. Code Examples
 
 Use fenced code blocks for anything longer than a short expression. Always include a language identifier when possible.
 
@@ -193,9 +244,9 @@ Rules for code examples:
 - Explain important lines after the snippet instead of commenting every line.
 - Never put a multi-line code sample in inline backticks.
 
-## 6. Images and captions
+## 6. Images and Captions
 
-### Asset rules
+### Asset Rules
 
 Store blog images under:
 
@@ -203,7 +254,7 @@ Store blog images under:
 
 Prefer WebP files with descriptive names. Use the same file name and extension in the Markdown reference. Do not use names such as `image.png`, `Untitled`, or `Screenshot 1` when a meaningful name is available.
 
-### Image without a visible caption
+### Image Without a Visible Caption
 
 Use pure Markdown for a normal image:
 
@@ -213,14 +264,14 @@ Use pure Markdown for a normal image:
 
 The alt text must describe the meaningful content of the image. It is used by screen readers and shown when the image cannot load; it is not a caption placeholder.
 
-### Image with a visible caption
+### Image With a Visible Caption
 
 Pure Markdown does not provide a reliable visible caption. For a caption, use the same centered HTML wrapper used by the Digital Twin and project pages:
 
 ```html
 <div style="text-align: center; margin-top: 1.5rem; margin-bottom: 1.5rem;">
   <img src="{{ '/assets/images/posts/common_ui/Common_UI_1.webp' | relative_url }}" alt="Common UI input routing diagram">
-  <p style="text-align: center; font-style: italic; font-size: 0.85rem;">Common UI input routing through the viewport.</p>
+  <p class="media-caption">Common UI input routing through the viewport.</p>
 </div>
 ```
 
@@ -228,16 +279,17 @@ Caption rules:
 
 - Center the image and caption.
 - Keep the caption short and factual.
+- Use the shared `.media-caption` class; do not set caption font size inline.
 - Use sentence case and end with a period when it is a complete sentence.
 - Describe what the reader should notice, not merely the file name.
 - Add a caption only when it provides context; do not caption every decorative image.
 - Keep `margin-top` and `margin-bottom` so the image does not collide with nearby text.
 
-### Image placement
+### Image Placement
 
 Place an image immediately after the paragraph or list that introduces it. Follow it with one short explanation when the image needs interpretation. Avoid stacking many images without text; the reader should understand why each image is present.
 
-## 7. Technical writing style
+## 7. Technical Writing Style
 
 - Define an unfamiliar term the first time it appears.
 - Use the full name first, then an abbreviation: `Unreal Motion Graphics (UMG)`, followed by `UMG`.
@@ -249,9 +301,9 @@ Place an image immediately after the paragraph or list that introduces it. Follo
 - Do not claim a feature, benchmark, or result unless it is supported by the project material.
 - Correct spelling and terminology before publishing: Unreal Engine, Blueprint, Blueprint Interface, Event Dispatcher, C++, `Build.cs`, `UPROPERTY()`.
 
-## 8. Suggested templates
+## 8. Suggested Templates
 
-### Concept note
+### Concept Note
 
 ```markdown
 ---
@@ -262,11 +314,11 @@ tags: [Unreal, Programming]
 
 One short paragraph explaining the concept and why it matters.
 
-## 1. What it is
+## 1. What It Is
 
 Define the concept in plain language.
 
-## 2. When to use it
+## 2. When to Use It
 
 Explain the decision and trade-offs.
 
@@ -287,7 +339,7 @@ State the main takeaway in two or three sentences.
 - [Official documentation](https://example.com)
 ```
 
-### Tutorial or setup note
+### Tutorial or Setup Note
 
 ```markdown
 ---
@@ -310,28 +362,32 @@ State the expected result and prerequisites.
 2. Add the dependency.
 3. Configure the project.
 
-## 3. Verify the result
+## 3. Verify the Result
 
 Describe a small test that confirms the setup works.
 
-## Common problems
+## Common Problems
 
 Explain likely failures and fixes.
 ```
 
-## 9. Pre-publish checklist
+## 9. Pre-Publish Checklist
 
 - [ ] File name follows `YYYY-MM-DD-short-topic-name.md`.
 - [ ] Front matter includes `title`, `layout: post`, and relevant tags.
+- [ ] The page title and every heading use editorial Title Case.
 - [ ] The opening paragraph states the topic and value.
 - [ ] The body uses `##` and `###` headings consistently.
 - [ ] Technical identifiers use inline code.
 - [ ] Important concepts use bold selectively.
 - [ ] Multi-line code uses a language-specific fenced block.
+- [ ] Code blocks use the shared 13–14px scale and are not resized inline.
 - [ ] Every local image has useful alt text.
 - [ ] Captions use the centered image wrapper when a visible caption is needed.
 - [ ] Images use local WebP assets when available.
 - [ ] Paragraphs, lists, code, and images have balanced empty space.
+- [ ] Body text uses the shared 15–16px article scale; no inline body font size was added.
+- [ ] Section gaps follow the shared 28–36px / 20–26px heading rhythm.
 - [ ] Links use descriptive text and work correctly.
 - [ ] Claims, benchmarks, and references are accurate.
 - [ ] The page builds successfully with the local Jekyll configuration.

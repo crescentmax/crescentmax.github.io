@@ -5,7 +5,7 @@ permalink: /projects/retail
 ---
 
 <div style="text-align:center;">
-  <iframe
+  <iframe loading="lazy"
     src="https://www.youtube.com/embed/K-e6DO4BT6Y"
     title="Retail Digital Twin Demo"
     frameborder="0"
@@ -26,17 +26,17 @@ permalink: /projects/retail
 + Direction
 
 <div style="text-align: center; margin-top: 1.5rem; margin-bottom: 1.5rem;">
-    <img src="{{ '/assets/images/projects/digital_twin_retail/MarkerModel.webp' | relative_url }}" alt="Marker Model">
+    <img loading="lazy" decoding="async" src="{{ '/assets/images/projects/digital_twin_retail/MarkerModel.webp' | relative_url }}" alt="Marker Model">
     <p style="text-align: center; font-style: italic;">Marker in the Level</p>
 </div>
 
 <div style="text-align: center; margin-top: 1.5rem; margin-bottom: 1.5rem;">
-    <img src="{{ '/assets/images/projects/digital_twin_retail/MarkerDataTable.webp' | relative_url }}" alt="Marker Data Table">
+    <img loading="lazy" decoding="async" src="{{ '/assets/images/projects/digital_twin_retail/MarkerDataTable.webp' | relative_url }}" alt="Marker Data Table">
     <p style="text-align: center; font-style: italic;">Store Level Marker Information in Data Table</p>
 </div>
 
 <div style="text-align: center; margin-top: 1.5rem; margin-bottom: 1.5rem;">
-    <img src="{{ '/assets/images/projects/digital_twin_retail/MarkerCreator.webp' | relative_url }}" alt="Marker Creator">
+    <img loading="lazy" decoding="async" src="{{ '/assets/images/projects/digital_twin_retail/MarkerCreator.webp' | relative_url }}" alt="Marker Creator">
     <p style="text-align: center; font-style: italic;">Designer can create markers with editor utility</p>
 </div>
 
@@ -54,7 +54,7 @@ We use predefined actions to control customers. Designer can easily create new a
 + Leaving
 
 <div style="text-align: center; margin-top: 1.5rem; margin-bottom: 1.5rem;">
-    <img src="{{ '/assets/images/projects/digital_twin_retail/CustomerBehavior.gif' | relative_url }}" alt="Customer Behaviors">
+    <img loading="lazy" decoding="async" src="{{ '/assets/images/projects/digital_twin_retail/CustomerBehavior.webp' | relative_url }}" alt="Customer Behaviors">
     <p style="text-align: center; font-style: italic;">Customer Behaviors</p>
 </div>
 
@@ -63,7 +63,7 @@ We use predefined actions to control customers. Designer can easily create new a
 ## Customer AI
 
 <div style="text-align: center; margin-top: 1.5rem; margin-bottom: 1.5rem;">
-    <img src="{{ '/assets/images/projects/digital_twin_retail/CustomerAI.webp' | relative_url }}" alt="Customer AI Structure">
+    <img loading="lazy" decoding="async" src="{{ '/assets/images/projects/digital_twin_retail/CustomerAI.webp' | relative_url }}" alt="Customer AI Structure">
     <p style="text-align: center; font-style: italic;">Customer AI Structure</p>
 </div>
 
@@ -74,6 +74,6 @@ We use predefined actions to control customers. Designer can easily create new a
 The system utilizes Unreal MQTT plugin to broadcast the real-time retail store data to a user specified topic. 
 
 <div style="text-align: center; margin-top: 1.5rem; margin-bottom: 1.5rem;">
-    <img src="{{ '/assets/images/projects/digital_twin_retail/MQTT.webp' | relative_url }}" alt="MQTT Scripts">
+    <img loading="lazy" decoding="async" src="{{ '/assets/images/projects/digital_twin_retail/MQTT.webp' | relative_url }}" alt="MQTT Scripts">
     <p style="text-align: center; font-style: italic;">MQTT Scripts</p>
 </div>

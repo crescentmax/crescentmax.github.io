@@ -10,16 +10,16 @@ title: Projects
     <!-- Title -->
     <h1 class="page__title">{{ page.title }}</h1>
     
-    <!-- Professional and collaborative work -->
+    <!-- Professional and research work -->
     <section class="project-section">
-      <h2 class="section-title">Professional &amp; collaborative work</h2>
+      <h2 class="section-title">Professional &amp; Research Work</h2>
       <div class="project-grid">
         {% for project in site.data.projects %}
-          {% if project.type == "work" %}
+          {% if project.type == "professional" %}
             <article class="project-card">
               <a href="{{ project.url | relative_url }}"{% if project.url contains '://' %} target="_blank" rel="noopener"{% endif %}>
                 {% if project.image %}
-                  <img class="project-image" src="{{ project.image | relative_url }}" alt="{{ project.title }}">
+                  <img class="project-image" src="{{ project.image | relative_url }}" alt="{{ project.title }}" width="1600" height="1000" loading="lazy" decoding="async">
                 {% else %}
                   <div class="project-image project-image--placeholder" role="img" aria-label="{{ project.title }}"><span>AI CONVERSATION<br>SIMULATION</span></div>
                 {% endif %}
@@ -40,16 +40,16 @@ title: Projects
       </div>
     </section>
 
-    <!-- Research and technical studies -->
+    <!-- Personal and course projects -->
     <section class="project-section">
-      <h2 class="section-title">Research &amp; technical studies</h2>
+      <h2 class="section-title">Personal &amp; Course Projects</h2>
       <div class="project-grid">
         {% for project in site.data.projects %}
-          {% if project.type == "highlight" %}
+          {% if project.type == "project" %}
             <article class="project-card">
               <a href="{{ project.url | relative_url }}"{% if project.url contains '://' %} target="_blank" rel="noopener"{% endif %}>
                 {% if project.image %}
-                  <img class="project-image" src="{{ project.image | relative_url }}" alt="{{ project.title }}">
+                  <img class="project-image" src="{{ project.image | relative_url }}" alt="{{ project.title }}" width="1600" height="1000" loading="lazy" decoding="async">
                 {% else %}
                   <div class="project-image project-image--placeholder" role="img" aria-label="{{ project.title }}"><span>AI CONVERSATION<br>SIMULATION</span></div>
                 {% endif %}
@@ -70,16 +70,16 @@ title: Projects
       </div>
     </section>
 
-    <!-- Personal projects and games -->
+    <!-- Games -->
     <section class="project-section">
-      <h2 class="section-title">Personal projects &amp; games</h2>
+      <h2 class="section-title">Games</h2>
       <div class="project-grid">
         {% for project in site.data.projects %}
-          {% if project.type == "personal" %}
+          {% if project.type == "game" %}
             <article class="project-card">
               <a href="{{ project.url | relative_url }}"{% if project.url contains '://' %} target="_blank" rel="noopener"{% endif %}>
                 {% if project.image %}
-                  <img class="project-image" src="{{ project.image | relative_url }}" alt="{{ project.title }}">
+                  <img class="project-image" src="{{ project.image | relative_url }}" alt="{{ project.title }}" width="1600" height="1000" loading="lazy" decoding="async">
                 {% else %}
                   <div class="project-image project-image--placeholder" role="img" aria-label="{{ project.title }}"><span>AI CONVERSATION<br>SIMULATION</span></div>
                 {% endif %}

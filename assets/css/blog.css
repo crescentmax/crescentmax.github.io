@@ -1,8 +1,8 @@
 /* Blog archive cards share the same quiet, editorial surface as the landing page. */
 body.layout--posts .page__title,
 body.layout--posts .page__content {
-  width: 80%;
-  max-width: 1024px;
+  width: 100%;
+  max-width: none;
 }
 
 body.layout--posts .archive__subtitle {

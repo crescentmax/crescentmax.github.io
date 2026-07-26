@@ -200,6 +200,25 @@
 }
 
 @media (max-width: 700px) {
+  .section-title {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  .project-title {
+    font-size: 18px;
+  }
+
+  .project-description {
+    font-size: 14px;
+  }
+
+  .project-footer,
+  .project-tag,
+  .project-link {
+    font-size: 12px;
+  }
+
   .project-grid {
     grid-template-columns: 1fr;
   }

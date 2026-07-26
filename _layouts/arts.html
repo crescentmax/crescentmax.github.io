@@ -10,22 +10,6 @@ title: Gallery
     <!-- Title -->
     <h1 class="page__title">{{ page.title }}</h1>
 
-    <!-- VFX Section -->
-    <section class="gallery-section">
-      <h2 class="section-title">VFX</h2>
-      <div class="gallery-grid">
-        {% for item in site.data.arts %}
-          {% if item.type == "VFX" %}
-            <div class="gallery-item">
-              <a href="{{ item.url | relative_url }}">
-                <img class="gallery-image" src="{{ item.image | relative_url }}" alt="VFX">
-              </a>
-            </div>
-          {% endif %}
-        {% endfor %}
-      </div>
-    </section>
-
     <!-- Texture Section -->
     <section class="gallery-section">
       <h2 class="section-title">Procedural Texture</h2>
@@ -42,7 +26,7 @@ title: Gallery
             {% if item.type == "Texture" %}
               <div class="slide-texture">
                 <a href="{{ item.url | relative_url }}">
-                  <img class="gallery-image" src="{{ item.image | relative_url }}" alt="Texture">
+                  <img class="gallery-image" src="{{ item.image | relative_url }}" alt="Texture" loading="lazy" decoding="async">
                 </a>
               </div>
             {% endif %}
@@ -70,7 +54,7 @@ title: Gallery
             {% if item.type == "2D" %}
               <div class="slide-2D">
                 <a href="{{ item.url | relative_url }}">
-                  <img class="gallery-image" src="{{ item.image | relative_url }}" alt="2D Art">
+                  <img class="gallery-image" src="{{ item.image | relative_url }}" alt="2D Art" loading="lazy" decoding="async">
                 </a>
               </div>
             {% endif %}
@@ -98,7 +82,7 @@ title: Gallery
             {% if item.type == "Pixel" %}
               <div class="slide-pixel">
                 <a href="{{ item.url | relative_url }}">
-                  <img class="gallery-image" src="{{ item.image | relative_url }}" alt="Pixel Art">
+                  <img class="gallery-image" src="{{ item.image | relative_url }}" alt="Pixel Art" loading="lazy" decoding="async">
                 </a>
               </div>
             {% endif %}

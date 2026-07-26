@@ -11,6 +11,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    {% if page.header.overlay_image %}
+      <link rel="preload" as="image" href="{{ page.header.overlay_image | relative_url }}" fetchpriority="high">
+    {% endif %}
     <link rel="stylesheet" href="{{ '/assets/css/overall.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/splash.css' | relative_url }}">
     {% if page.classes contains "project-case-study" %}

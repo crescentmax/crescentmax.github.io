@@ -7,6 +7,11 @@ body {
   line-height: 1.7;
 }
 
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 body,
 p,
 li,
@@ -118,6 +123,32 @@ a:hover {
   line-height: 1.08;
 }
 
+/* Top-level navigation pages share one canvas and title anchor. */
+body.layout--projects .page,
+body.layout--arts .page,
+body.layout--posts .page,
+body.navigation-page .page {
+  width: 80% !important;
+  max-width: 1024px;
+}
+
+body.layout--projects .page__title,
+body.layout--arts .page__title,
+body.layout--posts .page__title,
+body.navigation-page .page__title {
+  width: 100%;
+  max-width: none;
+  margin-right: 0;
+  margin-left: 0;
+  color: var(--atelier-accent) !important;
+}
+
+body.layout--posts .page__content,
+body.navigation-page .page__content {
+  width: 100%;
+  max-width: none;
+}
+
 .page__content h1,
 .page__content h2,
 .page__content h3,
@@ -148,15 +179,39 @@ body.layout--post .page__title {
   font-weight: 400;
 }
 
-body.layout--post .page__content h2 {
-  font-size: clamp(1.15rem, 2vw, 1.6rem);
+body:is(.layout--post, .blog-post) .page__content h2 {
+  margin: clamp(28px, 2vw, 36px) 0 10px;
+  font-size: clamp(22px, 1.18rem, 27px);
   font-weight: 400;
+  line-height: 1.25;
 }
 
-body.layout--post .page__content h3,
-body.layout--post .page__content h4 {
-  font-size: clamp(0.95rem, 1.45vw, 1.15rem);
+body:is(.layout--post, .blog-post) .page__content h3,
+body:is(.layout--post, .blog-post) .page__content h4 {
+  margin: clamp(20px, 1.5vw, 26px) 0 8px;
+  font-size: clamp(18px, 0.92rem, 21px);
   font-weight: 500;
+  line-height: 1.35;
+}
+
+/* Long-form reading scale shared by technical blogs and project write-ups.
+   Pixel bounds prevent the theme's responsive 16–22px root size from making
+   article copy oversized on wide screens or undersized on phones. */
+body:is(.layout--post, .blog-post) .page__content p,
+body:is(.layout--post, .blog-post) .page__content li,
+body:is(.layout--post, .blog-post) .page__content dd {
+  font-size: clamp(15px, 0.72rem, 16px);
+  line-height: 1.68;
+}
+
+body:is(.layout--post, .blog-post) .page__content p {
+  margin: 0 0 0.85rem;
+}
+
+body:is(.layout--post, .blog-post) .page__content ul,
+body:is(.layout--post, .blog-post) .page__content ol {
+  margin-top: 0.45rem;
+  margin-bottom: 0.95rem;
 }
 
 /* Keep long-form project copy at a comfortable reading measure while allowing
@@ -196,13 +251,73 @@ body.layout--post:not(.project-case-study) .page__content > hr {
 }
 
 body.blog-post .page__content :not(pre) > code {
-  padding: 0.12em 0.35em;
+  padding: 0.1em 0.3em;
   border: 1px solid #71303d;
   border-radius: 0.3rem;
   background: #351820;
   color: #f0a0ad;
-  font-size: 0.88em;
+  font-size: 0.84em;
   font-weight: 500;
+}
+
+body.blog-post .page__content div.highlighter-rouge,
+body.blog-post .page__content figure.highlight {
+  margin: 0.85rem 0 1.05rem;
+  font-size: clamp(13px, 0.62rem, 14px);
+  line-height: 1.55;
+}
+
+body.blog-post .page__content pre {
+  font-size: clamp(13px, 0.62rem, 14px) !important;
+  line-height: 1.55;
+}
+
+body.blog-post .page__content pre code {
+  font-size: inherit !important;
+  line-height: inherit;
+}
+
+body.blog-post .page__content pre {
+  padding: 0.8rem;
+}
+
+body.blog-post .page__content table {
+  margin: 0.85rem 0 1.1rem;
+  font-size: clamp(13px, 0.66rem, 15px);
+  line-height: 1.55;
+}
+
+body.blog-post .page__content th,
+body.blog-post .page__content td {
+  padding: 0.5rem 0.65rem;
+}
+
+/* Project chapters use a quiet rule between major H2 sections. The first H2
+   begins the content and therefore does not receive a divider. */
+body.layout--post:not(.blog-post) .page__content > h2 ~ h2 {
+  margin-top: clamp(24px, 2vw, 32px);
+  padding-top: clamp(22px, 1.8vw, 28px);
+  border-top: 1px solid var(--atelier-line);
+}
+
+/* Older project pages already contain Markdown horizontal rules. In that
+   case, retain the authored rule and remove the generated H2 divider. */
+body.layout--post:not(.blog-post) .page__content > hr + h2 {
+  margin-top: 10px;
+  padding-top: 0;
+  border-top: 0;
+}
+
+/* One caption scale for legacy inline wrappers and the preferred class-based
+   markup. Inline font sizes are intentionally overridden for consistency. */
+body:is(.layout--post, .blog-post) .page__content .media-caption,
+body:is(.layout--post, .blog-post) .page__content div[style*="text-align: center"] > p[style*="font-style: italic"] {
+  margin: 0.45rem 0 0;
+  color: var(--atelier-muted);
+  font-size: clamp(14px, 0.68rem, 15px) !important;
+  font-style: italic;
+  line-height: 1.5;
+  text-align: center !important;
 }
 
 .about-intro {
@@ -285,6 +400,31 @@ img {
 }
 
 @media (max-width: 600px) {
+  body.layout--projects .page,
+  body.layout--arts .page,
+  body.layout--posts .page,
+  body.navigation-page .page {
+    width: 100% !important;
+  }
+
+  .page__content p,
+  .page__content li,
+  .page__content dd {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .page__content h2 {
+    font-size: 22px;
+    line-height: 1.25;
+  }
+
+  .page__content h3,
+  .page__content h4 {
+    font-size: 18px;
+    line-height: 1.35;
+  }
+
   .masthead__inner-wrap {
     padding: 0.8rem 0.75rem;
   }

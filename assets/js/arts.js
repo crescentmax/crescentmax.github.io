@@ -2,8 +2,7 @@
 let slideIndexes = {
   "2D": 1,
   "pixel": 1,
-  "texture": 1,
-  "vfx": 1
+  "texture": 1
 };
 
 function showSlides(n, type) {
@@ -29,6 +28,5 @@ document.addEventListener("DOMContentLoaded", function() {
   showSlides(1, "2D");
   showSlides(1, "pixel");
   showSlides(1, "texture");
-  showSlides(1, "vfx");
 });
 

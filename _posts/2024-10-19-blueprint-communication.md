@@ -1,10 +1,13 @@
+---
+title: "Blueprint Communication"
+---
 
 Blueprint communication lets Unreal Engine objects interact through direct references, interfaces, or event dispatchers.
 ---
 
 ## **I. Intro**
 
-### **What is Blueprint Communication?**
+### **What Is Blueprint Communication?**
 
 - **A means for seperate individual objects to interact with each other**
     - Imagine a Light Blueprint and a LightSwitch Blueprint
@@ -32,7 +35,7 @@ Blueprint communication lets Unreal Engine objects interact through direct refer
 
 ### **Communication Types**
 
-### **3 primary communication methods:**
+### **3 Primary Communication Methods:**
 
 - **Direct Communication**
 - **Blueprint Interface message calls**
@@ -43,7 +46,7 @@ Blueprint communication lets Unreal Engine objects interact through direct refer
 
 ---
 
-### **How to use different types?**
+### **How to Use Different Types?**
 
 - First question is the **flow of communication**
     - Is the sender **pushing the data out** to the receiver(s)? If yes,
@@ -75,7 +78,7 @@ Blueprint communication lets Unreal Engine objects interact through direct refer
 
 ---
 
-### **When to use**
+### **When to Use**
 
 - You already know the following
     - The sender
@@ -89,7 +92,7 @@ Blueprint communication lets Unreal Engine objects interact through direct refer
 
 ---
 
-### **How to do**
+### **How to Do**
 
 - Sender gets a reference to the receiver
     - Assigned at the start of the game(BeginPlay)
@@ -104,7 +107,7 @@ Blueprint communication lets Unreal Engine objects interact through direct refer
     - Sender can send data to or pull data from the revceiver
     - Sender can call functions directly on the receiver
 
-### **What casting looks like from the sender**
+### **What Casting Looks Like from the Sender**
 
 ![https://i.imgur.com/iO0CLE9.png](https://i.imgur.com/iO0CLE9.png)
 
@@ -127,7 +130,7 @@ Blueprint communication lets Unreal Engine objects interact through direct refer
 
 ---
 
-## **III. Bluprint Interfaces**
+## **III. Blueprint Interfaces**
 
 ### **Concept**
 
@@ -156,7 +159,7 @@ Blueprint communication lets Unreal Engine objects interact through direct refer
 
 ---
 
-### **When to use**
+### **When to Use**
 
 - When you are sending a signal to some other object, and you don’t really care what it does once it receives the signal
 - Example:
@@ -168,7 +171,7 @@ Blueprint communication lets Unreal Engine objects interact through direct refer
 
 ---
 
-### **How to do**
+### **How to Do**
 
 - Create them in the Content Browser
     - Right Click > Blueprint Submenu > Blueprint Interface
@@ -207,7 +210,7 @@ Blueprint communication lets Unreal Engine objects interact through direct refer
 
 ---
 
-### **EX: Organization of Nodes**
+### **Example: Organization of Nodes**
 
 - Collapse Nodes
     - If we copy/paste the node, each copy will be an individual collection of those nodes. If we want to fix it, we have to fix all.
@@ -230,7 +233,7 @@ Blueprint communication lets Unreal Engine objects interact through direct refer
 
 ---
 
-### **When to use**
+### **When to Use**
 
 - When you have a single event on a Sender that needs to be received by a lot of different receivers, each doing their own thing
     - The sender cannot receive a return value from receivers
@@ -244,7 +247,7 @@ Blueprint communication lets Unreal Engine objects interact through direct refer
 
 ---
 
-### **How to do**
+### **How to Do**
 
 - In the Sender Class
     - Create a new Event Dispatcher in the My Blueprint panel
@@ -263,7 +266,7 @@ Blueprint communication lets Unreal Engine objects interact through direct refer
 
 ---
 
-### **Event Dispatchers on the sender and the receiver**
+### **Event Dispatchers on the Sender and the Receiver**
 
 - From the Sender’s perspective, you only need to setup the Event Dispatcher then Call it at some point in the Event Graph
     - **Notice that the call doesn’t require a reference!** Instead, the sender calls the Dispatcher on itself!

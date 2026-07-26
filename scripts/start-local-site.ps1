@@ -35,6 +35,6 @@ if ($listener) {
 
 Write-Host "Starting Jekyll at http://127.0.0.1:$Port/" -ForegroundColor Green
 Write-Host "Keep this terminal open while viewing the site. Press Ctrl+C to stop." -ForegroundColor DarkGray
-# Keep local serving deterministic. Livereload is optional and can leave the
-# process stuck during its initial rebuild on this Windows setup.
-jekyll serve --config local/_config.yml --host 127.0.0.1 --port $Port --no-watch
+# The site is built above, so skip Jekyll's second initial build. This avoids a
+# Windows serve-stage stall while keeping the generated output deterministic.
+jekyll serve --config local/_config.yml --host 127.0.0.1 --port $Port --no-watch --skip-initial-build

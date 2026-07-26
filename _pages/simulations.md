@@ -1,153 +1,163 @@
 ---
-title: Physically Based Simulation
+title: Physically Based Simulations
 layout: post
 permalink: /projects/simulations
+classes:
+  - project-case-study
 ---
 
-The following showcases were completed as part of the **CSCE 649: Physically Based Modeling** course, taught by Professor **John Keyser**. 
-His excellent teaching helped me gain valuable insights into implementing and optimizing simulation algorithms. 
-All simulations were implemented using either **OpenGL** or **Unreal Engine 5 (Niagara and GLSL)**.
-
----
-## I. Bouncing Ball
-This project features a simple bouncing ball simulation. The simulation and rendering steps are decoupled, ensuring the frame rate remains unaffected when adjusting the simulation step.<br><br>
-**Key Features:**
-+ Continuous collision detection
-+ Rest state detection
-+ Decoupled simulation step and rendering step
-+ External forces like gravity, air resistance, and wind force
-+ Constant energy loss
-<div style="text-align: center; margin-top: 1.5rem; margin-bottom: 1.5rem;">
-    <img src="{{ '/assets/images/projects/simulations/BouncingBall.gif' | relative_url }}" alt="Bouncing Ball">
-    <p style="text-align: center; font-style: italic;">Bouncing Ball in a Box</p>
+<div class="case-study__tags" aria-label="Project technologies and focus">
+  <span class="case-study__tag">UE5</span>
+  <span class="case-study__tag">Niagara</span>
+  <span class="case-study__tag">HLSL</span>
+  <span class="case-study__tag">OpenGL</span>
 </div>
 
----
-## II. Particle System
-This project demonstrates a flame simulation powered by a robust particle system. The simulation ran smoothly on my laptop 
-*(RTX 3060, i5-11300H, 8GB RAM)* with up to 5,000 particles, handling thousands of particles and a mesh with approximately a thousand faces.
-<br><br>
-**Key Features:**
-+ Collision detection for particles
-+ Particles with initial attributes including position, velocity, lifespan, and color based on temprature
-+ Initial attributes drawn from a probability distribution
-<div style="text-align: center; margin-top: 1.5rem; margin-bottom: 1.5rem;">
-    <img src="{{ '/assets/images/projects/simulations/ParticleSystem01.gif' | relative_url }}" alt="Particle System 01">
-    <p style="text-align: center; font-style: italic;">Flame Particle Collision with Simple Cube </p>
-</div>
-<div style="text-align: center; margin-bottom: 1.5rem;">
-    <img src="{{ '/assets/images/projects/simulations/ParticleSystem02.gif' | relative_url }}" alt="Particle System 02">
-    <p style="text-align: center; font-style: italic;">Flame Particle Collision with Complex Mesh</p>
+<p class="case-study__summary">A collection of real-time simulation systems exploring GPU particle computation, numerical integration, collision response, and procedural rendering. The featured work is an interactive Smoothed Particle Hydrodynamics fluid simulation implemented in Unreal Engine 5 with Niagara and custom HLSL.<span class="case-study__summary-topics"><strong>Featured topics:</strong> SPH fluid simulation, GPU flocking with spatial partitioning, and OpenGL rigid-body collision response.</span></p>
+
+<div class="case-study__figure">
+  <img decoding="async" fetchpriority="high" src="{{ '/assets/images/projects/simulations/SPH20000.webp' | relative_url }}" alt="Twenty-thousand-particle SPH fluid simulation running in Unreal Engine" width="600" height="338">
+  <p class="media-caption">The Niagara SPH system simulates 20,000 particles in approximately 0.5 ms per frame on the test hardware.</p>
 </div>
 
----
-### III. Flocking System / Boid
-This project showcases a flocking simulation implemented in Unreal Engine using the Niagara system. By leveraging the **NeighborGrid3D**, each particle queries the states of its neighbors, enabling behavior influenced only by nearby particles while ignoring distant ones. The system emulates natural flocking dynamics with rules such as separation, alignment, cohesion, and obstacle avoidance.
-<br><br>
-**Key Features:**
-+ Spatial subdivision with NeighborGrid3D
-+ Particles that make their own independent decisions 
-+ Rules that produce a flocking behavior (Separation, Alignment, Cohesion)
-+ Obstacle avoidance with Signed Distance Fields
-<div style="text-align: center; margin-top: 1.5rem; margin-bottom: 1.5rem;">
-    <img src="{{ '/assets/images/projects/simulations/Boid01.gif' | relative_url }}" alt="Flocking System 01">
-    <p style="text-align: center; font-style: italic;">Spatial Subdivision</p>
-</div>
-<div style="text-align: center; margin-bottom: 1.5rem;">
-    <img src="{{ '/assets/images/projects/simulations/Boid02.gif' | relative_url }}" alt="Flocking System 02">
-    <p style="text-align: center; font-style: italic;">Flocking System with High Cohesion Factor</p>
-</div>
-<div style="text-align: center; margin-bottom: 1.5rem;">
-    <img src="{{ '/assets/images/projects/simulations/Boid03.gif' | relative_url }}" alt="Flocking System 03">
-    <p style="text-align: center; font-style: italic;">Flocking System with High Avoidance Factor</p>
-</div>
-<div style="text-align: center; margin-bottom: 1.5rem;">
-    <video controls autoplay loop muted playsinline style="width: 100%; max-width: 800px;">
-        <source src="{{ '/assets/images/projects/simulations/Boid04.webm' | relative_url }}" type="video/webm">
-        <p>Your browser does not support the video tag. <a href="{{ '/assets/videos/projects/simulations/Boid04.webm' | relative_url }}">Download the video</a>.</p>
-    </video>
-    <p style="text-align: center; font-style: italic;">General Fish Behavior Showcase</p>
+## I. SPH Implementation
+
+The SPH system handles neighbor sampling, density and pressure evaluation, fluid forces, collision response, and integration inside Niagara HLSL nodes. Particle data is then projected onto a camera-aligned render target and composited into a smoother fluid surface.
+
+**Spatial partition → neighbor query → density and pressure → pressure and viscosity forces → collision response → integration → render-target projection**
+
+### Density and Pressure
+
+Each particle queries nearby particles through a spatial grid. Neighbors within the smoothing radius contribute to the Poly6 density kernel; the resulting density is then converted into pressure relative to the rest density.
+
+```hlsl
+// Convert the Unreal-space distance from centimeters to meters.
+float dist = length(InPos - NeighborPos) / 100.0;
+
+// Accumulate the Poly6 kernel contribution from neighbors
+// inside the smoothing radius.
+if (dist < SmoothingLength)
+{
+    DensitySum += pow(
+        SmoothingLength * SmoothingLength - dist * dist,
+        3
+    );
+}
+
+// Normalize the accumulated kernel and calculate particle density.
+float poly6 =
+    315.0 / (64.0 * PI * pow(SmoothingLength, 9));
+
+OutDensity = InMass * poly6 * DensitySum;
+
+// Convert the difference from rest density into pressure.
+// The clamp prevents negative pressure in this implementation.
+OutPressure = max(
+    (OutDensity - InRestDensity) * InStiffness,
+    0.0
+);
+```
+
+### Pressure and Viscosity Forces
+
+The force pass accumulates symmetric pressure contributions from each neighbor so the interaction remains balanced between particle pairs. A viscosity term reduces velocity differences and produces more coherent fluid motion.
+
+```hlsl
+// Pressure acts along the direction between each particle pair.
+float3 direction = normalize(InPos - NeighborPos);
+
+// Accumulate a symmetric pressure contribution so both particles
+// use their own pressure and density states.
+OutPressureForce +=
+    InPressureFactor * NeighborMass *
+    (
+        InPressure / (InDensity * InDensity) +
+        NeighborPressure /
+        (NeighborDensity * NeighborDensity)
+    ) *
+    SpikyGradient * direction;
+
+// Viscosity reduces the velocity difference between neighbors
+// and produces more coherent fluid motion.
+float3 velocityDiff = NeighborVelocity - InVelocity;
+
+OutViscosityForce +=
+    InViscosityFactor * NeighborMass *
+    velocityDiff / NeighborDensity *
+    ViscosityLaplacian;
+```
+
+The Niagara update also resolves particle collisions against static scene geometry and exposes interaction forces that can be applied at runtime.
+
+<div class="case-study__figure">
+  <img loading="lazy" decoding="async" src="{{ '/assets/images/projects/simulations/SPHInteract.webp' | relative_url }}" alt="SPH particles responding to interactive collision geometry" width="600" height="326">
+  <p class="media-caption">Runtime collision geometry displaces the fluid while the Niagara simulation continues to resolve neighboring forces.</p>
 </div>
 
----
-### IV. Softbody
-This project demonstrates a softbody simulation using pendulum constraint. The vertices are colored based the external forces acting on them. Elasticity is acheived by spawning particles on the surface of a mesh and constraining them with a pendulum system. This approach establishes springs between each particle and the pendulum center, forming a mass-spring-damper system. The physics calculations are resolved and used to deform the mesh via world position offsets, resulting in a springy, flexible structure.
-<br><br>
-**Key Features:**
-+ Object defined using particles with mass
-+ Mass-spring-damper system
-+ Supports both simple Euler integration and 4th order Runge-Kutta (RK4)
-<div style="text-align: center; margin-top: 1.5rem; margin-bottom: 1.5rem;">
-    <img src="{{ '/assets/images/projects/simulations/Softbody.gif' | relative_url }}" alt="Softbody">
-    <p style="text-align: center; font-style: italic;">Softbody Simulation with Pendulum Constraint</p>
+## II. Integration Stability
+
+The simulation supports both Euler and fourth-order Runge–Kutta integration. Euler is inexpensive but becomes unstable at larger time steps; RK4 requires additional evaluation while producing a visibly more stable particle volume.
+
+<div class="case-study__media-grid">
+  <figure>
+    <img loading="lazy" decoding="async" src="{{ '/assets/images/projects/simulations/SPHEuler.webp' | relative_url }}" alt="Unstable SPH fluid behavior using Euler integration" width="600" height="338">
+    <figcaption>Euler integration becomes unstable under the same simulation conditions.</figcaption>
+  </figure>
+  <figure>
+    <img loading="lazy" decoding="async" src="{{ '/assets/images/projects/simulations/SPHRK4.webp' | relative_url }}" alt="Stable SPH fluid behavior using RK4 integration" width="600" height="338">
+    <figcaption>RK4 maintains a more stable particle distribution.</figcaption>
+  </figure>
 </div>
 
----
-### V. Rigidbody Simulation
-This project features a rigidbody simulation with realistic collision handling. 
-Both face-vertex and edge-edge collision cases are supported, along with precise 
-responses that incorporate velocity and inertia for accurate physical interactions. 
-The system supports multiple objects and complex interactions, making it versatile 
-for diverse scenarios. 
-<br><br>
-**Key Features:**
-+ Continuous collision detection
-+ Rest state detection
-+ Supports face-vertex, edge-edge collision detection and collision response
-+ Supports multiple objects and interactions between them
-+ Supports both simple Euler integration and 4th order Runge-Kutta (RK4)
-<div style="text-align: center; margin-top: 1.5rem; margin-bottom: 1.5rem;">
-    <img src="{{ '/assets/images/projects/simulations/RigidbodyCollision01.gif' | relative_url }}" alt="Rigidbody Collision 01">
-    <p style="text-align: center; font-style: italic;">Rigidbody Comeing to Rest</p>
-</div>
-<div style="text-align: center; margin-bottom: 1.5rem;">
-    <img src="{{ '/assets/images/projects/simulations/RigidbodyCollision02.gif' | relative_url }}" alt="Rigidbody Collision 02">
-    <p style="text-align: center; font-style: italic;">Multiple Objects Collision</p>
-</div>
-<div style="text-align: center; margin-bottom: 1.5rem;">
-    <img src="{{ '/assets/images/projects/simulations/RigidbodyCollision03.gif' | relative_url }}" alt="Rigidbody Collision 03">
-    <p style="text-align: center; font-style: italic;">Collision Against Non-Axis-Aligned Planes</p>
-</div>
-<div style="text-align: center; margin-bottom: 1.5rem;">
-    <img src="{{ '/assets/images/projects/simulations/RigidbodyCollision04.gif' | relative_url }}" alt="Rigidbody Collision 04">
-    <p style="text-align: center; font-style: italic;">Edge-Edge Collision Showcase</p>
+## III. Camera-Aligned Fluid Rendering
+
+The particles are projected onto a two-dimensional render target positioned in front of the camera. The projection plane is perpendicular to the camera direction vector, so its local right and up axes provide stable screen-space coordinates as the camera moves.
+
+For each particle, the renderer measures its position relative to the plane, projects that offset onto the camera-right and camera-up vectors, and maps the result into render-target UV coordinates. The resulting particle layers provide the inputs for the fluid composite:
+
+**Particle position → camera-aligned plane → render-target UV → diffuse and specular layer + opacity layer + background → final composite**
+
+<div class="case-study__figure">
+  <img loading="lazy" decoding="async" src="{{ '/assets/images/projects/simulations/SPHPostProcessing.webp' | relative_url }}" alt="Diffuse, opacity, background, and composite passes used for SPH fluid rendering" width="1257" height="692">
+  <p class="media-caption">The rendering pipeline combines diffuse and specular information, opacity, and the scene background into the final fluid composite.</p>
 </div>
 
----
-### VI. Smoothed Particle Hydrodynamics
-The goal of this project is to create real-time realistic fluid simulation with smooth particle hydrodynamics (SPH). The system uses spatial partition to accelerate the simulation. There are 40 cells along each axis, and the size is close to 2-3 times of the particle size to achieve the best performance. The smoothing length, which is the range of kernel function is also 2-3 times of the particle size.
-<br><br>
-**Key Features:**
-+ Implemented with Unreal Niagara System and hlsl
-+ Symmetric pressure Contribution
-+ Collision detection with any static meshes in the scene
-+ Supports user interactions
-+ Supports both simple Euler integration and 4th order Runge-Kutta (RK4)
-+ Post Processing for better rendering result
-<div style="text-align: center; margin-top: 1.5rem; margin-bottom: 1.5rem;">
-    <img src="{{ '/assets/images/projects/simulations/SPH20000.webp' | relative_url }}" alt="SPH20000">
-    <p style="text-align: center; font-style: italic;">Simulation with 20000 Particles <br> Each frame will only cost 0.5ms</p>
-</div>
-<div style="text-align: center; margin-bottom: 1.5rem;">
-    <img src="{{ '/assets/images/projects/simulations/SPHEuler.webp' | relative_url }}" alt="SPHEuler">
-    <p style="text-align: center; font-style: italic;">Euler Integration (Unstable)</p>
-</div>
-<div style="text-align: center; margin-bottom: 1.5rem;">
-    <img src="{{ '/assets/images/projects/simulations/SPHRK4.webp' | relative_url }}" alt="SPHRK4">
-    <p style="text-align: center; font-style: italic;">RK4 Integration (Stable)</p>
-</div>
-<div style="text-align: center; margin-bottom: 1.5rem;">
-    <img src="{{ '/assets/images/projects/simulations/SPHInteract.webp' | relative_url }}" alt="SPHInteract">
-    <p style="text-align: center; font-style: italic;">Interact with Particles</p>
+<div class="case-study__figure">
+  <img loading="lazy" decoding="async" src="{{ '/assets/images/projects/simulations/SPHWater.webp' | relative_url }}" alt="Final post-processed SPH water rendering in Unreal Engine" width="600" height="338">
+  <p class="media-caption">Final Niagara particle output after the camera-aligned render-target composite.</p>
 </div>
 
-In order to improve the rendering result, the water material combines 3 passes
-to get the final result.
-<div style="text-align: center; margin-top: 1.5rem; margin-bottom: 1.5rem;">
-    <img src="{{ '/assets/images/projects/simulations/SPHPostProcessing.webp' | relative_url }}" alt="SPHPostProcessing">
-    <p style="text-align: center; font-style: italic;">Post Processing Process</p>
+## IV. Supporting Simulation Studies
+
+### GPU Flocking with Niagara
+
+A flocking system uses Niagara's `NeighborGrid3D` for spatial subdivision so each particle evaluates only nearby agents. Separation, alignment, cohesion, and signed-distance-field obstacle avoidance produce coordinated movement without a centralized controller.
+
+<div class="case-study__figure">
+  <img loading="lazy" decoding="async" src="{{ '/assets/images/projects/simulations/Boid01.webp' | relative_url }}" alt="Niagara NeighborGrid3D spatial partition used by the GPU flocking system" width="600" height="505">
+  <p class="media-caption">NeighborGrid3D partitions the simulation volume so each agent queries only nearby particles.</p>
 </div>
-<div style="text-align: center; margin-bottom: 1.5rem;">
-    <img src="{{ '/assets/images/projects/simulations/SPHWater.webp' | relative_url }}" alt="SPHWater">
-    <p style="text-align: center; font-style: italic;">Result after Post Processing</p>
+
+<div class="case-study__figure">
+  <img loading="lazy" decoding="async" src="{{ '/assets/images/projects/simulations/Boid03.webp' | relative_url }}" alt="GPU flocking system demonstrating a high avoidance parameter" width="600" height="373">
+  <p class="media-caption">A high avoidance weighting demonstrates how parameter adjustment changes flock separation and obstacle response.</p>
 </div>
+
+### Rigid-Body Collision and Response in OpenGL
+
+The OpenGL rigid-body study implements continuous collision detection, rest-state handling, and collision response for face–vertex and edge–edge cases. Velocity and inertia are resolved across multiple interacting objects, with both Euler and RK4 integration available.
+
+<div class="case-study__media-grid">
+  <figure>
+    <img loading="lazy" decoding="async" src="{{ '/assets/images/projects/simulations/RigidbodyCollision02.webp' | relative_url }}" alt="Multiple rigid bodies colliding in the simulation" width="600" height="343">
+    <figcaption>Collision response across multiple interacting rigid bodies.</figcaption>
+  </figure>
+  <figure>
+    <img loading="lazy" decoding="async" src="{{ '/assets/images/projects/simulations/RigidbodyCollision04.webp' | relative_url }}" alt="Edge-to-edge rigid-body collision test" width="600" height="343">
+    <figcaption>Edge–edge collision detection and response.</figcaption>
+  </figure>
+</div>
+
+## V. Project Context
+
+These systems were developed for **CSCE 649: Physically Based Modeling**, taught by Professor **John Keyser**. The work combines OpenGL simulation fundamentals with GPU-oriented Unreal Engine implementations in Niagara and HLSL.

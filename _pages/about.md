@@ -2,6 +2,8 @@
 title: "About Me"
 layout: single
 permalink: /about/
+classes:
+  - navigation-page
 ---
 
 <div class="about-intro">
@@ -12,7 +14,7 @@ permalink: /about/
 
     <p>Previously, I worked at Winking Studios on Project Kyzen and an unannounced AAA action RPG, developing gameplay systems, dialogue tools, and reusable interaction frameworks. I’m now looking for opportunities in gameplay programming, tools development, and technical art.</p>
   </div>
-  <img class="about-intro__portrait" src="{{ '/assets/images/about/vizpic.jpg' | relative_url }}" alt="Chengyan Tsai">
+  <img class="about-intro__portrait" src="{{ '/assets/images/about/vizpic.webp' | relative_url }}" alt="Chengyan Tsai" width="1200" height="900" fetchpriority="high" decoding="async">
 </div>
 
 ## Contact Me

@@ -1,3 +1,6 @@
+---
+title: "Unreal Plugin Structure"
+---
 
 Basic structure and configurations of an unreal engine C++ plugin.
 
@@ -62,7 +65,7 @@ MyProject/
 
 - Folder name under `Source` must match the plugin name and module name.
 
-## 2. Add `.cpp`  and `.h` file
+## 2. Add `.cpp` and `.h` Files
 
 ```cpp
 // Public/MyPlugin.h
@@ -125,7 +128,7 @@ public class MyPlugin : ModuleRules
 
 ```
 
-## 4. Update `.uplugin` file
+## 4. Update the `.uplugin` File
 
 Add a `“Modules”` section:
 
@@ -231,7 +234,7 @@ void UMyWidget::NativeConstruct()
 
 ```
 
-## 7. Check list
+## 7. Checklist
 
 - [ ]  Plugin folder structure is valid
 - [ ]  `.uplugin` has `"Modules"` section

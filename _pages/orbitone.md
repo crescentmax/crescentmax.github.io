@@ -10,7 +10,7 @@ In this project, I was primarily responsible for design and testing, while also 
 <br><br>
 
 <div style="text-align:center;">
-  <iframe width="560" height="315"
+  <iframe loading="lazy" width="560" height="315"
           src="https://www.youtube.com/embed/KIr_CQgP_Xo"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -25,12 +25,12 @@ Most of the rhythm game use a *"Waterfall"* style note generation: notes will fi
 far away, and then fall down along the tracks. This is also true even for the popular VR rhythm game *Beat Saber*.
 
 <div style="text-align: center; margin-top: 1.5rem; margin-bottom: 1.5rem;">
-    <img src="{{ '/assets/images/projects/orbitone/DJMax.gif' | relative_url }}" alt="DJMax">
+    <img loading="lazy" decoding="async" src="{{ '/assets/images/projects/orbitone/DJMax.webp' | relative_url }}" alt="DJMax">
     <p style="text-align: center; font-style: italic;">Waterfall Style Rhythm Game<br>(DJMax)</p>
 </div>
 
 <div style="text-align: center; 1.5rem; margin-bottom: 1.5rem; ">
-    <img src="{{ '/assets/images/projects/orbitone/Beatsaber.webp' | relative_url }}" alt="Beat Saber" style="width: 70%; height: auto;">
+    <img loading="lazy" decoding="async" src="{{ '/assets/images/projects/orbitone/Beatsaber.webp' | relative_url }}" alt="Beat Saber" style="width: 70%; height: auto;">
     <p style="text-align: center; font-style: italic;">Beat Saber</p>
 </div>
 
@@ -48,7 +48,7 @@ This design introduced several *challenges*:
 + Designing colliders for notes appearing on a curved screen is difficult.
 
 <div style="text-align: center; margin-top: 1.5rem; margin-bottom: 1.5rem;">
-    <img src="{{ '/assets/images/projects/orbitone/DesignDoc01.webp' | relative_url }}" alt="Prototype" style="width: 90%; height: auto;">
+    <img loading="lazy" decoding="async" src="{{ '/assets/images/projects/orbitone/DesignDoc01.webp' | relative_url }}" alt="Prototype" style="width: 90%; height: auto;">
     <p style="text-align: center; font-style: italic;">Design Prototype</p>
 </div>
 
@@ -63,6 +63,6 @@ To address these challenges, we introduced three orbits in our second design ite
 + By treating notes as individual 3D models, we simplified the collider design, overcoming the challenges of a curved screen.
 
 <div style="text-align: center; margin-top: 1.5rem; margin-bottom: 1.5rem;">
-    <img src="{{ '/assets/images/projects/orbitone/DesignDoc02.webp' | relative_url }}" alt="Prototype" style="width: 90%; height: auto;">
+    <img loading="lazy" decoding="async" src="{{ '/assets/images/projects/orbitone/DesignDoc02.webp' | relative_url }}" alt="Prototype" style="width: 90%; height: auto;">
     <p style="text-align: center; font-style: italic;">Final Design</p>
 </div>

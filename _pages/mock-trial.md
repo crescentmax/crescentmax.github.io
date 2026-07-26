@@ -1,82 +1,91 @@
 ---
-title: Mock Trial
+title: Forensic Nursing Testimony Education
 layout: post
 permalink: /projects/mock-trial
 classes:
   - project-case-study
 ---
 
-<span class="case-study__status">Research collaboration · Forensic nursing education</span>
+<div class="case-study__tags" aria-label="Project technologies and focus">
+  <span class="case-study__tag">UE</span>
+  <span class="case-study__tag">C++</span>
+  <span class="case-study__tag">TTS</span>
+  <span class="case-study__tag">Simulation</span>
+</div>
 
-<p class="case-study__lede"><strong>Mock Trial</strong> is an immersive courtroom simulation that helps forensic nurses practice expert-witness testimony in a repeatable and psychologically safe environment. Role-specific AI agents conduct direct, cross, redirect, and re-cross examination inside an Unreal Engine courtroom.</p>
+<p class="case-study__summary">An immersive courtroom simulation for forensic nurses to practice expert-witness testimony. Role-specific AI agents conduct direct, cross, redirect, and re-cross examination inside an Unreal Engine courtroom.</p>
 
-<dl class="case-study__meta">
-  <div><dt>My role</dt><dd>Unreal gameplay &amp; systems developer</dd></div>
-  <div><dt>Collaborators</dt><dd>Texas A&amp;M forensic nursing researchers</dd></div>
-  <div><dt>Technology</dt><dd>Unreal Engine · C++ · WebSockets · MetaHuman</dd></div>
-  <div><dt>Focus</dt><dd>Gameplay logic · TTS · Real-time lip sync</dd></div>
-</dl>
+<div class="case-study__video">
+  <iframe loading="lazy"
+    src="https://www.youtube-nocookie.com/embed/i2OFY43f7sU?rel=0&modestbranding=1"
+    title="Forensic Nursing Testimony Education short demo"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen
+  ></iframe>
+</div>
 
-<figure class="case-study__hero">
-  <img src="{{ '/assets/images/projects/mock_trial/courtroom-simulation.webp' | relative_url }}" alt="Unreal Engine courtroom simulation with judge, prosecutors, defense, and jury">
-  <figcaption>The Unreal frontend places the learner in an interactive courtroom with AI-driven legal roles.</figcaption>
-</figure>
+<div style="text-align: center; margin-top: 1.5rem; margin-bottom: 1.5rem;">
+  <img loading="lazy" decoding="async" src="{{ '/assets/images/projects/mock_trial/courtroom-simulation.webp' | relative_url }}" alt="Unreal Engine courtroom simulation with judge, prosecutors, defense, and jury">
+  <p class="media-caption">The Unreal client places the learner in an interactive courtroom with AI-driven legal roles.</p>
+</div>
 
-<section class="case-study__section">
-  <h2>The training problem</h2>
-  <p>Sexual Assault Nurse Examiners must explain complex medical and forensic evidence accurately under adversarial questioning. Traditional mock court sessions are valuable, but they depend on expert facilitators and are difficult to repeat consistently at scale.</p>
-  <p>The research team designed a multi-agent simulation in which a judge, prosecutor, and defense attorney share case evidence, remember prior testimony, raise context-aware objections, and adapt their questions to the nurse’s answers.</p>
-</section>
+## Contribution
 
-<section class="case-study__section">
-  <h2>What I built</h2>
-  <p>My work centered on the Unreal client and the real-time path from an AI response to an embodied courtroom character. I translated backend events into understandable gameplay states, audible dialogue, and synchronized MetaHuman performance.</p>
+The Unreal interaction layer turns AI-generated courtroom exchanges into clear gameplay states, audible dialogue, and synchronized MetaHuman performances.
 
-  <div class="case-study__grid">
-    <article class="case-study__card">
-      <span>01 · Gameplay</span>
-      <h3>Trial state and interaction logic</h3>
-      <p>I implemented Unreal gameplay logic for courtroom roles, examination phases, speaker turns, UI state, and the flow between learner input and agent responses.</p>
-    </article>
-    <article class="case-study__card">
-      <span>02 · Networking</span>
-      <h3>Custom C++ socket API</h3>
-      <p>I built C++ components that exchange structured events with the orchestration backend over WebSockets and route responses to the appropriate Unreal systems.</p>
-    </article>
-    <article class="case-study__card">
-      <span>03 · Character performance</span>
-      <h3>TTS and MetaHuman lip sync</h3>
-      <p>I developed TTS and lip-sync components that receive generated speech, load audio at runtime, and map timing and viseme data onto MetaHuman characters.</p>
-    </article>
-  </div>
-</section>
+### Gameplay and Interaction Logic
 
-<section class="case-study__section">
-  <div class="case-study__split">
-    <div>
-      <h2>Unreal-to-AI pipeline</h2>
-      <p>The frontend communicates with a custom orchestration service through a WebSocket gateway. The service preserves the session transcript and case facts while routing each turn to the correct agent.</p>
-      <div class="case-study__callout">
-        <p><strong>Interaction flow:</strong> learner response → Unreal gameplay event → C++ socket client → agent orchestration → generated response → TTS audio → runtime playback and MetaHuman lip sync.</p>
-      </div>
-    </div>
-    <figure class="case-study__figure">
-      <img src="{{ '/assets/images/projects/mock_trial/system-architecture.webp' | relative_url }}" alt="System architecture connecting the client, WebSocket gateway, orchestration service, and case data">
-      <figcaption>The client remains focused on interaction and presentation while the backend owns dialogue context, evidence, and agent orchestration.</figcaption>
-    </figure>
-  </div>
-</section>
+- Implemented courtroom phases for direct, cross, redirect, and re-cross examination.
+- Built speaker-turn, learner-input, response, and UI state logic in Unreal.
+- Routed backend events to the correct courtroom character and gameplay state.
 
-<section class="case-study__section">
-  <h2>Adaptive courtroom behavior</h2>
-  <figure class="case-study__figure">
-    <img src="{{ '/assets/images/projects/mock_trial/agent-orchestration.webp' | relative_url }}" alt="Multi-agent courtroom orchestration workflow">
-    <figcaption>Role-specific agents share memory and case facts while the phase manager controls direct, cross, redirect, and re-cross examination.</figcaption>
-  </figure>
-  <p>Consistent testimony can produce coherent follow-up questions, while incomplete or contradictory answers prompt clarification and adaptive cross-examination. The Unreal layer makes those backend decisions legible through speaker focus, pacing, audio, and character performance.</p>
-</section>
+### C++ Networking and Runtime Data
 
-<section class="case-study__section">
-  <h2>Collaboration and outcome</h2>
-  <p>The five-person development effort was created with forensic nursing researchers at Texas A&amp;M. Domain experts helped ensure that the simulation’s language, evidence handling, and courtroom behavior remained appropriate for professional training. Formal evaluation is ongoing; the current work demonstrates the technical feasibility of scalable, case-grounded testimony practice.</p>
-</section>
+- Built custom C++ WebSocket components for asynchronous communication with the orchestration service.
+- Parsed structured responses and routed dialogue data to gameplay, UI, audio, and character systems.
+- Preserved a clear interaction state while waiting for AI-generated responses.
+
+### TTS and MetaHuman Lip Sync
+
+- Integrated text-to-speech playback for generated courtroom dialogue.
+- Developed runtime audio handling for the active speaker.
+- Connected speech timing and viseme data to MetaHuman lip-sync components.
+
+## System Architecture
+
+The Unreal client handles interaction and presentation, while the backend manages dialogue context, case evidence, and role-specific agent behavior.
+
+**Learner response → Unreal gameplay event → C++ WebSocket client → agent orchestration → generated response → TTS audio → MetaHuman lip sync and UI feedback**
+
+<div style="text-align: center; margin-top: 1.5rem; margin-bottom: 1.5rem;">
+  <img loading="lazy" decoding="async" src="{{ '/assets/images/projects/mock_trial/system-architecture.webp' | relative_url }}" alt="System architecture connecting the Unreal client, WebSocket gateway, orchestration service, and case data">
+  <p class="media-caption">The Unreal client presents the session while the backend maintains evidence, dialogue context, and agent orchestration.</p>
+</div>
+
+## Adaptive Courtroom Behavior
+
+Role-specific agents share case facts and session memory while a phase manager controls the examination sequence. Incomplete or contradictory testimony can prompt clarification and adaptive follow-up questions.
+
+<div style="text-align: center; margin-top: 1.5rem; margin-bottom: 1.5rem;">
+  <img loading="lazy" decoding="async" src="{{ '/assets/images/projects/mock_trial/agent-orchestration.webp' | relative_url }}" alt="Multi-agent courtroom orchestration workflow">
+  <p class="media-caption">The phase manager coordinates role-specific agents across each stage of testimony.</p>
+</div>
+
+## Project Context
+
+The project was developed by a five-person team in collaboration with forensic nursing researchers at Texas A&amp;M University. Domain experts guided the courtroom language, evidence handling, and training workflow.
+
+## Full Demo
+
+<div class="case-study__video">
+  <iframe loading="lazy"
+    src="https://www.youtube-nocookie.com/embed/-8kz4-X3Bak?rel=0&modestbranding=1"
+    title="Forensic Nursing Testimony Education full demo"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen
+  ></iframe>
+</div>

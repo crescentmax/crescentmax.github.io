@@ -705,7 +705,7 @@ h2.archive__item-title {
 @media (max-width: 700px) {
   .layout--splash .page__hero--overlay {
     min-height: 600px !important;
-    background-position: 62% center !important;
+    background-position: 62% 30% !important;
   }
 
   .layout--splash .page__hero--overlay .wrapper {
@@ -735,6 +735,18 @@ h2.archive__item-title {
   .section-heading {
     grid-template-columns: 1fr;
     gap: 0.8rem;
+  }
+
+  .section-heading h2 {
+    font-size: 24px;
+  }
+
+  h2.archive__item-title {
+    font-size: 18px !important;
+  }
+
+  .archive__item-excerpt p {
+    font-size: 14px !important;
   }
 
   .feature__widget,
@@ -776,6 +788,19 @@ h2.archive__item-title {
   .experience-item__header {
     grid-template-columns: 1fr;
     gap: 0.35rem;
+  }
+
+  .experience-item__identity h3 {
+    font-size: 17px;
+  }
+
+  .experience-item__identity p,
+  .experience-item__description p {
+    font-size: 14px;
+  }
+
+  .experience-item__identity time {
+    font-size: 12px;
   }
 }
 
