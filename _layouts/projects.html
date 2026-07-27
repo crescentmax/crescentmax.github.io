@@ -4,100 +4,43 @@ title: Projects
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/projects.css' | relative_url }}">
+<script src="{{ '/assets/js/project-filters.js' | relative_url }}" defer></script>
 
 <div id="main" role="main">
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <!-- Title -->
     <h1 class="page__title">{{ page.title }}</h1>
-    
-    <!-- Professional and research work -->
-    <section class="project-section">
-      <h2 class="section-title">Professional &amp; Research Work</h2>
-      <div class="project-grid">
-        {% for project in site.data.projects %}
-          {% if project.type == "professional" %}
-            <article class="project-card">
-              <a href="{{ project.url | relative_url }}"{% if project.url contains '://' %} target="_blank" rel="noopener"{% endif %}>
-                {% if project.image %}
-                  <img class="project-image" src="{{ project.image | relative_url }}" alt="{{ project.title }}" width="1600" height="1000" loading="lazy" decoding="async">
-                {% else %}
-                  <div class="project-image project-image--placeholder" role="img" aria-label="{{ project.title }}"><span>AI CONVERSATION<br>SIMULATION</span></div>
-                {% endif %}
-                <div class="project-content">
-                  <h3 class="project-title">{{ project.title }}</h3>
-                  <p class="project-description">{{ project.description }}</p>
-                  <div class="project-footer">
-                    <span class="project-tags">
-                      {% for tag in project.tags %}<span class="project-tag">{{ tag }}</span>{% endfor %}
-                    </span>
-                    <span class="project-link">View project ↗</span>
-                  </div>
-                </div>
-              </a>
-            </article>
-          {% endif %}
-        {% endfor %}
-      </div>
-    </section>
 
-    <!-- Personal and course projects -->
-    <section class="project-section">
-      <h2 class="section-title">Personal &amp; Course Projects</h2>
-      <div class="project-grid">
-        {% for project in site.data.projects %}
-          {% if project.type == "project" %}
-            <article class="project-card">
-              <a href="{{ project.url | relative_url }}"{% if project.url contains '://' %} target="_blank" rel="noopener"{% endif %}>
-                {% if project.image %}
-                  <img class="project-image" src="{{ project.image | relative_url }}" alt="{{ project.title }}" width="1600" height="1000" loading="lazy" decoding="async">
-                {% else %}
-                  <div class="project-image project-image--placeholder" role="img" aria-label="{{ project.title }}"><span>AI CONVERSATION<br>SIMULATION</span></div>
-                {% endif %}
-                <div class="project-content">
-                  <h3 class="project-title">{{ project.title }}</h3>
-                  <p class="project-description">{{ project.description }}</p>
-                  <div class="project-footer">
-                    <span class="project-tags">
-                      {% for tag in project.tags %}<span class="project-tag">{{ tag }}</span>{% endfor %}
-                    </span>
-                    <span class="project-link">View project ↗</span>
-                  </div>
-                </div>
-              </a>
-            </article>
-          {% endif %}
-        {% endfor %}
-      </div>
-    </section>
+    <nav class="project-filters" aria-label="Filter projects by category">
+      <button class="project-filter is-active" type="button" data-project-filter="all" aria-pressed="true">All</button>
+      <button class="project-filter" type="button" data-project-filter="professional" aria-pressed="false">Professional</button>
+      <button class="project-filter" type="button" data-project-filter="project" aria-pressed="false">Personal</button>
+      <button class="project-filter" type="button" data-project-filter="game" aria-pressed="false">Games</button>
+    </nav>
 
-    <!-- Games -->
-    <section class="project-section">
-      <h2 class="section-title">Games</h2>
-      <div class="project-grid">
-        {% for project in site.data.projects %}
-          {% if project.type == "game" %}
-            <article class="project-card">
-              <a href="{{ project.url | relative_url }}"{% if project.url contains '://' %} target="_blank" rel="noopener"{% endif %}>
-                {% if project.image %}
-                  <img class="project-image" src="{{ project.image | relative_url }}" alt="{{ project.title }}" width="1600" height="1000" loading="lazy" decoding="async">
-                {% else %}
-                  <div class="project-image project-image--placeholder" role="img" aria-label="{{ project.title }}"><span>AI CONVERSATION<br>SIMULATION</span></div>
-                {% endif %}
-                <div class="project-content">
-                  <h3 class="project-title">{{ project.title }}</h3>
-                  <p class="project-description">{{ project.description }}</p>
-                  <div class="project-footer">
-                    <span class="project-tags">
-                      {% for tag in project.tags %}<span class="project-tag">{{ tag }}</span>{% endfor %}
-                    </span>
-                    <span class="project-link">View project ↗</span>
-                  </div>
-                </div>
-              </a>
-            </article>
-          {% endif %}
-        {% endfor %}
-      </div>
-    </section>
+    <p id="project-filter-status" class="sr-only" aria-live="polite"></p>
+
+    <div class="project-grid" id="project-grid">
+      {% for project in site.data.projects %}
+        <article class="project-card" data-project-category="{{ project.type }}">
+          <a href="{{ project.url | relative_url }}"{% if project.url contains '://' %} target="_blank" rel="noopener"{% endif %}>
+            {% if project.image %}
+              <img class="project-image" src="{{ project.image | relative_url }}" alt="{{ project.title }}" width="1600" height="1000" loading="lazy" decoding="async">
+            {% else %}
+              <div class="project-image project-image--placeholder" role="img" aria-label="{{ project.title }}"><span>AI CONVERSATION<br>SIMULATION</span></div>
+            {% endif %}
+            <div class="project-content">
+              <h2 class="project-title">{{ project.title }}</h2>
+              <p class="project-description">{{ project.description }}</p>
+              <div class="project-footer">
+                <span class="project-tags">
+                  {% for tag in project.tags %}<span class="project-tag">{{ tag }}</span>{% endfor %}
+                </span>
+                <span class="project-link">View project <span aria-hidden="true">&nearr;</span></span>
+              </div>
+            </div>
+          </a>
+        </article>
+      {% endfor %}
+    </div>
   </article>
 </div>

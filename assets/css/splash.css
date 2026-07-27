@@ -1,13 +1,13 @@
 :root {
-  --atelier-bg: #080b12;
-  --atelier-surface: #101522;
-  --atelier-surface-raised: #171d2e;
-  --atelier-line: #303858;
-  --atelier-text: #edf0f8;
-  --atelier-muted: #9aa3ba;
-  --atelier-accent: #6770c3;
-  --atelier-gold: #939be0;
-  --atelier-cool: #b18bd4;
+  --atelier-bg: #0d1017;
+  --atelier-surface: #151a24;
+  --atelier-surface-raised: #202735;
+  --atelier-line: #3c4350;
+  --atelier-text: #f6f4f0;
+  --atelier-muted: #a8adba;
+  --atelier-accent: #ecc244;
+  --atelier-gold: #eabb2c;
+  --atelier-cool: #6f8fb3;
 }
 
 html {
@@ -17,15 +17,15 @@ html {
 body.layout--splash {
   font-family: "Manrope", sans-serif;
   background:
-    radial-gradient(circle at 18% 22%, rgba(103, 112, 195, 0.07), transparent 26rem),
-    radial-gradient(circle at 85% 68%, rgba(177, 139, 212, 0.05), transparent 30rem),
+    radial-gradient(circle at 18% 22%, rgba(234, 187, 44, 0.07), transparent 26rem),
+    radial-gradient(circle at 85% 68%, rgba(111, 143, 179, 0.05), transparent 30rem),
     var(--atelier-bg);
 }
 
 .layout--splash .masthead {
   position: absolute;
   inset: 0 0 auto;
-  background: linear-gradient(to bottom, rgba(8, 11, 18, 0.92), transparent);
+  background: linear-gradient(to bottom, rgba(13, 16, 23, 0.92), transparent);
   border-bottom: 0;
 }
 
@@ -47,8 +47,13 @@ body.layout--splash {
   letter-spacing: -0.025em;
 }
 
+.layout--splash .site-title:hover,
+.layout--splash .site-title:focus {
+  color: #ffffff !important;
+}
+
 .layout--splash .masthead__menu-item a {
-  color: rgba(232, 238, 246, 0.76);
+  color: rgba(244, 240, 230, 0.76);
   font-size: 0.72rem;
   font-weight: 500;
   letter-spacing: 0.05em;
@@ -56,7 +61,7 @@ body.layout--splash {
 }
 
 .layout--splash .masthead__menu-item a:hover {
-  color: var(--atelier-text);
+  color: #ffffff;
 }
 
 .layout--splash .page__hero--overlay {
@@ -120,9 +125,9 @@ body.layout--splash {
   z-index: 3;
   margin: 0.35rem 0.5rem 0.35rem 0;
   padding: 0.52rem 0.78rem;
-  border: 1px solid rgba(232, 238, 246, 0.62);
+  border: 1px solid rgba(244, 240, 230, 0.62);
   border-radius: 999px;
-  background: rgba(14, 20, 32, 0.7);
+  background: rgba(21, 26, 36, 0.7);
   color: var(--atelier-text) !important;
   font-family: "Manrope", sans-serif;
   font-size: 0.6rem;
@@ -146,7 +151,7 @@ body.layout--splash {
   border-color: var(--atelier-text);
   background: var(--atelier-text);
   color: var(--atelier-bg) !important;
-  box-shadow: 0 8px 24px rgba(103, 112, 195, 0.28);
+  box-shadow: 0 8px 24px rgba(234, 187, 44, 0.28);
   transform: translateY(-2px);
 }
 
@@ -165,8 +170,8 @@ body.layout--splash {
 }
 
 .layout--splash .page__hero--overlay .social-links .social-icon {
-  border-color: rgba(232, 238, 246, 0.68);
-  background: rgba(8, 11, 18, 0.72);
+  border-color: rgba(244, 240, 230, 0.68);
+  background: rgba(13, 16, 23, 0.72);
   color: var(--atelier-text) !important;
 }
 
@@ -259,7 +264,7 @@ body.layout--splash {
   padding: 1rem 1.15rem;
   border: 1px solid var(--atelier-line);
   border-radius: 0.7rem;
-  background: rgba(14, 20, 32, 0.86);
+  background: rgba(21, 26, 36, 0.86);
   color: inherit;
   text-decoration: none;
   cursor: pointer;
@@ -273,7 +278,7 @@ body.layout--splash {
   background: var(--atelier-surface-raised);
   color: inherit;
   text-decoration: none;
-  box-shadow: 0 12px 32px rgba(103, 112, 195, 0.16);
+  box-shadow: 0 12px 32px rgba(234, 187, 44, 0.16);
   transform: translateY(-2px);
 }
 
@@ -424,7 +429,7 @@ body.layout--splash {
 }
 
 .feature__widget:hover {
-  border-color: rgba(103, 112, 195, 0.68);
+  border-color: rgba(234, 187, 44, 0.68);
   color: inherit;
   text-decoration: none;
   box-shadow: 0 20px 48px rgba(0, 0, 0, 0.28);
@@ -484,9 +489,9 @@ body.layout--splash {
   overflow: hidden;
   background: linear-gradient(
     to top,
-    rgba(8, 11, 18, 0.98) 0%,
-    rgba(8, 11, 18, 0.82) 27%,
-    rgba(8, 11, 18, 0.28) 52%,
+    rgba(13, 16, 23, 0.98) 0%,
+    rgba(13, 16, 23, 0.82) 27%,
+    rgba(13, 16, 23, 0.28) 52%,
     transparent 75%
   );
 }
@@ -497,10 +502,10 @@ body.layout--splash {
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(8, 11, 18, 0.99) 0%,
-    rgba(8, 11, 18, 0.92) 38%,
-    rgba(8, 11, 18, 0.6) 68%,
-    rgba(8, 11, 18, 0.08) 100%
+    rgba(13, 16, 23, 0.99) 0%,
+    rgba(13, 16, 23, 0.92) 38%,
+    rgba(13, 16, 23, 0.6) 68%,
+    rgba(13, 16, 23, 0.08) 100%
   );
   content: "";
   opacity: 0;
@@ -558,7 +563,7 @@ h2.archive__item-title {
 .feature__widget:focus-visible .archive__item-footer {
   max-height: 5rem;
   padding-top: 0.75rem;
-  border-color: rgba(145, 160, 181, 0.32);
+  border-color: rgba(168, 173, 186, 0.32);
   opacity: 1;
   transform: translateY(0);
 }
@@ -571,10 +576,10 @@ h2.archive__item-title {
 
 .archive__item-tag {
   padding: 0.26rem 0.5rem;
-  border: 1px solid rgba(103, 112, 195, 0.48);
+  border: 1px solid rgba(234, 187, 44, 0.48);
   border-radius: 999px;
-  background: rgba(103, 112, 195, 0.14);
-  color: #c5caef;
+  background: rgba(234, 187, 44, 0.14);
+  color: var(--atelier-gold);
   font-size: 0.66rem;
   font-weight: 500;
 }
@@ -608,8 +613,8 @@ h2.archive__item-title {
 
 .experience-item:hover,
 .experience-item:focus-visible {
-  background: linear-gradient(90deg, rgba(103, 112, 195, 0.15), transparent 82%);
-  border-color: rgba(103, 112, 195, 0.55);
+  background: linear-gradient(90deg, rgba(234, 187, 44, 0.15), transparent 82%);
+  border-color: rgba(234, 187, 44, 0.55);
   outline: none;
 }
 
@@ -757,7 +762,7 @@ h2.archive__item-title {
   .archive__item-footer {
     max-height: 5rem;
     padding-top: 0.65rem;
-    border-color: rgba(145, 160, 181, 0.32);
+    border-color: rgba(168, 173, 186, 0.32);
     opacity: 1;
     transform: none;
   }

@@ -1,2 +1,3 @@
 To use retry middleware with Faraday v2.0+, install `faraday-retry` gem
+To use retry middleware with Faraday v2.0+, install `faraday-retry` gem
 [33m     Build Warning: Skipping the initial build. This may result in an out-of-date site.[0m

@@ -42,7 +42,7 @@ a:hover {
 }
 
 .masthead {
-  background: rgba(8, 11, 18, 0.96);
+  background: rgba(13, 16, 23, 0.96);
   border-bottom: 1px solid var(--atelier-line);
 }
 
@@ -64,6 +64,13 @@ a:hover {
   color: var(--atelier-text) !important;
   font-size: 1rem;
   text-decoration: none !important;
+  transition: color 180ms ease;
+}
+
+.site-title:hover,
+.site-title:focus {
+  color: #ffffff !important;
+  text-decoration: none !important;
 }
 
 .site-subtitle {
@@ -71,17 +78,17 @@ a:hover {
 }
 
 .masthead .masthead__menu-item a {
-  color: var(--atelier-muted);
+  color: rgba(244, 240, 230, 0.76);
   font-family: "Manrope", sans-serif;
   font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
+  font-weight: 500;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
 .masthead .masthead__menu-item a:hover,
 .masthead .masthead__menu-item a:focus {
-  color: var(--atelier-accent);
+  color: #ffffff;
 }
 
 .greedy-nav .hidden-links {
@@ -150,7 +157,10 @@ body.navigation-page .page__content {
 }
 
 .page__content h1,
-.page__content h2,
+.page__content h2 {
+  color: var(--atelier-accent);
+}
+
 .page__content h3,
 .page__content h4 {
   color: var(--atelier-text);
@@ -252,10 +262,10 @@ body.layout--post:not(.project-case-study) .page__content > hr {
 
 body.blog-post .page__content :not(pre) > code {
   padding: 0.1em 0.3em;
-  border: 1px solid #71303d;
+  border: 1px solid var(--atelier-line);
   border-radius: 0.3rem;
-  background: #351820;
-  color: #f0a0ad;
+  background: #151a24;
+  color: #ed9eab;
   font-size: 0.84em;
   font-weight: 500;
 }
@@ -263,8 +273,13 @@ body.blog-post .page__content :not(pre) > code {
 body.blog-post .page__content div.highlighter-rouge,
 body.blog-post .page__content figure.highlight {
   margin: 0.85rem 0 1.05rem;
+  background: var(--atelier-surface);
   font-size: clamp(13px, 0.62rem, 14px);
   line-height: 1.55;
+}
+
+body.blog-post .page__content .highlight {
+  background: var(--atelier-surface);
 }
 
 body.blog-post .page__content pre {
@@ -369,7 +384,7 @@ body:is(.layout--post, .blog-post) .page__content div[style*="text-align: center
 .btn:focus-visible {
   background: var(--atelier-accent);
   border-color: var(--atelier-accent);
-  box-shadow: 0 8px 22px rgba(103, 112, 195, 0.28);
+  box-shadow: 0 8px 22px rgba(234, 187, 44, 0.28);
   transform: translateY(-2px);
 }
 

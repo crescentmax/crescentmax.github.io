@@ -35,4 +35,18 @@ The project used a staged pipeline that kept capture, model processing, animatio
 
 ## Project Context
 
-The Buried Lumen was created for *VIZA 619 Motion Capture Animation*, instructed by Michael Walsh. The project focused on combining motion-capture performance with a real-time cinematic production workflow.
+The Buried Lumen was created for *VIZA 619 Motion Capture Animation*. The project focused on combining motion-capture performance with a real-time cinematic production workflow.
+
+## Credits and Asset Attribution
+
+### Production Credits
+
+- **Director:** Chengyan Tsai
+- **Actor:** Ryann Lu
+- **Instructors:** Michael Walsh and Carlos Carrillo
+
+### Third-Party Assets
+
+- [**Dark Knight - Male & Female**](https://www.fab.com/listings/d237534b-9ba7-4c48-8cd9-8a1fd1965119) - AhmedSagov
+- [**Gothic Exterior Mega Pack**](https://www.fab.com/listings/8b1e023a-1996-4f09-b105-bf1bc2d65d39) - Meshingun Studio
+- **Background music** - Pixabay

@@ -1,3 +1,12 @@
+Building the local site...
+Configuration file: C:/Users/cresc/Documents/Portfolio/local/_config.yml
+            Source: C:/Users/cresc/Documents/Portfolio
+       Destination: C:/Users/cresc/Documents/Portfolio/.jekyll-local
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+       Jekyll Feed: Generating feed for posts
+                    done in 5.878 seconds.
+ Auto-regeneration: disabled. Use --watch to enable.
 Starting Jekyll at http://127.0.0.1:4000/
 Keep this terminal open while viewing the site. Press Ctrl+C to stop.
 Configuration file: C:/Users/cresc/Documents/Portfolio/local/_config.yml

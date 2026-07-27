@@ -50,7 +50,7 @@
 }
 
 .gallery-item:hover {
-  border-color: rgba(103, 112, 195, 0.68);
+  border-color: rgba(75, 86, 148, 0.68);
   transform: translateY(-4px);
 }
 

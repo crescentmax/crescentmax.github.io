@@ -1,5 +1,5 @@
 :root {
-  --case-bg: #080b12;
+  --case-bg: #111844;
   --case-surface: var(--atelier-surface);
   --case-surface-raised: var(--atelier-surface-raised);
   --case-line: var(--atelier-line);
@@ -53,9 +53,9 @@ body.project-case-study .pagination {
   gap: 0.5rem;
   margin-bottom: 1rem;
   padding: 0.4rem 0.7rem;
-  border: 1px solid rgba(103, 112, 195, 0.5);
+  border: 1px solid rgba(75, 86, 148, 0.5);
   border-radius: 999px;
-  background: rgba(103, 112, 195, 0.13);
+  background: rgba(75, 86, 148, 0.13);
   color: #c5caef;
   font-size: 0.66rem;
   font-weight: 600;
@@ -68,7 +68,7 @@ body.project-case-study .pagination {
   height: 0.42rem;
   border-radius: 50%;
   background: var(--case-accent);
-  box-shadow: 0 0 0 0.25rem rgba(103, 112, 195, 0.12);
+  box-shadow: 0 0 0 0.25rem rgba(75, 86, 148, 0.12);
   content: "";
 }
 
@@ -81,9 +81,9 @@ body.project-case-study .pagination {
 
 .case-study__tag {
   padding: 0.28rem 0.58rem;
-  border: 1px solid rgba(103, 112, 195, 0.48);
+  border: 1px solid rgba(75, 86, 148, 0.48);
   border-radius: 999px;
-  background: rgba(103, 112, 195, 0.14);
+  background: rgba(75, 86, 148, 0.14);
   color: #c5caef;
   font-size: 0.62rem;
   font-weight: 600;
@@ -159,7 +159,7 @@ body.project-case-study .pagination {
 .case-study__actions .btn:focus-visible {
   background: var(--case-accent);
   border-color: var(--case-accent);
-  box-shadow: 0 8px 22px rgba(103, 112, 195, 0.28);
+  box-shadow: 0 8px 22px rgba(75, 86, 148, 0.28);
   color: #090b17 !important;
   transform: translateY(-4px);
 }
@@ -298,7 +298,7 @@ body.project-case-study .pagination {
 
 .case-study__section h2 {
   margin: 0 0 10px;
-  color: var(--case-text) !important;
+  color: var(--case-accent) !important;
   font-size: clamp(22px, 1.18rem, 27px);
   font-weight: 400;
   letter-spacing: -0.045em;
